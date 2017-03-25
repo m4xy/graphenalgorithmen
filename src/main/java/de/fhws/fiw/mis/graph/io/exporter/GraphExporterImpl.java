@@ -9,6 +9,7 @@ import org.jgrapht.graph.DefaultWeightedEdge;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -21,7 +22,7 @@ public class GraphExporterImpl implements GraphExporter {
         ComponentAttributeProvider<DefaultWeightedEdge> componentAttributeProvider = new ComponentAttributeProvider<DefaultWeightedEdge>() {
             public Map<String, String> getComponentAttributes(DefaultWeightedEdge e) {
                 Map<String, String> map = new LinkedHashMap<>();
-                map.put("label", Double.toString(graph.getEdgeWeight(e)));
+                map.put("label", new DecimalFormat("#.##").format(graph.getEdgeWeight(e)));
                 return map;
             }
         };
