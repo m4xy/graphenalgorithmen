@@ -2,7 +2,9 @@ package de.fhws.fiw.mis.graph.io.importer;
 
 import de.fhws.fiw.mis.graph.io.importer.GraphImporter;
 import org.jgrapht.WeightedGraph;
+import org.jgrapht.graph.AbstractBaseGraph;
 import org.jgrapht.graph.DefaultWeightedEdge;
+import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 import org.jgrapht.graph.SimpleWeightedGraph;
 
 import java.io.BufferedReader;
@@ -18,16 +20,27 @@ public class GraphImporterImpl implements GraphImporter {
     @Override
     public SimpleWeightedGraph<String, DefaultWeightedEdge> importGraph(String fileName) {
         SimpleWeightedGraph<String, DefaultWeightedEdge> graph = new SimpleWeightedGraph<>(DefaultWeightedEdge.class);
-        List<String> inputFile = readFile(fileName);
-
-        addVertexes(inputFile, graph);
-        addEdges(inputFile, graph);
+        buildGraph(graph, fileName);
 
         return graph;
     }
 
+    @Override
+    public SimpleDirectedWeightedGraph<String, DefaultWeightedEdge> importDirectedGraph(String fileName) {
+        SimpleDirectedWeightedGraph<String, DefaultWeightedEdge> graph = new SimpleDirectedWeightedGraph<>(DefaultWeightedEdge.class);
+        buildGraph(graph, fileName);
 
-    public List<String> readFile(String fileName) {
+        return graph;
+    }
+
+    private void buildGraph(AbstractBaseGraph<String, DefaultWeightedEdge> graph, String fileName) {
+        List<String> inputFile = readFile(fileName);
+
+        addVertexes(inputFile, graph);
+        addEdges(inputFile, graph);
+    }
+
+    private List<String> readFile(String fileName) {
         ClassLoader classLoader = getClass().getClassLoader();
         List<String> stringList = new LinkedList<>();
 
@@ -53,7 +66,7 @@ public class GraphImporterImpl implements GraphImporter {
 
         return stringList;
     }
-    public void addVertexes(List<String> inputFile, WeightedGraph<String, DefaultWeightedEdge> graph) {
+    private void addVertexes(List<String> inputFile, AbstractBaseGraph<String, DefaultWeightedEdge> graph) {
         for(String line : inputFile) {
             if(line.startsWith("knoten")) {
                 String vertex = line.split(" ")[1];
@@ -62,7 +75,7 @@ public class GraphImporterImpl implements GraphImporter {
         }
     }
 
-    public void addEdges(List<String> inputFile, WeightedGraph<String, DefaultWeightedEdge> graph) {
+    private void addEdges(List<String> inputFile, AbstractBaseGraph<String, DefaultWeightedEdge> graph) {
         for(String line : inputFile) {
             if(line.startsWith("kante")) {
                 String[] lineArr = line.split(" ");
