@@ -1,12 +1,15 @@
 package de.fhws.fiw.mis.graph.io.exporter;
 
 import de.fhws.fiw.mis.graph.UndirGraph;
+import de.fhws.fiw.mis.graph.io.DirGraph;
+import org.jgrapht.Graph;
 import org.jgrapht.WeightedGraph;
 import org.jgrapht.ext.ComponentAttributeProvider;
 import org.jgrapht.ext.DOTExporter;
 import org.jgrapht.ext.IntegerNameProvider;
 import org.jgrapht.ext.StringNameProvider;
 import org.jgrapht.graph.DefaultWeightedEdge;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -19,7 +22,7 @@ import java.util.Map;
  */
 public class GraphExporterImpl implements GraphExporter {
     @Override
-    public void exportGraph(UndirGraph<String, DefaultWeightedEdge> graph, String filePath) {
+    public void exportGraph(Graph<String, DefaultWeightedEdge> graph, String filePath) {
         ComponentAttributeProvider<DefaultWeightedEdge> componentAttributeProvider = new ComponentAttributeProvider<DefaultWeightedEdge>() {
             public Map<String, String> getComponentAttributes(DefaultWeightedEdge e) {
                 Map<String, String> map = new LinkedHashMap<>();
@@ -36,4 +39,10 @@ public class GraphExporterImpl implements GraphExporter {
             System.out.println(e.getStackTrace());
         }
     }
+
+    @Override
+    public void exportDirGraph(DirGraph<String, DefaultWeightedEdge> graph, String filePath) {
+        throw new NotImplementedException();
+    }
+
 }

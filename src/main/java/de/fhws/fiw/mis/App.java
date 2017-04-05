@@ -1,6 +1,7 @@
 package de.fhws.fiw.mis;
 
 import de.fhws.fiw.mis.graph.UndirGraph;
+import de.fhws.fiw.mis.graph.io.DirGraph;
 import de.fhws.fiw.mis.graph.io.dotconverter.DotConverter;
 import de.fhws.fiw.mis.graph.io.dotconverter.GraphViz;
 import de.fhws.fiw.mis.graph.io.exporter.GraphExporter;
@@ -16,7 +17,7 @@ public class App {
         final String DOT_FILE_NAME = "graph.dot";
 
         GraphImporter importer = new GraphImporterImpl();
-        UndirGraph<String, DefaultWeightedEdge> g = importer.importGraph("DeinzerGraph.txt");
+        DirGraph<String, DefaultWeightedEdge> g = importer.importDirectedGraph("Euler1.txt");
 
 //        g.edgesOf("");
 //        g.get

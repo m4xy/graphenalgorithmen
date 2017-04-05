@@ -1,6 +1,7 @@
 package de.fhws.fiw.mis.graph.io.importer;
 
 import de.fhws.fiw.mis.graph.UndirGraph;
+import de.fhws.fiw.mis.graph.io.DirGraph;
 import de.fhws.fiw.mis.graph.io.importer.GraphImporter;
 import org.jgrapht.DirectedGraph;
 import org.jgrapht.WeightedGraph;
@@ -28,8 +29,8 @@ public class GraphImporterImpl implements GraphImporter {
     }
 
     @Override
-    public SimpleDirectedWeightedGraph<String, DefaultWeightedEdge> importDirectedGraph(String fileName) {
-        SimpleDirectedWeightedGraph<String, DefaultWeightedEdge> graph = new SimpleDirectedWeightedGraph<>(DefaultWeightedEdge.class);
+    public DirGraph<String, DefaultWeightedEdge> importDirectedGraph(String fileName) {
+        DirGraph<String, DefaultWeightedEdge> graph = new DirGraph<>(DefaultWeightedEdge.class, true, true);
         buildGraph(graph, fileName);
 
         return graph;
