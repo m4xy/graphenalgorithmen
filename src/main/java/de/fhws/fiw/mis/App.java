@@ -19,9 +19,6 @@ public class App {
         GraphImporter importer = new GraphImporterImpl();
         DirGraph<String, DefaultWeightedEdge> g = importer.importDirectedGraph("Euler1.txt");
 
-//        g.edgesOf("");
-//        g.get
-
         GraphExporter exporter = new GraphExporterImpl();
         exporter.exportGraph(g, DOT_FILE_NAME);
 

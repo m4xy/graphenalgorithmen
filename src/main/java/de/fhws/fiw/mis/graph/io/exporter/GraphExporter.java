@@ -11,5 +11,4 @@ import org.jgrapht.graph.DefaultWeightedEdge;
  */
 public interface GraphExporter {
     void exportGraph(Graph<String, DefaultWeightedEdge> graph, String filePath);
-    void exportDirGraph(DirGraph<String, DefaultWeightedEdge> graph, String filePath);
 }

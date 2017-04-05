@@ -39,10 +39,4 @@ public class GraphExporterImpl implements GraphExporter {
             System.out.println(e.getStackTrace());
         }
     }
-
-    @Override
-    public void exportDirGraph(DirGraph<String, DefaultWeightedEdge> graph, String filePath) {
-        throw new NotImplementedException();
-    }
-
 }
