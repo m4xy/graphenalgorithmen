@@ -1,6 +1,8 @@
 package de.fhws.fiw.mis.graph.io.importer;
 
+import de.fhws.fiw.mis.graph.UndirGraph;
 import de.fhws.fiw.mis.graph.io.importer.GraphImporter;
+import org.jgrapht.DirectedGraph;
 import org.jgrapht.WeightedGraph;
 import org.jgrapht.graph.AbstractBaseGraph;
 import org.jgrapht.graph.DefaultWeightedEdge;
@@ -18,8 +20,8 @@ import java.util.List;
  */
 public class GraphImporterImpl implements GraphImporter {
     @Override
-    public SimpleWeightedGraph<String, DefaultWeightedEdge> importGraph(String fileName) {
-        SimpleWeightedGraph<String, DefaultWeightedEdge> graph = new SimpleWeightedGraph<>(DefaultWeightedEdge.class);
+    public UndirGraph<String, DefaultWeightedEdge> importGraph(String fileName) {
+        UndirGraph<String, DefaultWeightedEdge> graph = new UndirGraph<>(DefaultWeightedEdge.class, true, true);
         buildGraph(graph, fileName);
 
         return graph;
@@ -76,21 +78,27 @@ public class GraphImporterImpl implements GraphImporter {
     }
 
     private void addEdges(List<String> inputFile, AbstractBaseGraph<String, DefaultWeightedEdge> graph) {
-        for(String line : inputFile) {
-            if(line.startsWith("kante")) {
-                String[] lineArr = line.split(" ");
-                Double weight = 1.0;
+        try {
+            for(String line : inputFile) {
+                if(line.startsWith("kante")) {
+                    String[] lineArr = line.split(" ");
+                    Double weight = 1.0;
 
-                String v1 = lineArr[1];
-                String v2 = lineArr[2];
+                    String v1 = lineArr[1];
+                    String v2 = lineArr[2];
 
-                if(lineArr.length > 3) {
-                    weight = Double.parseDouble(lineArr[3]);
+                    if(lineArr.length > 3) {
+                        weight = Double.parseDouble(lineArr[3]);
+                    }
+
+                    DefaultWeightedEdge e = graph.addEdge(v1, v2);
+                    graph.setEdgeWeight(e, weight);
                 }
-
-                DefaultWeightedEdge e = graph.addEdge(v1, v2);
-                graph.setEdgeWeight(e, weight);
             }
         }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }

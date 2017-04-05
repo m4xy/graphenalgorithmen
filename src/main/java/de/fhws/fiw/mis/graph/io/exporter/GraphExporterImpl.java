@@ -1,5 +1,6 @@
 package de.fhws.fiw.mis.graph.io.exporter;
 
+import de.fhws.fiw.mis.graph.UndirGraph;
 import org.jgrapht.WeightedGraph;
 import org.jgrapht.ext.ComponentAttributeProvider;
 import org.jgrapht.ext.DOTExporter;
@@ -18,7 +19,7 @@ import java.util.Map;
  */
 public class GraphExporterImpl implements GraphExporter {
     @Override
-    public void exportGraph(WeightedGraph<String, DefaultWeightedEdge> graph, String filePath) {
+    public void exportGraph(UndirGraph<String, DefaultWeightedEdge> graph, String filePath) {
         ComponentAttributeProvider<DefaultWeightedEdge> componentAttributeProvider = new ComponentAttributeProvider<DefaultWeightedEdge>() {
             public Map<String, String> getComponentAttributes(DefaultWeightedEdge e) {
                 Map<String, String> map = new LinkedHashMap<>();

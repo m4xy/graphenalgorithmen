@@ -1,5 +1,6 @@
 package de.fhws.fiw.mis.graph.io.exporter;
 
+import de.fhws.fiw.mis.graph.UndirGraph;
 import org.jgrapht.WeightedGraph;
 import org.jgrapht.graph.DefaultWeightedEdge;
 
@@ -7,5 +8,5 @@ import org.jgrapht.graph.DefaultWeightedEdge;
  * Created by maxarndt on 23.03.17.
  */
 public interface GraphExporter {
-    void exportGraph(WeightedGraph<String, DefaultWeightedEdge> graph, String filePath);
+    void exportGraph(UndirGraph<String, DefaultWeightedEdge> graph, String filePath);
 }
