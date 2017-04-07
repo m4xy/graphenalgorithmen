@@ -2,7 +2,6 @@ package de.fhws.fiw.mis.graph;
 
 import org.jgrapht.EdgeFactory;
 import org.jgrapht.graph.AbstractBaseGraph;
-import org.jgrapht.graph.ClassBasedEdgeFactory;
 import org.jgrapht.graph.DefaultWeightedEdge;
 
 import java.util.*;
@@ -37,11 +36,20 @@ public abstract class AbstractGraph extends AbstractBaseGraph<Vertex, DefaultWei
         }
         return visited;
     }
-
-
-
-
-
-
-
+    public Collection<Vertex> depthFirstSearch(Vertex startVertex) {
+        Stack<Vertex> stack = new Stack<>();
+        List<Vertex> visited = new LinkedList<>();
+        stack.add(startVertex);
+        while(!stack.isEmpty()) {
+            Vertex curVertex = stack.pop();
+            if(!visited.contains(curVertex)) {
+                visited.add(curVertex);
+                stack.addAll(getNeighbors(curVertex).stream()
+                        .distinct()
+                        .filter(v -> visited.contains(v) != true)
+                        .collect(Collectors.toList()));
+            }
+        }
+        return visited;
+    }
 }

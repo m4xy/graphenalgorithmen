@@ -1,6 +1,7 @@
 package de.fhws.fiw.mis;
 
 import de.fhws.fiw.mis.graph.DirGraph;
+import de.fhws.fiw.mis.graph.UndirGraph;
 import de.fhws.fiw.mis.graph.io.dotconverter.DotConverter;
 import de.fhws.fiw.mis.graph.io.dotconverter.GraphViz;
 import de.fhws.fiw.mis.graph.io.exporter.GraphExporter;
@@ -15,13 +16,15 @@ public class App {
         final String DOT_FILE_NAME = "graph.dot";
 
         GraphImporter importer = new GraphImporterImpl();
-//        UndirGraph g = importer.importGraph("Test.txt");
-        DirGraph g = importer.importDirectedGraph("Dijkstra.txt");
+        UndirGraph g = importer.importGraph("Baum.txt");
+//        DirGraph g = importer.importDirectedGraph("Euler1.txt");
 
         System.out.println(g.hasEulerianCircuit());
         System.out.println(g.hasEulerianPath());
 //        System.out.println(g.hasCycle());
-        g.breadthFirstSearch(g.vertexSet().stream().findFirst().get()).stream().forEach(System.out::println);
+//        g.breadthFirstSearch(g.vertexSet().stream().findFirst().get()).stream().forEach(System.out::println);
+        g.depthFirstSearch(g.vertexSet().stream().findFirst().get()).stream().forEach(System.out::println);
+
 
         GraphExporter exporter = new GraphExporterImpl();
         exporter.exportGraph(g, DOT_FILE_NAME);
