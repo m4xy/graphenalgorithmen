@@ -17,4 +17,12 @@ public class DirGraph extends GraphImpl implements DirectedGraph<Vertex, Default
     protected Specifics<Vertex, DefaultWeightedEdge> createSpecifics() {
         return super.createDirectedSpecifics();
     }
+
+    public Boolean hasEulerianCircuit() {
+        return isConnected() && vertexSet().stream()
+                .allMatch(x -> inDegreeOf(x) == outDegreeOf(x));
+    }
+    public static Boolean hasEulerianPath() {
+        return false;
+    }
 }

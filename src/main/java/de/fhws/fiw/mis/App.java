@@ -1,16 +1,12 @@
 package de.fhws.fiw.mis;
 
-import de.fhws.fiw.mis.graph.DirGraph;
-import de.fhws.fiw.mis.graph.Euler;
 import de.fhws.fiw.mis.graph.UndirGraph;
-import de.fhws.fiw.mis.graph.Vertex;
 import de.fhws.fiw.mis.graph.io.dotconverter.DotConverter;
 import de.fhws.fiw.mis.graph.io.dotconverter.GraphViz;
 import de.fhws.fiw.mis.graph.io.exporter.GraphExporter;
 import de.fhws.fiw.mis.graph.io.exporter.GraphExporterImpl;
 import de.fhws.fiw.mis.graph.io.importer.GraphImporter;
 import de.fhws.fiw.mis.graph.io.importer.GraphImporterImpl;
-import org.jgrapht.graph.*;
 
 
 public class App {
@@ -22,8 +18,8 @@ public class App {
         UndirGraph g = importer.importGraph("EulerPfad.txt");
 //        DirGraph g = importer.importDirectedGraph("K5.txt");
 
-//        System.out.println(Euler.hasEulerianCircuit(g));
-//        System.out.println(Euler.hasEulerianPath(g));
+//        System.out.println(g.hasEulerianCircuit());
+//        System.out.println(g.hasEulerianPath());
 //        g.breadthFirstSearch(g.vertexSet().stream().findFirst().get()).stream().forEach(System.out::println);
         System.out.println(g.isConnected());
 

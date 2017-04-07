@@ -16,4 +16,13 @@ public class UndirGraph extends GraphImpl {
     protected Specifics<Vertex, DefaultWeightedEdge> createSpecifics() {
         return super.createUndirectedSpecifics();
     }
+
+    public Boolean hasEulerianCircuit() {
+        return isConnected() && vertexSet().stream()
+                .allMatch(x -> edgesOf(x).size() % 2 == 0);
+    }
+    public Boolean hasEulerianPath() {
+        return isConnected() && vertexSet().stream()
+                .filter(x -> edgesOf(x).size() % 2 == 1).count() == 2;
+    }
 }
