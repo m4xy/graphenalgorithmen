@@ -9,6 +9,6 @@ import org.jgrapht.graph.*;
  * Created by maxarndt on 22.03.17.
  */
 public interface GraphImporter {
-    UndirGraph<Vertex, DefaultWeightedEdge> importGraph(String fileName);
-    DirGraph<Vertex, DefaultWeightedEdge> importDirectedGraph(String fileName);
+    UndirGraph importGraph(String fileName);
+    DirGraph importDirectedGraph(String fileName);
 }

@@ -17,16 +17,16 @@ import java.util.List;
  */
 public class GraphImporterImpl implements GraphImporter {
     @Override
-    public UndirGraph<Vertex, DefaultWeightedEdge> importGraph(String fileName) {
-        UndirGraph<Vertex, DefaultWeightedEdge> graph = new UndirGraph<>(DefaultWeightedEdge.class, true, true);
+    public UndirGraph importGraph(String fileName) {
+        UndirGraph graph = new UndirGraph();
         buildGraph(graph, fileName);
 
         return graph;
     }
 
     @Override
-    public DirGraph<Vertex, DefaultWeightedEdge> importDirectedGraph(String fileName) {
-        DirGraph<Vertex, DefaultWeightedEdge> graph = new DirGraph<>(DefaultWeightedEdge.class, true, true);
+    public DirGraph importDirectedGraph(String fileName) {
+        DirGraph graph = new DirGraph();
         buildGraph(graph, fileName);
 
         return graph;

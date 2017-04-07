@@ -19,12 +19,13 @@ public class App {
         final String DOT_FILE_NAME = "graph.dot";
 
         GraphImporter importer = new GraphImporterImpl();
-        UndirGraph<Vertex, DefaultWeightedEdge> g = importer.importGraph("Eulerpfad.txt");
-//        DirGraph<Vertex, DefaultWeightedEdge> g = importer.importDirectedGraph("K5.txt");
+        UndirGraph g = importer.importGraph("EulerPfad.txt");
+//        DirGraph g = importer.importDirectedGraph("K5.txt");
 
 //        System.out.println(Euler.hasEulerianCircuit(g));
-        System.out.println(Euler.hasEulerianPath(g));
-
+//        System.out.println(Euler.hasEulerianPath(g));
+//        g.breadthFirstSearch(g.vertexSet().stream().findFirst().get()).stream().forEach(System.out::println);
+        System.out.println(g.isConnected());
 
         GraphExporter exporter = new GraphExporterImpl();
         exporter.exportGraph(g, DOT_FILE_NAME);
