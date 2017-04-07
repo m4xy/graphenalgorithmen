@@ -23,7 +23,8 @@ public class GraphExporterImpl implements GraphExporter {
         ComponentAttributeProvider<DefaultWeightedEdge> componentAttributeProvider = new ComponentAttributeProvider<DefaultWeightedEdge>() {
             public Map<String, String> getComponentAttributes(DefaultWeightedEdge e) {
                 Map<String, String> map = new LinkedHashMap<>();
-                map.put("label", new DecimalFormat("#.##").format(graph.getEdgeWeight(e)));
+                if(graph.getEdgeWeight(e) != 1)
+                    map.put("label", new DecimalFormat("#.##").format(graph.getEdgeWeight(e)));
                 return map;
             }
         };
