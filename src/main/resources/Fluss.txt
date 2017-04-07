@@ -1,4 +1,4 @@
-# 9 Knotendefinitionen, A bis I
+# Knotendefinitionen
 knoten A
 knoten B 
 knoten C
