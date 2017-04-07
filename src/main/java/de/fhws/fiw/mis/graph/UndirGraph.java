@@ -9,7 +9,7 @@ import org.jgrapht.graph.specifics.Specifics;
 /**
  * Created by maxarndt on 05.04.17.
  */
-public class UndirGraph<V, E> extends AbstractBaseGraph<V, E> {
+public class UndirGraph<V, E> extends GraphImpl<V, E> {
     public UndirGraph(EdgeFactory<V, E> ef, boolean allowMultipleEdges, boolean allowLoops) {
         super(ef, allowMultipleEdges, allowLoops);
     }

@@ -1,4 +1,4 @@
-package de.fhws.fiw.mis.graph.io;
+package de.fhws.fiw.mis.graph;
 
 import org.jgrapht.DirectedGraph;
 import org.jgrapht.EdgeFactory;
@@ -9,7 +9,7 @@ import org.jgrapht.graph.specifics.Specifics;
 /**
  * Created by maxarndt on 05.04.17.
  */
-public class DirGraph<V, E> extends AbstractBaseGraph<V, E> implements DirectedGraph<V, E> {
+public class DirGraph<V, E> extends GraphImpl<V, E> implements DirectedGraph<V, E> {
     public DirGraph(EdgeFactory<V, E> ef, boolean allowMultipleEdges, boolean allowLoops) {
         super(ef, allowMultipleEdges, allowLoops);
     }
