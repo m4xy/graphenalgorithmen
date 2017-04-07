@@ -9,7 +9,7 @@ import org.jgrapht.graph.specifics.Specifics;
  */
 public class UndirGraph extends GraphImpl implements Euler {
     public UndirGraph() {
-        super(new ClassBasedEdgeFactory<>(DefaultWeightedEdge.class), true, true);
+        super(new ClassBasedEdgeFactory<>(DefaultWeightedEdge.class), false, false);
     }
 
     @Override
@@ -17,12 +17,15 @@ public class UndirGraph extends GraphImpl implements Euler {
         return super.createUndirectedSpecifics();
     }
 
-    public Boolean hasEulerianCircuit() {
+    public boolean hasEulerianCircuit() {
         return isConnected() && vertexSet().stream()
                 .allMatch(x -> edgesOf(x).size() % 2 == 0);
     }
-    public Boolean hasEulerianPath() {
+    public boolean hasEulerianPath() {
         return isConnected() && vertexSet().stream()
                 .filter(x -> edgesOf(x).size() % 2 == 1).count() == 2;
+    }
+    public boolean hasCycle() {
+        return edgeSet().size() >= vertexSet().size();
     }
 }

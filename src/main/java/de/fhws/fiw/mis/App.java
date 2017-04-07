@@ -16,11 +16,12 @@ public class App {
         final String DOT_FILE_NAME = "graph.dot";
 
         GraphImporter importer = new GraphImporterImpl();
-//        UndirGraph g = importer.importGraph("EulerPfad.txt");
-        DirGraph g = importer.importDirectedGraph("DirEulerPfad.txt");
+        UndirGraph g = importer.importGraph("Test.txt");
+//        DirGraph g = importer.importDirectedGraph("DirEulerPfad.txt");
 
         System.out.println(g.hasEulerianCircuit());
         System.out.println(g.hasEulerianPath());
+        System.out.println(g.hasCycle());
 //        g.breadthFirstSearch(g.vertexSet().stream().findFirst().get()).stream().forEach(System.out::println);
 
         GraphExporter exporter = new GraphExporterImpl();
