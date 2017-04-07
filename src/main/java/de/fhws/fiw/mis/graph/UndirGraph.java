@@ -7,7 +7,7 @@ import org.jgrapht.graph.specifics.Specifics;
 /**
  * Created by maxarndt on 05.04.17.
  */
-public class UndirGraph extends GraphImpl {
+public class UndirGraph extends GraphImpl implements Euler {
     public UndirGraph() {
         super(new ClassBasedEdgeFactory<>(DefaultWeightedEdge.class), true, true);
     }

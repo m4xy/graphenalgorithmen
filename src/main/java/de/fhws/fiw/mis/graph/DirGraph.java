@@ -8,7 +8,7 @@ import org.jgrapht.graph.specifics.Specifics;
 /**
  * Created by maxarndt on 05.04.17.
  */
-public class DirGraph extends GraphImpl implements DirectedGraph<Vertex, DefaultWeightedEdge> {
+public class DirGraph extends GraphImpl implements DirectedGraph<Vertex, DefaultWeightedEdge>, Euler {
     public DirGraph() {
         super(new ClassBasedEdgeFactory<>(DefaultWeightedEdge.class), true, true);
     }
@@ -22,7 +22,8 @@ public class DirGraph extends GraphImpl implements DirectedGraph<Vertex, Default
         return isConnected() && vertexSet().stream()
                 .allMatch(x -> inDegreeOf(x) == outDegreeOf(x));
     }
-    public static Boolean hasEulerianPath() {
-        return false;
+    public Boolean hasEulerianPath() {
+        return isConnected() && vertexSet().stream().
+                allMatch(v -> Math.abs(inDegreeOf(v) - outDegreeOf(v)) < 2);
     }
 }

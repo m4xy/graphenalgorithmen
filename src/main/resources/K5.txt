@@ -4,7 +4,6 @@ knoten B
 knoten C
 knoten D
 knoten E
-knoten F
 
 # Kantendefinitionen
 kante A B

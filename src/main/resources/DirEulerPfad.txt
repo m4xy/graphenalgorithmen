@@ -9,12 +9,9 @@ knoten G
 
 # Kantendefinitionen
 kante A B
-kante A C
-kante A D
 kante B C
-kante B D
+kante D B
 kante C E
-kante C D
-kante D E
-kante A F
+kante F A
 kante B G
+kante G D
