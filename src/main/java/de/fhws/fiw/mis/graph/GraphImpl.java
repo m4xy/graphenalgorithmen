@@ -11,24 +11,16 @@ import java.util.stream.Collectors;
 /**
  * Created by maxarndt on 06.04.17.
  */
-public class GraphImpl extends AbstractBaseGraph<Vertex, DefaultWeightedEdge> {
+public abstract class GraphImpl extends AbstractBaseGraph<Vertex, DefaultWeightedEdge> {
     public GraphImpl(EdgeFactory<Vertex, DefaultWeightedEdge> ef, boolean allowMultipleEdges, boolean allowLoops) {
         super(ef, allowMultipleEdges, allowLoops);
     }
 
+    public abstract Collection<Vertex> getNeighbors(Vertex vertex);
+
     public boolean isConnected() {
         Collection<Vertex> vertices = breadthFirstSearch(vertexSet().stream().findFirst().get());
         return !vertexSet().stream().anyMatch(x -> vertices.contains(x) == false);
-    }
-    public Collection<Vertex> getNeighbors(Vertex vertex) {
-        Collection<Vertex> vertices = new ArrayList<>();
-        Set<DefaultWeightedEdge> edges = edgesOf(vertex);
-        for(DefaultWeightedEdge edge : edges) {
-            Vertex neighbor = getEdgeSource(edge);
-            if(neighbor.equals(vertex)) neighbor = getEdgeTarget(edge);
-            if(!neighbor.equals(vertex)) vertices.add(neighbor);
-        }
-        return vertices;
     }
     public Collection<Vertex> breadthFirstSearch(Vertex startVertex) {
         Queue<Vertex> queue = new LinkedList<>(Arrays.asList(startVertex));
