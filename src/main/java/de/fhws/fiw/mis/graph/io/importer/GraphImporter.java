@@ -1,9 +1,7 @@
 package de.fhws.fiw.mis.graph.io.importer;
 
-import de.fhws.fiw.mis.graph.UndirGraph;
 import de.fhws.fiw.mis.graph.DirGraph;
-import de.fhws.fiw.mis.graph.Vertex;
-import org.jgrapht.graph.*;
+import de.fhws.fiw.mis.graph.UndirGraph;
 
 /**
  * Created by maxarndt on 22.03.17.

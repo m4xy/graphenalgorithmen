@@ -11,7 +11,7 @@ import java.util.*;
 /**
  * Created by maxarndt on 05.04.17.
  */
-public class DirGraph extends GraphImpl implements DirectedGraph<Vertex, DefaultWeightedEdge>, Euler {
+public class DirGraph extends AbstractGraph implements DirectedGraph<Vertex, DefaultWeightedEdge>, Euler {
     public DirGraph() {
         super(new ClassBasedEdgeFactory<>(DefaultWeightedEdge.class), false, false);
     }

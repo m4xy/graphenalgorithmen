@@ -11,7 +11,7 @@ import java.util.Set;
 /**
  * Created by maxarndt on 05.04.17.
  */
-public class UndirGraph extends GraphImpl implements Euler {
+public class UndirGraph extends AbstractGraph implements Euler {
     public UndirGraph() {
         super(new ClassBasedEdgeFactory<>(DefaultWeightedEdge.class), false, false);
     }

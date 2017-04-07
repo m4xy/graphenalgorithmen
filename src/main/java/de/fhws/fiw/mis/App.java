@@ -1,7 +1,6 @@
 package de.fhws.fiw.mis;
 
 import de.fhws.fiw.mis.graph.DirGraph;
-import de.fhws.fiw.mis.graph.UndirGraph;
 import de.fhws.fiw.mis.graph.io.dotconverter.DotConverter;
 import de.fhws.fiw.mis.graph.io.dotconverter.GraphViz;
 import de.fhws.fiw.mis.graph.io.exporter.GraphExporter;

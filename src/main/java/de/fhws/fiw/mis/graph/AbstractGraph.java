@@ -11,8 +11,8 @@ import java.util.stream.Collectors;
 /**
  * Created by maxarndt on 06.04.17.
  */
-public abstract class GraphImpl extends AbstractBaseGraph<Vertex, DefaultWeightedEdge> {
-    public GraphImpl(EdgeFactory<Vertex, DefaultWeightedEdge> ef, boolean allowMultipleEdges, boolean allowLoops) {
+public abstract class AbstractGraph extends AbstractBaseGraph<Vertex, DefaultWeightedEdge> {
+    public AbstractGraph(EdgeFactory<Vertex, DefaultWeightedEdge> ef, boolean allowMultipleEdges, boolean allowLoops) {
         super(ef, allowMultipleEdges, allowLoops);
     }
 
