@@ -10,6 +10,7 @@
   <title>graphenalgorithmen</title>
 
   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bower_components/vis/dist/vis-network.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -47,17 +48,16 @@
 
   <!-- Main component for a primary marketing message or call to action -->
   <div class="jumbotron">
-    <h1>Navbar example</h1>
-    <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-    <p>To see the difference between static and fixed top navbars, just scroll.</p>
-    <p>
-      <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-    </p>
+    <h1>Graph Example</h1>
+    <div id="graph"></div>
+    <div id="status"></div>
   </div>
 
 </div> <!-- /container -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/vis/dist/vis.min.js"></script>
+<script src="js/graph.js"></script>
 </body>
 </html>
 
