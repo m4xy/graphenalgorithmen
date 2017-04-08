@@ -9,8 +9,12 @@ import org.jgrapht.graph.DefaultWeightedEdge;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * Created by maxarndt on 22.03.17.
@@ -40,27 +44,12 @@ public class GraphImporterImpl implements GraphImporter {
     }
 
     private List<String> readFile(String fileName) {
-        ClassLoader classLoader = getClass().getClassLoader();
         List<String> stringList = new LinkedList<>();
 
-        try {
-            File file = new File(classLoader.getResource(fileName).getFile());
-
-            BufferedReader br = new BufferedReader(new FileReader(file));
-            try {
-                String line = br.readLine();
-
-                while (line != null) {
-                    stringList.add(line);
-                    line = br.readLine();
-                }
-
-            } finally {
-                br.close();
-            }
-        }
-        catch(Exception e) {
-            System.out.println(e.toString());
+        try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
+            stream.forEach(l -> stringList.add(l));
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
         return stringList;
