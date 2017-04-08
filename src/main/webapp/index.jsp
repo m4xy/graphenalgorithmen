@@ -47,11 +47,14 @@
 <div class="container">
 
   <!-- Main component for a primary marketing message or call to action -->
-  <div class="jumbotron">
-    <h1>Graph Example</h1>
-    <div id="graph"></div>
-    <div id="status"></div>
+  <div class="jumbotron-container">
+    <div class="jumbotron">
+      <h1>Graph Example</h1>
+      <div id="graph"></div>
+      <div id="status"></div>
+    </div>
   </div>
+
 
 </div> <!-- /container -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
