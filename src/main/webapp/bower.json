@@ -1,0 +1,22 @@
+{
+  "name": "graphenalgorithmen",
+  "homepage": "https://github.com/m4xy/graphenalgorithmen",
+  "authors": [
+    "Max Arndt <max@eyrichshof.de>"
+  ],
+  "description": "FHWS MIS SS17 Theoretische Informatik",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vis": "^4.19.1",
+    "bootstrap": "^3.3.7"
+  }
+}

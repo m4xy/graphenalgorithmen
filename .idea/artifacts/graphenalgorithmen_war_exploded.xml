@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="graphenalgorithmen:war exploded">
+    <output-path>$PROJECT_DIR$/target/graphenalgorithmen</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="graphenalgorithmen" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.jgrapht:jgrapht-core:1.0.1" />
+          <element id="library" level="project" name="Maven: org.jgrapht:jgrapht-ext:1.0.1" />
+          <element id="library" level="project" name="Maven: org.tinyjee.jgraphx:jgraphx:2.0.0.1" />
+          <element id="library" level="project" name="Maven: jgraph:jgraph:5.13.0.0" />
+          <element id="library" level="project" name="Maven: org.antlr:antlr4-runtime:4.5.3" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/graphenalgorithmen/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="graphenalgorithmen/web/Web" />
+    </root>
+  </artifact>
+</component>
