@@ -7,6 +7,7 @@ import org.jgrapht.graph.specifics.Specifics;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by maxarndt on 05.04.17.
@@ -40,7 +41,23 @@ public class DirGraph extends AbstractGraph implements DirectedGraph<Vertex, Def
         return isConnected() && vertexSet().stream().
                 allMatch(v -> Math.abs(inDegreeOf(v) - outDegreeOf(v)) < 2);
     }
-    public boolean hasCycle() {
-        throw new NotImplementedException();
+    public boolean hasCycle() { //Kahn's Algorithm
+        DirGraph clone = (DirGraph)clone();
+        List<Vertex> sortedVertices = new LinkedList<>();
+        Queue<Vertex> verticesWOIncEdge = new LinkedList<>(clone.vertexSet().stream()
+                .filter(v -> clone.inDegreeOf(v) == 0)
+                .collect(Collectors.toList()));
+        while(!verticesWOIncEdge.isEmpty()) {
+            Vertex curVertex = verticesWOIncEdge.remove();
+            sortedVertices.add(curVertex);
+            clone.edgesOf(curVertex).stream().forEach(e -> {
+                Vertex targetVertex = clone.getEdgeTarget(e);
+                clone.removeEdge(e);
+                if(clone.inDegreeOf(targetVertex) == 0)
+                    verticesWOIncEdge.add(targetVertex);
+            });
+        }
+
+        return clone.edgeSet().size() > 0 ? true : false;
     }
 }

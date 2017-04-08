@@ -16,15 +16,15 @@ public class App {
         final String DOT_FILE_NAME = "graph.dot";
 
         GraphImporter importer = new GraphImporterImpl();
-        UndirGraph g = importer.importGraph("Baum.txt");
-//        DirGraph g = importer.importDirectedGraph("Euler1.txt");
+//        UndirGraph g = importer.importGraph("Baum.txt");
+        DirGraph g = importer.importDirectedGraph("Test.txt");
 
         System.out.println(g.hasEulerianCircuit());
         System.out.println(g.hasEulerianPath());
 //        System.out.println(g.hasCycle());
 //        g.breadthFirstSearch(g.vertexSet().stream().findFirst().get()).stream().forEach(System.out::println);
-        g.depthFirstSearch(g.vertexSet().stream().findFirst().get()).stream().forEach(System.out::println);
-
+//        g.depthFirstSearch(g.vertexSet().stream().findFirst().get()).stream().forEach(System.out::println);
+        System.out.println(g.hasCycle());
 
         GraphExporter exporter = new GraphExporterImpl();
         exporter.exportGraph(g, DOT_FILE_NAME);
