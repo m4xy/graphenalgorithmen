@@ -4,16 +4,9 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.ServletContext;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.URI;
-import java.net.URL;
 import java.nio.file.*;
-import java.nio.file.attribute.BasicFileAttributes;
 import java.util.*;
-import java.util.stream.Stream;
 
 /**
  * Created by maxarndt on 09.04.17.
@@ -21,12 +14,7 @@ import java.util.stream.Stream;
 @ManagedBean(name = "indexBean", eager = true)
 @RequestScoped
 public class IndexBean {
-    private ServletContext context;
 
-
-    public String getHelloWorld() {
-        return "Hello World!";
-    }
     public List<String> getFiles() {
         List<String> files = new LinkedList<>();
 
