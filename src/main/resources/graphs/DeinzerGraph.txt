@@ -1,0 +1,1017 @@
+# Websites in the Graph
+knoten http://wikipedia.org
+knoten http://dmoztools.net/
+knoten http://twitter.com
+knoten http://en.wikipedia.org/
+knoten http://es.wikipedia.org/
+knoten https://www.resource-zone.com/
+knoten https://twitter.com/dmoz
+knoten http://de.wikipedia.org/
+knoten http://dmoztools.net/docs/en/about.html
+knoten http://ja.wikipedia.org/
+knoten http://dmoztools.net/docs/en/help/become.html
+knoten http://ru.wikipedia.org/
+knoten http://dmoztools.net/docs/en/add.html
+knoten http://fr.wikipedia.org/
+knoten http://dmoztools.net/docs/en/help/helpmain.html
+knoten http://it.wikipedia.org/
+knoten http://dmoztools.net/editors/
+knoten http://zh.wikipedia.org/
+knoten http://www.facebook.com/dmoz
+knoten http://www.twitter.com/dmoz
+knoten http://pt.wikipedia.org/
+knoten http://pl.wikipedia.org/
+knoten http://dmoztools.net/docs/en/searchguide.html
+knoten http://dmoztools.net/Arts/
+knoten http://dmoztools.net/Arts/Movies/
+knoten http://dmoztools.net/Arts/Television/
+knoten http://dmoztools.net/Arts/Music/
+knoten http://dmoztools.net/Business/
+knoten http://dmoztools.net/Business/Employment/
+knoten http://dmoztools.net/Business/Real_Estate/
+knoten http://dmoztools.net/Business/Investing/
+knoten http://dmoztools.net/Computers/
+knoten http://dmoztools.net/Computers/Internet/
+knoten http://dmoztools.net/Computers/Software/
+knoten http://nl.wikipedia.org/
+knoten http://dmoztools.net/Computers/Hardware/
+knoten http://dmoztools.net/Games/
+knoten http://dmoztools.net/Games/Video_Games/
+knoten http://dmoztools.net/Games/Roleplaying/
+knoten http://ceb.wikipedia.org/
+knoten http://dmoztools.net/Games/Gambling/
+knoten http://sv.wikipedia.org/
+knoten http://vi.wikipedia.org/
+knoten http://dmoztools.net/Health/
+knoten http://war.wikipedia.org/
+knoten http://dmoztools.net/Health/Fitness/
+knoten http://dmoztools.net/Health/Medicine/
+knoten http://ar.wikipedia.org/
+knoten http://az.wikipedia.org/
+knoten http://dmoztools.net/Health/Alternative/
+knoten http://bg.wikipedia.org/
+knoten http://dmoztools.net/Home/
+knoten http://zh-min-nan.wikipedia.org/
+knoten http://dmoztools.net/Home/Family/
+knoten http://be.wikipedia.org/
+knoten http://dmoztools.net/Home/Consumer_Information/
+knoten http://dmoztools.net/Home/Cooking/
+knoten http://dmoztools.net/News/
+knoten http://ca.wikipedia.org/
+knoten http://cs.wikipedia.org/
+knoten http://dmoztools.net/News/Media/
+knoten http://dmoztools.net/News/Newspapers/
+knoten http://da.wikipedia.org/
+knoten http://et.wikipedia.org/
+knoten http://dmoztools.net/News/Weather/
+knoten http://el.wikipedia.org/
+knoten http://dmoztools.net/Recreation/
+knoten http://eo.wikipedia.org/
+knoten http://eu.wikipedia.org/
+knoten http://dmoztools.net/Recreation/Travel/
+knoten http://fa.wikipedia.org/
+knoten http://dmoztools.net/Recreation/Food/
+knoten http://gl.wikipedia.org/
+knoten http://dmoztools.net/Recreation/Outdoors/
+knoten http://ko.wikipedia.org/
+knoten http://dmoztools.net/Recreation/Humor/
+knoten http://hy.wikipedia.org/
+knoten http://hi.wikipedia.org/
+knoten http://dmoztools.net/Reference/
+knoten http://hr.wikipedia.org/
+knoten http://dmoztools.net/Reference/Maps/
+knoten http://id.wikipedia.org/
+knoten http://dmoztools.net/Reference/Education/
+knoten http://he.wikipedia.org/
+knoten http://ka.wikipedia.org/
+knoten http://dmoztools.net/Reference/Libraries/
+knoten http://la.wikipedia.org/
+knoten http://dmoztools.net/Regional/
+knoten http://lt.wikipedia.org/
+knoten http://dmoztools.net/Regional/North_America/United_States/
+knoten http://hu.wikipedia.org/
+knoten http://ms.wikipedia.org/
+knoten http://dmoztools.net/Regional/North_America/Canada/
+knoten http://min.wikipedia.org/
+knoten http://dmoztools.net/Regional/Europe/United_Kingdom/
+knoten http://no.wikipedia.org/
+knoten http://dmoztools.net/Regional/Europe/
+knoten http://nn.wikipedia.org/
+knoten http://ce.wikipedia.org/
+knoten http://dmoztools.net/Science/
+knoten http://uz.wikipedia.org/
+knoten http://dmoztools.net/Science/Biology/
+knoten http://dmoztools.net/Science/Social_Sciences/Psychology/
+knoten http://kk.wikipedia.org/
+knoten http://dmoztools.net/Science/Physics/
+knoten http://ro.wikipedia.org/
+knoten http://simple.wikipedia.org/
+knoten http://dmoztools.net/Shopping/
+knoten http://sk.wikipedia.org/
+knoten http://dmoztools.net/Shopping/Clothing/
+knoten http://sl.wikipedia.org/
+knoten http://dmoztools.net/Shopping/Food/
+knoten http://sr.wikipedia.org/
+knoten http://dmoztools.net/Shopping/Gifts/
+knoten http://sh.wikipedia.org/
+knoten http://fi.wikipedia.org/
+knoten http://dmoztools.net/Society/
+knoten http://th.wikipedia.org/
+knoten http://dmoztools.net/Society/People/
+knoten http://tr.wikipedia.org/
+knoten http://dmoztools.net/Society/Religion_and_Spirituality/
+knoten http://uk.wikipedia.org/
+knoten http://ur.wikipedia.org/
+knoten http://dmoztools.net/Society/Issues/
+knoten http://vo.wikipedia.org/
+knoten http://dmoztools.net/Sports/
+knoten http://dmoztools.net/Sports/Baseball/
+knoten http://af.wikipedia.org/
+knoten http://dmoztools.net/Sports/Soccer/
+knoten http://als.wikipedia.org/
+knoten http://dmoztools.net/Sports/Basketball/
+knoten http://am.wikipedia.org/
+knoten http://dmoztools.net/Kids_and_Teens/
+knoten http://an.wikipedia.org/
+knoten http://ast.wikipedia.org/
+knoten http://dmoztools.net/Kids_and_Teens/Arts/
+knoten http://bn.wikipedia.org/
+knoten http://dmoztools.net/Kids_and_Teens/School_Time/
+knoten http://dmoztools.net/Kids_and_Teens/Teen_Life/
+knoten http://dmoztools.net/World/
+knoten http://map-bms.wikipedia.org/
+knoten http://dmoztools.net/World/Deutsch/
+knoten http://ba.wikipedia.org/
+knoten http://be-tarask.wikipedia.org/
+knoten http://bpy.wikipedia.org/
+knoten http://bar.wikipedia.org/
+knoten http://bs.wikipedia.org/
+knoten http://br.wikipedia.org/
+knoten http://cv.wikipedia.org/
+knoten http://fo.wikipedia.org/
+knoten http://fy.wikipedia.org/
+knoten http://ga.wikipedia.org/
+knoten http://gd.wikipedia.org/
+knoten http://gu.wikipedia.org/
+knoten http://hsb.wikipedia.org/
+knoten http://io.wikipedia.org/
+knoten http://ilo.wikipedia.org/
+knoten http://ia.wikipedia.org/
+knoten http://os.wikipedia.org/
+knoten http://is.wikipedia.org/
+knoten http://jv.wikipedia.org/
+knoten http://kn.wikipedia.org/
+knoten http://ht.wikipedia.org/
+knoten http://ku.wikipedia.org/
+knoten http://ckb.wikipedia.org/
+knoten http://ky.wikipedia.org/
+knoten http://mrj.wikipedia.org/
+knoten http://lv.wikipedia.org/
+knoten http://lb.wikipedia.org/
+knoten http://li.wikipedia.org/
+knoten http://lmo.wikipedia.org/
+knoten http://mai.wikipedia.org/
+knoten http://mk.wikipedia.org/
+knoten http://mg.wikipedia.org/
+knoten http://ml.wikipedia.org/
+knoten http://mr.wikipedia.org/
+knoten http://arz.wikipedia.org/
+knoten http://mzn.wikipedia.org/
+knoten http://mn.wikipedia.org/
+knoten http://my.wikipedia.org/
+knoten http://new.wikipedia.org/
+knoten http://ne.wikipedia.org/
+knoten http://nap.wikipedia.org/
+knoten http://oc.wikipedia.org/
+knoten http://or.wikipedia.org/
+knoten http://pa.wikipedia.org/
+knoten http://pnb.wikipedia.org/
+knoten http://pms.wikipedia.org/
+knoten http://nds.wikipedia.org/
+knoten http://qu.wikipedia.org/
+knoten http://cy.wikipedia.org/
+knoten http://sa.wikipedia.org/
+knoten http://sah.wikipedia.org/
+knoten http://sco.wikipedia.org/
+knoten http://sq.wikipedia.org/
+knoten http://scn.wikipedia.org/
+knoten http://si.wikipedia.org/
+knoten http://su.wikipedia.org/
+knoten http://sw.wikipedia.org/
+knoten http://tl.wikipedia.org/
+knoten http://ta.wikipedia.org/
+knoten http://tt.wikipedia.org/
+knoten http://te.wikipedia.org/
+knoten http://tg.wikipedia.org/
+knoten http://azb.wikipedia.org/
+knoten http://bug.wikipedia.org/
+knoten http://vec.wikipedia.org/
+knoten http://wa.wikipedia.org/
+knoten http://dmoztools.net/World/Fran%C3%A7ais/
+knoten http://yi.wikipedia.org/
+knoten http://dmoztools.net/World/Japanese/
+knoten http://yo.wikipedia.org/
+knoten http://zh-yue.wikipedia.org/
+knoten http://dmoztools.net/World/Italiano/
+knoten http://bat-smg.wikipedia.org/
+knoten http://dmoztools.net/World/Espa%C3%B1ol/
+knoten http://ace.wikipedia.org/
+knoten http://dmoztools.net/World/Russian/
+knoten http://kbd.wikipedia.org/
+knoten http://ang.wikipedia.org/
+knoten http://dmoztools.net/World/Nederlands/
+knoten http://ab.wikipedia.org/
+knoten http://dmoztools.net/World/Polski/
+knoten http://roa-rup.wikipedia.org/
+knoten http://frp.wikipedia.org/
+knoten http://dmoztools.net/World/T%C3%BCrk%C3%A7e/
+knoten http://arc.wikipedia.org/
+knoten http://gn.wikipedia.org/
+knoten http://dmoztools.net/World/Dansk/
+knoten http://dmoztools.net/World/Chinese_Simplified/
+knoten http://av.wikipedia.org/
+knoten http://ay.wikipedia.org/
+knoten http://bjn.wikipedia.org/
+knoten http://bh.wikipedia.org/
+knoten http://bcl.wikipedia.org/
+knoten http://bo.wikipedia.org/
+knoten http://dmoztools.net/docs/en/termsofuse.html
+knoten http://bxr.wikipedia.org/
+knoten http://dmoztools.net/docs/en/cmbuild.html
+knoten http://cbk-zam.wikipedia.org/
+knoten http://co.wikipedia.org/
+knoten http://za.wikipedia.org/
+knoten http://pdc.wikipedia.org/
+knoten http://dv.wikipedia.org/
+knoten http://nv.wikipedia.org/
+knoten http://dsb.wikipedia.org/
+knoten http://eml.wikipedia.org/
+knoten http://myv.wikipedia.org/
+knoten http://ext.wikipedia.org/
+knoten http://hif.wikipedia.org/
+knoten http://fur.wikipedia.org/
+knoten http://gv.wikipedia.org/
+knoten http://gag.wikipedia.org/
+knoten http://ki.wikipedia.org/
+knoten http://glk.wikipedia.org/
+knoten http://gan.wikipedia.org/
+knoten http://hak.wikipedia.org/
+knoten http://xal.wikipedia.org/
+knoten http://ha.wikipedia.org/
+knoten http://haw.wikipedia.org/
+knoten http://ig.wikipedia.org/
+knoten http://ie.wikipedia.org/
+knoten http://kl.wikipedia.org/
+knoten http://pam.wikipedia.org/
+knoten http://csb.wikipedia.org/
+knoten http://kw.wikipedia.org/
+knoten http://km.wikipedia.org/
+knoten http://rw.wikipedia.org/
+knoten http://kv.wikipedia.org/
+knoten http://kg.wikipedia.org/
+knoten http://gom.wikipedia.org/
+knoten http://lo.wikipedia.org/
+knoten http://lad.wikipedia.org/
+knoten http://lbe.wikipedia.org/
+knoten http://lez.wikipedia.org/
+knoten http://lij.wikipedia.org/
+knoten http://ln.wikipedia.org/
+knoten http://jbo.wikipedia.org/
+knoten http://lrc.wikipedia.org/
+knoten http://lg.wikipedia.org/
+knoten http://mt.wikipedia.org/
+knoten http://zh-classical.wikipedia.org/
+knoten http://ty.wikipedia.org/
+knoten http://mi.wikipedia.org/
+knoten http://xmf.wikipedia.org/
+knoten http://cdo.wikipedia.org/
+knoten http://mwl.wikipedia.org/
+knoten http://mdf.wikipedia.org/
+knoten http://nah.wikipedia.org/
+knoten http://na.wikipedia.org/
+knoten http://nds-nl.wikipedia.org/
+knoten http://frr.wikipedia.org/
+knoten http://nrm.wikipedia.org/
+knoten http://nov.wikipedia.org/
+knoten http://mhr.wikipedia.org/
+knoten http://as.wikipedia.org/
+knoten http://pi.wikipedia.org/
+knoten http://pag.wikipedia.org/
+knoten http://pap.wikipedia.org/
+knoten http://ps.wikipedia.org/
+knoten http://koi.wikipedia.org/
+knoten http://pfl.wikipedia.org/
+knoten http://pcd.wikipedia.org/
+knoten http://krc.wikipedia.org/
+knoten http://kaa.wikipedia.org/
+knoten http://crh.wikipedia.org/
+knoten http://ksh.wikipedia.org/
+knoten http://rm.wikipedia.org/
+knoten http://rue.wikipedia.org/
+knoten http://se.wikipedia.org/
+knoten http://sc.wikipedia.org/
+knoten http://stq.wikipedia.org/
+knoten http://nso.wikipedia.org/
+knoten http://sn.wikipedia.org/
+knoten http://sd.wikipedia.org/
+knoten http://szl.wikipedia.org/
+knoten http://so.wikipedia.org/
+knoten http://srn.wikipedia.org/
+knoten http://kab.wikipedia.org/
+knoten http://roa-tara.wikipedia.org/
+knoten http://tet.wikipedia.org/
+knoten http://tpi.wikipedia.org/
+knoten http://to.wikipedia.org/
+knoten http://tk.wikipedia.org/
+knoten http://tyv.wikipedia.org/
+knoten http://udm.wikipedia.org/
+knoten http://ug.wikipedia.org/
+knoten http://vep.wikipedia.org/
+knoten http://fiu-vro.wikipedia.org/
+knoten http://vls.wikipedia.org/
+knoten http://wo.wikipedia.org/
+knoten http://wuu.wikipedia.org/
+knoten http://diq.wikipedia.org/
+knoten http://zea.wikipedia.org/
+knoten http://ak.wikipedia.org/
+knoten http://bm.wikipedia.org/
+knoten http://bi.wikipedia.org/
+knoten http://ch.wikipedia.org/
+knoten http://ny.wikipedia.org/
+knoten http://ee.wikipedia.org/
+knoten http://ff.wikipedia.org/
+knoten http://got.wikipedia.org/
+knoten http://iu.wikipedia.org/
+knoten http://ik.wikipedia.org/
+knoten http://ks.wikipedia.org/
+knoten http://ltg.wikipedia.org/
+knoten http://mo.wikipedia.org/
+knoten http://fj.wikipedia.org/
+knoten http://cr.wikipedia.org/
+knoten http://pih.wikipedia.org/
+knoten http://om.wikipedia.org/
+knoten http://pnt.wikipedia.org/
+knoten http://dz.wikipedia.org/
+knoten http://rmy.wikipedia.org/
+knoten http://rn.wikipedia.org/
+knoten http://sm.wikipedia.org/
+knoten http://sg.wikipedia.org/
+knoten http://st.wikipedia.org/
+knoten http://tn.wikipedia.org/
+knoten http://cu.wikipedia.org/
+knoten http://ss.wikipedia.org/
+knoten http://ti.wikipedia.org/
+knoten http://chr.wikipedia.org/
+knoten http://chy.wikipedia.org/
+knoten http://ve.wikipedia.org/
+knoten http://ts.wikipedia.org/
+knoten http://tum.wikipedia.org/
+knoten http://tw.wikipedia.org/
+knoten http://xh.wikipedia.org/
+knoten http://zu.wikipedia.org/
+knoten http://meta.wikimedia.org/wiki/List_of_Wikipedias
+knoten http://de.wikipedia.org/wiki/Wikipedia:Sprachen
+knoten http://meta.wikimedia.org/wiki/Liste_des_Wikip%C3%A9dias
+knoten http://pl.wikipedia.org/wiki/Wikipedia:Lista_wersji_j%C4%99zykowych
+knoten http://ja.wikipedia.org/wiki/Wikipedia:%E5%A4%9A%E8%A8%80%E8%AA%9E%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%A8%E3%81%97%E3%81%A6%E3%81%AE%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2
+knoten http://meta.wikimedia.org/wiki/Lista_de_Wikipedias
+knoten http://zh.wikipedia.org/wiki/Wikipedia:%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91%E8%AF%AD%E8%A8%80%E5%88%97%E8%A1%A8
+knoten http://ru.wikipedia.org/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D0%92
+knoten http://eo.wikipedia.org/wiki/Vikipedio:Internacia_Vikipedio
+knoten http://meta.wikimedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC%EC%9D%98_%EB%AA%A9%EB%A1%9D
+knoten http://vi.wikipedia.org/wiki/Wikipedia:Phi%C3%AAn_b%E1%BA%A3n_ng%C3%B4n_ng%E1%BB%AF
+knoten http://wikimediafoundation.org/
+knoten http://itunes.apple.com/app/apple-store/id324715238
+knoten http://play.google.com/store/apps/details
+knoten http://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications
+knoten http://commons.wikimedia.org/
+knoten http://www.wikivoyage.org/
+knoten http://www.wiktionary.org/
+knoten http://www.wikibooks.org/
+knoten http://www.wikinews.org/
+knoten http://www.wikidata.org/
+knoten http://www.wikiversity.org/
+knoten http://www.wikiquote.org/
+knoten http://www.mediawiki.org/
+knoten http://www.wikisource.org/
+knoten http://species.wikimedia.org/
+knoten http://meta.wikimedia.org/
+knoten http://creativecommons.org/licenses/by-sa/3.0/
+knoten http://meta.wikimedia.org/wiki/Terms_of_Use
+knoten http://meta.wikimedia.org/wiki/Privacy_policy
+knoten http://dmoztools.net/desc/Home/Family
+knoten http://dmoztools.net/public/abuse
+knoten http://dmoztools.net/Home/Family/Babies/
+knoten http://dmoztools.net/Home/Family/Grandparents/
+knoten http://dmoztools.net/Home/Family/Large_Families/
+knoten http://dmoztools.net/Home/Family/Multiple_Births/
+knoten http://dmoztools.net/Home/Family/Parenting/
+knoten http://dmoztools.net/Home/Family/Adoption/
+knoten http://dmoztools.net/Health/Child_Health/
+knoten http://dmoztools.net/Home/Family/Childcare/
+knoten http://dmoztools.net/Society/Death/
+knoten http://dmoztools.net/Society/Relationships/Divorce/
+knoten http://dmoztools.net/Home/Family/Foster_Care/
+knoten http://dmoztools.net/Reference/Education/K_through_12/Home_Schooling/
+knoten http://dmoztools.net/Society/Relationships/Marriage/
+knoten http://dmoztools.net/Home/Family/Pregnancy/
+knoten http://dmoztools.net/Home/Family/Runaways/
+knoten http://dmoztools.net/Home/Family/Chats_and_Forums/
+knoten http://dmoztools.net/Society/Religion_and_Spirituality/Christianity/People/Family/
+knoten http://dmoztools.net/Home/Family/Family_Resources_and_Support/
+knoten http://dmoztools.net/Home/Family/Family_Websites/
+knoten http://dmoztools.net/Society/Genealogy/
+knoten http://dmoztools.net/Home/Family/Publications/
+knoten http://dmoztools.net/Home/Family/Reunions/
+knoten http://dmoztools.net/Home/Family/Software/
+knoten http://dmoztools.net/Kids_and_Teens/Your_Family/
+knoten http://dmoztools.net/Society/Issues/Children%2C_Youth_and_Family/
+knoten http://dmoztools.net/Society/Law/Legal_Information/Family_Law/
+knoten http://dmoztools.net/World/Azerbaijani/Evdarl%C4%B1q/Ail%C9%99
+knoten http://dmoztools.net/World/Bahasa_Indonesia/Rumah_Tangga/Keluarga
+knoten http://dmoztools.net/World/Catal%C3%A0/Societat/Fam%C3%ADlia
+knoten http://dmoztools.net/World/%C4%8Cesky/Domov/Rodina
+knoten http://dmoztools.net/World/Dansk/Hus_og_hjem/Familie
+knoten http://dmoztools.net/World/Deutsch/Gesellschaft/Familie
+knoten http://dmoztools.net/World/Espa%C3%B1ol/Hogar/Familia
+knoten http://dmoztools.net/World/Fran%C3%A7ais/Soci%C3%A9t%C3%A9/Personnes/Famille
+knoten http://dmoztools.net/World/Italiano/Casa/Famiglia
+knoten http://dmoztools.net/World/Kurd%C3%AE/Civak/Gel/Malbat
+knoten http://dmoztools.net/World/Lietuvi%C5%B3/Buitis/%C5%A0eima
+knoten http://dmoztools.net/World/Nederlands/Huis_en_Tuin/Familie
+knoten http://dmoztools.net/World/Norsk/Hjem_og_familie/Familie
+knoten http://dmoztools.net/World/Polski/Dom/Rodzina
+knoten http://dmoztools.net/World/Portugu%C3%AAs/Lar/Fam%C3%ADlia
+knoten http://dmoztools.net/World/Rom%C3%A2n%C4%83/Acas%C4%83/Familie
+knoten http://dmoztools.net/World/Slovensky/Domov/Rodina
+knoten http://dmoztools.net/World/Suomi/Koti/Perhe
+knoten http://dmoztools.net/World/Svenska/Hus_och_hem/Familj
+knoten http://dmoztools.net/World/T%C3%BCrk%C3%A7e/Ev/Aile
+knoten http://dmoztools.net/World/Bulgarian/%D0%94%D0%BE%D0%BC/%D0%A1%D0%B5%D0%BC%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%BE
+knoten http://dmoztools.net/World/Russian/%D0%94%D0%BE%D0%BC/%D0%A1%D0%B5%D0%BC%D1%8C%D1%8F
+knoten http://dmoztools.net/World/Ukrainian/%D0%94%D1%96%D0%BC_%D1%82%D0%B0_%D1%81%D1%96%D0%BC'%D1%8F/%D0%A1%D1%96%D0%BC'%D1%8F
+knoten http://dmoztools.net/World/Hebrew/%D7%91%D7%99%D7%AA/%D7%9E%D7%A9%D7%A4%D7%97%D7%94
+knoten http://dmoztools.net/World/Arabic/%D8%A3%D8%B3%D8%B1%D8%A9
+knoten http://dmoztools.net/World/Thai/%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99/%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7
+knoten http://dmoztools.net/World/Japanese/%E5%AE%B6%E5%BA%AD/%E5%AE%B6%E6%97%8F
+knoten http://dmoztools.net/World/Chinese_Simplified/%E5%AE%B6%E5%BA%AD/%E5%AE%B6%E6%97%8F
+knoten http://dmoztools.net/World/Korean/%EA%B0%80%EC%A0%95%EA%B3%BC_%EC%83%9D%ED%99%9C/%EA%B0%80%EC%A1%B1%2C%EA%B0%80%EC%A0%95
+knoten http://search.aol.com/aol/search
+knoten http://www.ask.com/web
+knoten https://www.bing.com/search
+knoten https://duckduckgo.com/
+knoten https://gigablast.com/search
+knoten https://www.google.com/search
+knoten https://www.ixquick.com/do/search/
+knoten https://search.yahoo.com/search
+knoten https://www.yandex.com/yandsearch
+knoten http://new.yippy.com/search
+knoten http://dmoztools.net/about.html
+knoten http://dmoztools.net/docs/en/socialcontract.html
+knoten http://dmoztools.net/docs/en/rdf.html
+knoten http://dmoztools.net/docs/en/help/submit.html
+knoten http://dmoztools.net/guidelines/
+knoten http://dmoztools.net/erz/
+knoten http://dmoztools.net/docs/ar/about.html
+knoten http://dmoztools.net/docs/an/about.html
+knoten http://dmoztools.net/docs/ca/about.html
+knoten http://dmoztools.net/docs/cs/about.html
+knoten http://dmoztools.net/docs/da/about.html
+knoten http://dmoztools.net/docs/de/about.html
+knoten http://dmoztools.net/docs/es/about.html
+knoten http://dmoztools.net/docs/fr/about.html
+knoten http://dmoztools.net/docs/gl/about.html
+knoten http://dmoztools.net/docs/he/about.html
+knoten http://dmoztools.net/docs/it/about.html
+knoten http://dmoztools.net/docs/ja/about.html
+knoten http://dmoztools.net/docs/ko/about.html
+knoten http://dmoztools.net/docs/lv/about.html
+knoten http://dmoztools.net/docs/lt/about.html
+knoten http://dmoztools.net/docs/nl/about.html
+knoten http://dmoztools.net/docs/pl/about.html
+knoten http://dmoztools.net/docs/pt/about.html
+knoten http://dmoztools.net/docs/ro/about.html
+knoten http://dmoztools.net/docs/tr/about.html
+knoten http://dmoztools.net/docs/ur/about.html
+knoten http://dmoztools.net/docs/zh_CN/about.html
+knoten http://dmoztools.net/docs/en/help/geninfo.html
+knoten http://dmoztools.net/Computers/Internet/Searching/Directories/DMOZ/Sites_Using_DMOZ_Data
+knoten http://dmoztools.net/Computers/Internet/Searching/Directories/DMOZ/News_and_Media
+knoten http://dmoztools.net/docs/en/link.html
+knoten http://dmoztools.net/docs/en/license.html
+
+# Links between Websites
+kante http://dmoztools.net/ http://dmoztools.net/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/
+kante http://wikipedia.org http://en.wikipedia.org/
+kante http://wikipedia.org http://es.wikipedia.org/
+kante http://dmoztools.net/ https://www.resource-zone.com/
+kante http://dmoztools.net/ https://twitter.com/dmoz
+kante http://dmoztools.net/Home/Family/ https://twitter.com/dmoz
+kante http://wikipedia.org http://de.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/docs/en/about.html
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/docs/en/about.html
+kante http://wikipedia.org http://ja.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/docs/en/help/become.html
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/docs/en/help/become.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/en/help/become.html
+kante http://wikipedia.org http://ru.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/docs/en/add.html
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/docs/en/add.html
+kante http://wikipedia.org http://fr.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/docs/en/help/helpmain.html
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/docs/en/help/helpmain.html
+kante http://wikipedia.org http://it.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/editors/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/editors/
+kante http://wikipedia.org http://zh.wikipedia.org/
+kante http://dmoztools.net/ http://www.facebook.com/dmoz
+kante http://dmoztools.net/Home/Family/ http://www.facebook.com/dmoz
+kante http://dmoztools.net/ http://www.twitter.com/dmoz
+kante http://dmoztools.net/Home/Family/ http://www.twitter.com/dmoz
+kante http://wikipedia.org http://pt.wikipedia.org/
+kante http://wikipedia.org http://pl.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/docs/en/searchguide.html
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/docs/en/searchguide.html
+kante http://dmoztools.net/ http://dmoztools.net/Arts/
+kante http://dmoztools.net/ http://dmoztools.net/Arts/Movies/
+kante http://dmoztools.net/ http://dmoztools.net/Arts/Television/
+kante http://dmoztools.net/ http://dmoztools.net/Arts/Music/
+kante http://dmoztools.net/ http://dmoztools.net/Business/
+kante http://dmoztools.net/ http://dmoztools.net/Business/Employment/
+kante http://dmoztools.net/ http://dmoztools.net/Business/Real_Estate/
+kante http://dmoztools.net/ http://dmoztools.net/Business/Investing/
+kante http://dmoztools.net/ http://dmoztools.net/Computers/
+kante http://dmoztools.net/ http://dmoztools.net/Computers/Internet/
+kante http://dmoztools.net/ http://dmoztools.net/Computers/Software/
+kante http://wikipedia.org http://nl.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Computers/Hardware/
+kante http://dmoztools.net/ http://dmoztools.net/Games/
+kante http://dmoztools.net/ http://dmoztools.net/Games/Video_Games/
+kante http://dmoztools.net/ http://dmoztools.net/Games/Roleplaying/
+kante http://wikipedia.org http://ceb.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Games/Gambling/
+kante http://wikipedia.org http://sv.wikipedia.org/
+kante http://wikipedia.org http://vi.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Health/
+kante http://wikipedia.org http://war.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Health/Fitness/
+kante http://dmoztools.net/ http://dmoztools.net/Health/Medicine/
+kante http://wikipedia.org http://ar.wikipedia.org/
+kante http://wikipedia.org http://az.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Health/Alternative/
+kante http://wikipedia.org http://bg.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Home/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Home/
+kante http://wikipedia.org http://zh-min-nan.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Home/Family/
+kante http://wikipedia.org http://be.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Home/Consumer_Information/
+kante http://dmoztools.net/ http://dmoztools.net/Home/Cooking/
+kante http://dmoztools.net/ http://dmoztools.net/News/
+kante http://wikipedia.org http://ca.wikipedia.org/
+kante http://wikipedia.org http://cs.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/News/Media/
+kante http://dmoztools.net/ http://dmoztools.net/News/Newspapers/
+kante http://wikipedia.org http://da.wikipedia.org/
+kante http://wikipedia.org http://et.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/News/Weather/
+kante http://wikipedia.org http://el.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Recreation/
+kante http://wikipedia.org http://eo.wikipedia.org/
+kante http://wikipedia.org http://eu.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Recreation/Travel/
+kante http://wikipedia.org http://fa.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Recreation/Food/
+kante http://wikipedia.org http://gl.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Recreation/Outdoors/
+kante http://wikipedia.org http://ko.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Recreation/Humor/
+kante http://wikipedia.org http://hy.wikipedia.org/
+kante http://wikipedia.org http://hi.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Reference/
+kante http://wikipedia.org http://hr.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Reference/Maps/
+kante http://wikipedia.org http://id.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Reference/Education/
+kante http://wikipedia.org http://he.wikipedia.org/
+kante http://wikipedia.org http://ka.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Reference/Libraries/
+kante http://wikipedia.org http://la.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Regional/
+kante http://wikipedia.org http://lt.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Regional/North_America/United_States/
+kante http://wikipedia.org http://hu.wikipedia.org/
+kante http://wikipedia.org http://ms.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Regional/North_America/Canada/
+kante http://wikipedia.org http://min.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Regional/Europe/United_Kingdom/
+kante http://wikipedia.org http://no.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Regional/Europe/
+kante http://wikipedia.org http://nn.wikipedia.org/
+kante http://wikipedia.org http://ce.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Science/
+kante http://wikipedia.org http://uz.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Science/Biology/
+kante http://dmoztools.net/ http://dmoztools.net/Science/Social_Sciences/Psychology/
+kante http://wikipedia.org http://kk.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Science/Physics/
+kante http://wikipedia.org http://ro.wikipedia.org/
+kante http://wikipedia.org http://simple.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Shopping/
+kante http://wikipedia.org http://sk.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Shopping/Clothing/
+kante http://wikipedia.org http://sl.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Shopping/Food/
+kante http://wikipedia.org http://sr.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Shopping/Gifts/
+kante http://wikipedia.org http://sh.wikipedia.org/
+kante http://wikipedia.org http://fi.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Society/
+kante http://wikipedia.org http://th.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Society/People/
+kante http://wikipedia.org http://tr.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Society/Religion_and_Spirituality/
+kante http://wikipedia.org http://uk.wikipedia.org/
+kante http://wikipedia.org http://ur.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Society/Issues/
+kante http://wikipedia.org http://vo.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Sports/
+kante http://dmoztools.net/ http://dmoztools.net/Sports/Baseball/
+kante http://wikipedia.org http://af.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Sports/Soccer/
+kante http://wikipedia.org http://als.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Sports/Basketball/
+kante http://wikipedia.org http://am.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Kids_and_Teens/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Kids_and_Teens/
+kante http://wikipedia.org http://an.wikipedia.org/
+kante http://wikipedia.org http://ast.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Kids_and_Teens/Arts/
+kante http://wikipedia.org http://bn.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/Kids_and_Teens/School_Time/
+kante http://dmoztools.net/ http://dmoztools.net/Kids_and_Teens/Teen_Life/
+kante http://dmoztools.net/ http://dmoztools.net/World/
+kante http://wikipedia.org http://map-bms.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/World/Deutsch/
+kante http://wikipedia.org http://ba.wikipedia.org/
+kante http://wikipedia.org http://be-tarask.wikipedia.org/
+kante http://wikipedia.org http://bpy.wikipedia.org/
+kante http://wikipedia.org http://bar.wikipedia.org/
+kante http://wikipedia.org http://bs.wikipedia.org/
+kante http://wikipedia.org http://br.wikipedia.org/
+kante http://wikipedia.org http://cv.wikipedia.org/
+kante http://wikipedia.org http://fo.wikipedia.org/
+kante http://wikipedia.org http://fy.wikipedia.org/
+kante http://wikipedia.org http://ga.wikipedia.org/
+kante http://wikipedia.org http://gd.wikipedia.org/
+kante http://wikipedia.org http://gu.wikipedia.org/
+kante http://wikipedia.org http://hsb.wikipedia.org/
+kante http://wikipedia.org http://io.wikipedia.org/
+kante http://wikipedia.org http://ilo.wikipedia.org/
+kante http://wikipedia.org http://ia.wikipedia.org/
+kante http://wikipedia.org http://os.wikipedia.org/
+kante http://wikipedia.org http://is.wikipedia.org/
+kante http://wikipedia.org http://jv.wikipedia.org/
+kante http://wikipedia.org http://kn.wikipedia.org/
+kante http://wikipedia.org http://ht.wikipedia.org/
+kante http://wikipedia.org http://ku.wikipedia.org/
+kante http://wikipedia.org http://ckb.wikipedia.org/
+kante http://wikipedia.org http://ky.wikipedia.org/
+kante http://wikipedia.org http://mrj.wikipedia.org/
+kante http://wikipedia.org http://lv.wikipedia.org/
+kante http://wikipedia.org http://lb.wikipedia.org/
+kante http://wikipedia.org http://li.wikipedia.org/
+kante http://wikipedia.org http://lmo.wikipedia.org/
+kante http://wikipedia.org http://mai.wikipedia.org/
+kante http://wikipedia.org http://mk.wikipedia.org/
+kante http://wikipedia.org http://mg.wikipedia.org/
+kante http://wikipedia.org http://ml.wikipedia.org/
+kante http://wikipedia.org http://mr.wikipedia.org/
+kante http://wikipedia.org http://arz.wikipedia.org/
+kante http://wikipedia.org http://mzn.wikipedia.org/
+kante http://wikipedia.org http://mn.wikipedia.org/
+kante http://wikipedia.org http://my.wikipedia.org/
+kante http://wikipedia.org http://new.wikipedia.org/
+kante http://wikipedia.org http://ne.wikipedia.org/
+kante http://wikipedia.org http://nap.wikipedia.org/
+kante http://wikipedia.org http://oc.wikipedia.org/
+kante http://wikipedia.org http://or.wikipedia.org/
+kante http://wikipedia.org http://pa.wikipedia.org/
+kante http://wikipedia.org http://pnb.wikipedia.org/
+kante http://wikipedia.org http://pms.wikipedia.org/
+kante http://wikipedia.org http://nds.wikipedia.org/
+kante http://wikipedia.org http://qu.wikipedia.org/
+kante http://wikipedia.org http://cy.wikipedia.org/
+kante http://wikipedia.org http://sa.wikipedia.org/
+kante http://wikipedia.org http://sah.wikipedia.org/
+kante http://wikipedia.org http://sco.wikipedia.org/
+kante http://wikipedia.org http://sq.wikipedia.org/
+kante http://wikipedia.org http://scn.wikipedia.org/
+kante http://wikipedia.org http://si.wikipedia.org/
+kante http://wikipedia.org http://su.wikipedia.org/
+kante http://wikipedia.org http://sw.wikipedia.org/
+kante http://wikipedia.org http://tl.wikipedia.org/
+kante http://wikipedia.org http://ta.wikipedia.org/
+kante http://wikipedia.org http://tt.wikipedia.org/
+kante http://wikipedia.org http://te.wikipedia.org/
+kante http://wikipedia.org http://tg.wikipedia.org/
+kante http://wikipedia.org http://azb.wikipedia.org/
+kante http://wikipedia.org http://bug.wikipedia.org/
+kante http://wikipedia.org http://vec.wikipedia.org/
+kante http://wikipedia.org http://wa.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/World/Fran%C3%A7ais/
+kante http://wikipedia.org http://yi.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/World/Japanese/
+kante http://wikipedia.org http://yo.wikipedia.org/
+kante http://wikipedia.org http://zh-yue.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/World/Italiano/
+kante http://wikipedia.org http://bat-smg.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/World/Espa%C3%B1ol/
+kante http://wikipedia.org http://ace.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/World/Russian/
+kante http://wikipedia.org http://kbd.wikipedia.org/
+kante http://wikipedia.org http://ang.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/World/Nederlands/
+kante http://wikipedia.org http://ab.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/World/Polski/
+kante http://wikipedia.org http://roa-rup.wikipedia.org/
+kante http://wikipedia.org http://frp.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/World/T%C3%BCrk%C3%A7e/
+kante http://wikipedia.org http://arc.wikipedia.org/
+kante http://wikipedia.org http://gn.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/World/Dansk/
+kante http://dmoztools.net/ http://dmoztools.net/World/Chinese_Simplified/
+kante http://wikipedia.org http://av.wikipedia.org/
+kante http://wikipedia.org http://ay.wikipedia.org/
+kante http://wikipedia.org http://bjn.wikipedia.org/
+kante http://wikipedia.org http://bh.wikipedia.org/
+kante http://wikipedia.org http://bcl.wikipedia.org/
+kante http://wikipedia.org http://bo.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/docs/en/termsofuse.html
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/docs/en/termsofuse.html
+kante http://wikipedia.org http://bxr.wikipedia.org/
+kante http://dmoztools.net/ http://dmoztools.net/docs/en/cmbuild.html
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/docs/en/cmbuild.html
+kante http://wikipedia.org http://cbk-zam.wikipedia.org/
+kante http://wikipedia.org http://co.wikipedia.org/
+kante http://wikipedia.org http://za.wikipedia.org/
+kante http://wikipedia.org http://pdc.wikipedia.org/
+kante http://wikipedia.org http://dv.wikipedia.org/
+kante http://wikipedia.org http://nv.wikipedia.org/
+kante http://wikipedia.org http://dsb.wikipedia.org/
+kante http://wikipedia.org http://eml.wikipedia.org/
+kante http://wikipedia.org http://myv.wikipedia.org/
+kante http://wikipedia.org http://ext.wikipedia.org/
+kante http://wikipedia.org http://hif.wikipedia.org/
+kante http://wikipedia.org http://fur.wikipedia.org/
+kante http://wikipedia.org http://gv.wikipedia.org/
+kante http://wikipedia.org http://gag.wikipedia.org/
+kante http://wikipedia.org http://ki.wikipedia.org/
+kante http://wikipedia.org http://glk.wikipedia.org/
+kante http://wikipedia.org http://gan.wikipedia.org/
+kante http://wikipedia.org http://hak.wikipedia.org/
+kante http://wikipedia.org http://xal.wikipedia.org/
+kante http://wikipedia.org http://ha.wikipedia.org/
+kante http://wikipedia.org http://haw.wikipedia.org/
+kante http://wikipedia.org http://ig.wikipedia.org/
+kante http://wikipedia.org http://ie.wikipedia.org/
+kante http://wikipedia.org http://kl.wikipedia.org/
+kante http://wikipedia.org http://pam.wikipedia.org/
+kante http://wikipedia.org http://csb.wikipedia.org/
+kante http://wikipedia.org http://kw.wikipedia.org/
+kante http://wikipedia.org http://km.wikipedia.org/
+kante http://wikipedia.org http://rw.wikipedia.org/
+kante http://wikipedia.org http://kv.wikipedia.org/
+kante http://wikipedia.org http://kg.wikipedia.org/
+kante http://wikipedia.org http://gom.wikipedia.org/
+kante http://wikipedia.org http://lo.wikipedia.org/
+kante http://wikipedia.org http://lad.wikipedia.org/
+kante http://wikipedia.org http://lbe.wikipedia.org/
+kante http://wikipedia.org http://lez.wikipedia.org/
+kante http://wikipedia.org http://lij.wikipedia.org/
+kante http://wikipedia.org http://ln.wikipedia.org/
+kante http://wikipedia.org http://jbo.wikipedia.org/
+kante http://wikipedia.org http://lrc.wikipedia.org/
+kante http://wikipedia.org http://lg.wikipedia.org/
+kante http://wikipedia.org http://mt.wikipedia.org/
+kante http://wikipedia.org http://zh-classical.wikipedia.org/
+kante http://wikipedia.org http://ty.wikipedia.org/
+kante http://wikipedia.org http://mi.wikipedia.org/
+kante http://wikipedia.org http://xmf.wikipedia.org/
+kante http://wikipedia.org http://cdo.wikipedia.org/
+kante http://wikipedia.org http://mwl.wikipedia.org/
+kante http://wikipedia.org http://mdf.wikipedia.org/
+kante http://wikipedia.org http://nah.wikipedia.org/
+kante http://wikipedia.org http://na.wikipedia.org/
+kante http://wikipedia.org http://nds-nl.wikipedia.org/
+kante http://wikipedia.org http://frr.wikipedia.org/
+kante http://wikipedia.org http://nrm.wikipedia.org/
+kante http://wikipedia.org http://nov.wikipedia.org/
+kante http://wikipedia.org http://mhr.wikipedia.org/
+kante http://wikipedia.org http://as.wikipedia.org/
+kante http://wikipedia.org http://pi.wikipedia.org/
+kante http://wikipedia.org http://pag.wikipedia.org/
+kante http://wikipedia.org http://pap.wikipedia.org/
+kante http://wikipedia.org http://ps.wikipedia.org/
+kante http://wikipedia.org http://koi.wikipedia.org/
+kante http://wikipedia.org http://pfl.wikipedia.org/
+kante http://wikipedia.org http://pcd.wikipedia.org/
+kante http://wikipedia.org http://krc.wikipedia.org/
+kante http://wikipedia.org http://kaa.wikipedia.org/
+kante http://wikipedia.org http://crh.wikipedia.org/
+kante http://wikipedia.org http://ksh.wikipedia.org/
+kante http://wikipedia.org http://rm.wikipedia.org/
+kante http://wikipedia.org http://rue.wikipedia.org/
+kante http://wikipedia.org http://se.wikipedia.org/
+kante http://wikipedia.org http://sc.wikipedia.org/
+kante http://wikipedia.org http://stq.wikipedia.org/
+kante http://wikipedia.org http://nso.wikipedia.org/
+kante http://wikipedia.org http://sn.wikipedia.org/
+kante http://wikipedia.org http://sd.wikipedia.org/
+kante http://wikipedia.org http://szl.wikipedia.org/
+kante http://wikipedia.org http://so.wikipedia.org/
+kante http://wikipedia.org http://srn.wikipedia.org/
+kante http://wikipedia.org http://kab.wikipedia.org/
+kante http://wikipedia.org http://roa-tara.wikipedia.org/
+kante http://wikipedia.org http://tet.wikipedia.org/
+kante http://wikipedia.org http://tpi.wikipedia.org/
+kante http://wikipedia.org http://to.wikipedia.org/
+kante http://wikipedia.org http://tk.wikipedia.org/
+kante http://wikipedia.org http://tyv.wikipedia.org/
+kante http://wikipedia.org http://udm.wikipedia.org/
+kante http://wikipedia.org http://ug.wikipedia.org/
+kante http://wikipedia.org http://vep.wikipedia.org/
+kante http://wikipedia.org http://fiu-vro.wikipedia.org/
+kante http://wikipedia.org http://vls.wikipedia.org/
+kante http://wikipedia.org http://wo.wikipedia.org/
+kante http://wikipedia.org http://wuu.wikipedia.org/
+kante http://wikipedia.org http://diq.wikipedia.org/
+kante http://wikipedia.org http://zea.wikipedia.org/
+kante http://wikipedia.org http://ak.wikipedia.org/
+kante http://wikipedia.org http://bm.wikipedia.org/
+kante http://wikipedia.org http://bi.wikipedia.org/
+kante http://wikipedia.org http://ch.wikipedia.org/
+kante http://wikipedia.org http://ny.wikipedia.org/
+kante http://wikipedia.org http://ee.wikipedia.org/
+kante http://wikipedia.org http://ff.wikipedia.org/
+kante http://wikipedia.org http://got.wikipedia.org/
+kante http://wikipedia.org http://iu.wikipedia.org/
+kante http://wikipedia.org http://ik.wikipedia.org/
+kante http://wikipedia.org http://ks.wikipedia.org/
+kante http://wikipedia.org http://ltg.wikipedia.org/
+kante http://wikipedia.org http://mo.wikipedia.org/
+kante http://wikipedia.org http://fj.wikipedia.org/
+kante http://wikipedia.org http://cr.wikipedia.org/
+kante http://wikipedia.org http://pih.wikipedia.org/
+kante http://wikipedia.org http://om.wikipedia.org/
+kante http://wikipedia.org http://pnt.wikipedia.org/
+kante http://wikipedia.org http://dz.wikipedia.org/
+kante http://wikipedia.org http://rmy.wikipedia.org/
+kante http://wikipedia.org http://rn.wikipedia.org/
+kante http://wikipedia.org http://sm.wikipedia.org/
+kante http://wikipedia.org http://sg.wikipedia.org/
+kante http://wikipedia.org http://st.wikipedia.org/
+kante http://wikipedia.org http://tn.wikipedia.org/
+kante http://wikipedia.org http://cu.wikipedia.org/
+kante http://wikipedia.org http://ss.wikipedia.org/
+kante http://wikipedia.org http://ti.wikipedia.org/
+kante http://wikipedia.org http://chr.wikipedia.org/
+kante http://wikipedia.org http://chy.wikipedia.org/
+kante http://wikipedia.org http://ve.wikipedia.org/
+kante http://wikipedia.org http://ts.wikipedia.org/
+kante http://wikipedia.org http://tum.wikipedia.org/
+kante http://wikipedia.org http://tw.wikipedia.org/
+kante http://wikipedia.org http://xh.wikipedia.org/
+kante http://wikipedia.org http://zu.wikipedia.org/
+kante http://wikipedia.org http://meta.wikimedia.org/wiki/List_of_Wikipedias
+kante http://wikipedia.org http://de.wikipedia.org/wiki/Wikipedia:Sprachen
+kante http://wikipedia.org http://meta.wikimedia.org/wiki/Liste_des_Wikip%C3%A9dias
+kante http://wikipedia.org http://pl.wikipedia.org/wiki/Wikipedia:Lista_wersji_j%C4%99zykowych
+kante http://wikipedia.org http://ja.wikipedia.org/wiki/Wikipedia:%E5%A4%9A%E8%A8%80%E8%AA%9E%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%A8%E3%81%97%E3%81%A6%E3%81%AE%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2
+kante http://wikipedia.org http://meta.wikimedia.org/wiki/Lista_de_Wikipedias
+kante http://wikipedia.org http://zh.wikipedia.org/wiki/Wikipedia:%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91%E8%AF%AD%E8%A8%80%E5%88%97%E8%A1%A8
+kante http://wikipedia.org http://ru.wikipedia.org/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D0%92
+kante http://wikipedia.org http://eo.wikipedia.org/wiki/Vikipedio:Internacia_Vikipedio
+kante http://wikipedia.org http://meta.wikimedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC%EC%9D%98_%EB%AA%A9%EB%A1%9D
+kante http://wikipedia.org http://vi.wikipedia.org/wiki/Wikipedia:Phi%C3%AAn_b%E1%BA%A3n_ng%C3%B4n_ng%E1%BB%AF
+kante http://wikipedia.org http://wikimediafoundation.org/
+kante http://wikipedia.org http://itunes.apple.com/app/apple-store/id324715238
+kante http://wikipedia.org http://play.google.com/store/apps/details
+kante http://wikipedia.org http://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications
+kante http://wikipedia.org http://commons.wikimedia.org/
+kante http://wikipedia.org http://www.wikivoyage.org/
+kante http://wikipedia.org http://www.wiktionary.org/
+kante http://wikipedia.org http://www.wikibooks.org/
+kante http://wikipedia.org http://www.wikinews.org/
+kante http://wikipedia.org http://www.wikidata.org/
+kante http://wikipedia.org http://www.wikiversity.org/
+kante http://wikipedia.org http://www.wikiquote.org/
+kante http://wikipedia.org http://www.mediawiki.org/
+kante http://wikipedia.org http://www.wikisource.org/
+kante http://wikipedia.org http://species.wikimedia.org/
+kante http://wikipedia.org http://meta.wikimedia.org/
+kante http://wikipedia.org http://creativecommons.org/licenses/by-sa/3.0/
+kante http://wikipedia.org http://meta.wikimedia.org/wiki/Terms_of_Use
+kante http://wikipedia.org http://meta.wikimedia.org/wiki/Privacy_policy
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/desc/Home/Family
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/public/abuse
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Home/Family/Babies/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Home/Family/Grandparents/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Home/Family/Large_Families/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Home/Family/Multiple_Births/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Home/Family/Parenting/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Home/Family/Adoption/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Health/Child_Health/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Home/Family/Childcare/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Society/Death/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Society/Relationships/Divorce/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Home/Family/Foster_Care/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Reference/Education/K_through_12/Home_Schooling/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Society/Relationships/Marriage/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Home/Family/Pregnancy/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Home/Family/Runaways/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Home/Family/Chats_and_Forums/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Society/Religion_and_Spirituality/Christianity/People/Family/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Home/Family/Family_Resources_and_Support/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Home/Family/Family_Websites/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Society/Genealogy/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Home/Family/Publications/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Home/Family/Reunions/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Home/Family/Software/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Kids_and_Teens/Your_Family/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Society/Issues/Children%2C_Youth_and_Family/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/Society/Law/Legal_Information/Family_Law/
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Azerbaijani/Evdarl%C4%B1q/Ail%C9%99
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Bahasa_Indonesia/Rumah_Tangga/Keluarga
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Catal%C3%A0/Societat/Fam%C3%ADlia
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/%C4%8Cesky/Domov/Rodina
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Dansk/Hus_og_hjem/Familie
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Deutsch/Gesellschaft/Familie
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Espa%C3%B1ol/Hogar/Familia
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Fran%C3%A7ais/Soci%C3%A9t%C3%A9/Personnes/Famille
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Italiano/Casa/Famiglia
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Kurd%C3%AE/Civak/Gel/Malbat
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Lietuvi%C5%B3/Buitis/%C5%A0eima
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Nederlands/Huis_en_Tuin/Familie
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Norsk/Hjem_og_familie/Familie
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Polski/Dom/Rodzina
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Portugu%C3%AAs/Lar/Fam%C3%ADlia
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Rom%C3%A2n%C4%83/Acas%C4%83/Familie
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Slovensky/Domov/Rodina
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Suomi/Koti/Perhe
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Svenska/Hus_och_hem/Familj
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/T%C3%BCrk%C3%A7e/Ev/Aile
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Bulgarian/%D0%94%D0%BE%D0%BC/%D0%A1%D0%B5%D0%BC%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%BE
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Russian/%D0%94%D0%BE%D0%BC/%D0%A1%D0%B5%D0%BC%D1%8C%D1%8F
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Ukrainian/%D0%94%D1%96%D0%BC_%D1%82%D0%B0_%D1%81%D1%96%D0%BC'%D1%8F/%D0%A1%D1%96%D0%BC'%D1%8F
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Hebrew/%D7%91%D7%99%D7%AA/%D7%9E%D7%A9%D7%A4%D7%97%D7%94
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Arabic/%D8%A3%D8%B3%D8%B1%D8%A9
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Thai/%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99/%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Japanese/%E5%AE%B6%E5%BA%AD/%E5%AE%B6%E6%97%8F
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Chinese_Simplified/%E5%AE%B6%E5%BA%AD/%E5%AE%B6%E6%97%8F
+kante http://dmoztools.net/Home/Family/ http://dmoztools.net/World/Korean/%EA%B0%80%EC%A0%95%EA%B3%BC_%EC%83%9D%ED%99%9C/%EA%B0%80%EC%A1%B1%2C%EA%B0%80%EC%A0%95
+kante http://dmoztools.net/Home/Family/ http://search.aol.com/aol/search
+kante http://dmoztools.net/Home/Family/ http://www.ask.com/web
+kante http://dmoztools.net/Home/Family/ https://www.bing.com/search
+kante http://dmoztools.net/Home/Family/ https://duckduckgo.com/
+kante http://dmoztools.net/Home/Family/ https://gigablast.com/search
+kante http://dmoztools.net/Home/Family/ https://www.google.com/search
+kante http://dmoztools.net/Home/Family/ https://www.ixquick.com/do/search/
+kante http://dmoztools.net/Home/Family/ https://search.yahoo.com/search
+kante http://dmoztools.net/Home/Family/ https://www.yandex.com/yandsearch
+kante http://dmoztools.net/Home/Family/ http://new.yippy.com/search
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/en/socialcontract.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/en/rdf.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/en/help/submit.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/guidelines/
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/erz/
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/ar/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/an/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/ca/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/cs/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/da/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/de/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/es/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/fr/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/gl/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/he/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/it/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/ja/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/ko/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/lv/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/lt/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/nl/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/pl/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/pt/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/ro/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/tr/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/ur/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/zh_CN/about.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/en/help/geninfo.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/Computers/Internet/Searching/Directories/DMOZ/Sites_Using_DMOZ_Data
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/Computers/Internet/Searching/Directories/DMOZ/News_and_Media
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/en/link.html
+kante http://dmoztools.net/docs/en/about.html http://dmoztools.net/docs/en/license.html

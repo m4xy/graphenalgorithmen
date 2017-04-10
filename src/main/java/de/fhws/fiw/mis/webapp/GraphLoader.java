@@ -13,11 +13,11 @@ import java.util.stream.Stream;
  * Created by maxarndt on 08.04.17.
  */
 public class GraphLoader {
-    public List<String> getFiles() {
+    public static List<String> getFiles() {
         List<String> files = new LinkedList<>();
 
         try {
-            Files.walk(Paths.get("graphs")).forEach(filePath -> {
+            Files.walk(Paths.get("")).forEach(filePath -> {
                 if (Files.isRegularFile(filePath)) {
                     files.add(filePath.toString());
                 }

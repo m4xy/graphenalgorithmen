@@ -25,8 +25,8 @@ public class App {
 //        g.breadthFirstSearch(g.vertexSet().stream().findFirst().get()).stream().forEach(System.out::println);
 //        g.depthFirstSearch(g.vertexSet().stream().findFirst().get()).stream().forEach(System.out::println);
         System.out.println(g.hasCycle());
-        GraphLoader l = new GraphLoader();
-        l.getFiles();
+
+        GraphLoader.getFiles();
 
         GraphExporter exporter = new GraphExporterImpl();
         exporter.exportGraph(g, DOT_FILE_NAME);
