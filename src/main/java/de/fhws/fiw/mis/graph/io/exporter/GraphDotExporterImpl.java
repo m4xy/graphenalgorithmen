@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * Created by maxarndt on 23.03.17.
  */
-public class GraphExporterImpl implements GraphExporter {
+public class GraphDotExporterImpl implements GraphFileExporter {
     @Override
     public void exportGraph(Graph<Vertex, DefaultWeightedEdge> graph, String filePath) {
         ComponentAttributeProvider<DefaultWeightedEdge> componentAttributeProvider = new ComponentAttributeProvider<DefaultWeightedEdge>() {

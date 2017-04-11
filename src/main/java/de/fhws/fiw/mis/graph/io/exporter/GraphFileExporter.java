@@ -7,6 +7,6 @@ import org.jgrapht.graph.DefaultWeightedEdge;
 /**
  * Created by maxarndt on 23.03.17.
  */
-public interface GraphExporter {
+public interface GraphFileExporter {
     void exportGraph(Graph<Vertex, DefaultWeightedEdge> graph, String filePath);
 }

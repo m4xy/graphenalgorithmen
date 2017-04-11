@@ -3,8 +3,8 @@ package de.fhws.fiw.mis;
 import de.fhws.fiw.mis.graph.DirGraph;
 import de.fhws.fiw.mis.graph.io.dotconverter.DotConverter;
 import de.fhws.fiw.mis.graph.io.dotconverter.GraphViz;
-import de.fhws.fiw.mis.graph.io.exporter.GraphExporter;
-import de.fhws.fiw.mis.graph.io.exporter.GraphExporterImpl;
+import de.fhws.fiw.mis.graph.io.exporter.GraphFileExporter;
+import de.fhws.fiw.mis.graph.io.exporter.GraphDotExporterImpl;
 import de.fhws.fiw.mis.graph.io.importer.GraphImporter;
 import de.fhws.fiw.mis.graph.io.importer.GraphImporterImpl;
 import de.fhws.fiw.mis.webapp.GraphLoader;
@@ -28,7 +28,7 @@ public class App {
 
         GraphLoader.getFiles();
 
-        GraphExporter exporter = new GraphExporterImpl();
+        GraphFileExporter exporter = new GraphDotExporterImpl();
         exporter.exportGraph(g, DOT_FILE_NAME);
 
         DotConverter converter = new GraphViz();
