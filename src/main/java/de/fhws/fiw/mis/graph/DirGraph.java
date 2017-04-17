@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 /**
  * Created by maxarndt on 05.04.17.
  */
-public class DirGraph extends AbstractGraph implements DirectedGraph<Vertex, DefaultWeightedEdge>, Euler {
+public class DirGraph extends AbstractGraph implements DirectedGraph<Vertex, DefaultWeightedEdge> {
     public DirGraph() {
         super(new ClassBasedEdgeFactory<>(DefaultWeightedEdge.class), false, false);
     }

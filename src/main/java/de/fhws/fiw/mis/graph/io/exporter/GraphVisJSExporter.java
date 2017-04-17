@@ -9,5 +9,5 @@ import org.jgrapht.graph.DefaultWeightedEdge;
  */
 public interface GraphVisJSExporter {
     String getNodeDataSet();
-    String getEdgeDataSet();
+    String getEdgeDataSet(boolean arrows);
 }

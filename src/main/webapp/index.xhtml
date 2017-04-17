@@ -41,6 +41,31 @@
                         </ul>
                     </li>
                 </ul>
+                <h:form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <h:panelGroup id="graph-type">
+                                    <h:outputText value="#{sessionBean.undirectedGraph ? 'Undirected Graph' : 'Directed Graph'}"/> <span class="caret"></span>
+                                </h:panelGroup>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <h:commandLink value="Undirected Graph" >
+                                        <f:setPropertyActionListener target="#{sessionBean.undirectedGraph}" value="true" />
+                                        <f:ajax execute="@this" render="graph-type" />
+                                    </h:commandLink>
+                                </li>
+                                <li>
+                                    <h:commandLink value="Directed Graph" >
+                                        <f:setPropertyActionListener target="#{sessionBean.undirectedGraph}" value="false" />
+                                        <f:ajax execute="@this" render="graph-type" />
+                                    </h:commandLink>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </h:form>
             </div>
         </div>
     </nav>
@@ -63,21 +88,29 @@
                                     <div class="buttongroup-row">
                                         <div class="btn-group btn-group-justified" role="group" aria-label="functions blatt1">
                                             <div class="btn-group" role="group">
-                                                <h:commandButton id="btn-eulerkreis" value="Eulerkreis" action="#{indexBean.calculateEulerkreis}" type="button" class="btn btn-default">
+                                                <h:commandButton id="btn-eulerkreis" value="Eulerkreis" action="#{indexBean.calculateEulerianCircuit}" type="button" class="btn btn-default">
                                                     <f:ajax execute="btn-eulerkreis" render="statusMessage" />
                                                 </h:commandButton>
                                             </div>
                                             <div class="btn-group" role="group">
-                                                <button type="button" class="btn btn-default">Eulerpfad</button>
+                                                <h:commandButton id="btn-eulerpfad" value="Eulerpfad" action="#{indexBean.calculateEulerianPath}" type="button" class="btn btn-default">
+                                                    <f:ajax execute="btn-eulerpfad" render="statusMessage" />
+                                                </h:commandButton>
                                             </div>
                                             <div class="btn-group" role="group">
-                                                <button type="button" class="btn btn-default">Tiefensuche</button>
+                                                <h:commandButton id="btn-tiefensuche" value="Tiefensuche" action="#{indexBean.calculateDepthSearch}" type="button" class="btn btn-default">
+                                                    <f:ajax execute="btn-tiefensuche" render="statusMessage" />
+                                                </h:commandButton>
                                             </div>
                                             <div class="btn-group" role="group">
-                                                <button type="button" class="btn btn-default">Breitensuche</button>
+                                                <h:commandButton id="btn-breitensuche" value="Breitensuche" action="#{indexBean.calculateBreadthSearch}" type="button" class="btn btn-default">
+                                                    <f:ajax execute="btn-breitensuche" render="statusMessage" />
+                                                </h:commandButton>
                                             </div>
                                             <div class="btn-group" role="group">
-                                                <button type="button" class="btn btn-default">Kreis</button>
+                                                <h:commandButton id="btn-kreis" value="Kreis" action="#{indexBean.calculateCircuit}" type="button" class="btn btn-default">
+                                                    <f:ajax execute="btn-kreis" render="statusMessage" />
+                                                </h:commandButton>
                                             </div>
                                         </div>
                                     </div>

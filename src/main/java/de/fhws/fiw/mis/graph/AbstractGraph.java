@@ -16,6 +16,9 @@ public abstract class AbstractGraph extends AbstractBaseGraph<Vertex, DefaultWei
     }
 
     public abstract Collection<Vertex> getNeighbors(Vertex vertex);
+    public abstract boolean hasCycle();
+    public abstract boolean hasEulerianCircuit();
+    public abstract boolean hasEulerianPath();
 
     public boolean isConnected() {
         Collection<Vertex> vertices = breadthFirstSearch(vertexSet().stream().findFirst().get());

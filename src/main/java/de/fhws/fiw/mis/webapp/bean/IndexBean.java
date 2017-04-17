@@ -1,12 +1,15 @@
 package de.fhws.fiw.mis.webapp.bean;
 
+import de.fhws.fiw.mis.graph.AbstractGraph;
 import de.fhws.fiw.mis.graph.UndirGraph;
 import de.fhws.fiw.mis.graph.io.exporter.GraphVisJSExporterImpl;
 import de.fhws.fiw.mis.graph.io.importer.GraphImporter;
 import de.fhws.fiw.mis.graph.io.importer.GraphImporterImpl;
 
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.ViewScoped;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import java.io.IOException;
@@ -17,15 +20,25 @@ import java.util.*;
  * Created by maxarndt on 09.04.17.
  */
 @ManagedBean(name = "indexBean", eager = true)
-@RequestScoped
+@ViewScoped
 public class IndexBean {
     private ExternalContext externalContext;
     private String webAppRealPath;
-    private UndirGraph graph;
+    private AbstractGraph graph;
     private GraphVisJSExporterImpl visExporter;
+
+    @ManagedProperty(value="#{sessionBean}")
+    private SessionBean sessionBean;
 
     private String graphFileName;
     private String statusMessage;
+
+    public SessionBean getSessionBean() {
+        return sessionBean;
+    }
+    public void setSessionBean(SessionBean sessionBean) {
+        this.sessionBean = sessionBean;
+    }
 
     public String getGraphFileName() {
         return graphFileName;
@@ -49,10 +62,12 @@ public class IndexBean {
 
         if(fileNameParam == null)
             fileNameParam = "Dijkstra";
-
         setGraphFileName(fileNameParam);
+    }
+    @PostConstruct
+    public void init() {
         GraphImporter importer = new GraphImporterImpl(webAppRealPath + "graphs");
-        graph = importer.importGraph(getGraphFileName());
+        graph = sessionBean.getUndirectedGraph() ? importer.importGraph(getGraphFileName()) : importer.importDirectedGraph(getGraphFileName());
         visExporter = new GraphVisJSExporterImpl(graph);
     }
 
@@ -77,10 +92,22 @@ public class IndexBean {
         return visExporter.getNodeDataSet();
     }
     public String getVisEdgeDataSet() {
-        return visExporter.getEdgeDataSet();
+        return visExporter.getEdgeDataSet(!sessionBean.getUndirectedGraph());
     }
 
-    public void calculateEulerkreis() {
-        setStatusMessage("Eulerkreis ausgeführt.");
+    public void calculateEulerianCircuit() {
+        setStatusMessage("Eulerkreis: " + graph.hasEulerianCircuit());
+    }
+    public void calculateEulerianPath() {
+        setStatusMessage("Eulerpfad: " + graph.hasEulerianPath());
+    }
+    public void calculateDepthSearch() {
+        setStatusMessage("Tiefensuche: ");
+    }
+    public void calculateBreadthSearch() {
+        setStatusMessage("Breitensuche: ");
+    }
+    public void calculateCircuit() {
+        setStatusMessage("Kreis: " + graph.hasCycle());
     }
 }

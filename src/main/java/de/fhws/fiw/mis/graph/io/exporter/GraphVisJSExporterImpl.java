@@ -24,10 +24,10 @@ public class GraphVisJSExporterImpl implements GraphVisJSExporter {
     }
 
     @Override
-    public String getEdgeDataSet() {
+    public String getEdgeDataSet(boolean arrows) {
         StringBuilder sb = new StringBuilder();
         graph.edgeSet().stream()
-                .forEach(e -> sb.append(getEdgeObj(graph.getEdgeSource(e).getName(), graph.getEdgeTarget(e).getName())));
+                .forEach(e -> sb.append(getEdgeObj(graph.getEdgeSource(e).getName(), graph.getEdgeTarget(e).getName(), arrows)));
 
         return removeLastChar(sb.toString());
     }
@@ -36,8 +36,10 @@ public class GraphVisJSExporterImpl implements GraphVisJSExporter {
     private String getNodeObj(String id, String label) {
         return "{id: '" + id + "', label: '" + label + "'},";
     }
-    private String getEdgeObj(String from, String to) {
-        return "{from: '" + from + "', to: '" + to + "'},";
+    private String getEdgeObj(String from, String to, boolean arrows) {
+        String edgeObj = "{from: '" + from + "', to: '" + to + "'";
+        edgeObj += arrows ? ", arrows: 'to'}," : "},";
+        return edgeObj;
     }
     private String removeLastChar(String str) {
         return str.substring(0, str.length() - 1);

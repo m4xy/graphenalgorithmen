@@ -34,6 +34,11 @@ public class GraphVisJSExprterTest {
 
     @Test
     public void testGetEdgeDataSet() {
-        assertEquals("{from: 'A', to: 'C'}", exporter.getEdgeDataSet());
+        assertEquals("{from: 'A', to: 'C'}", exporter.getEdgeDataSet(false));
+    }
+
+    @Test
+    public void testGetEdgeDataSetWithArrows() {
+        assertEquals("{from: 'A', to: 'C', arrows: 'to'}", exporter.getEdgeDataSet(true));
     }
 }
