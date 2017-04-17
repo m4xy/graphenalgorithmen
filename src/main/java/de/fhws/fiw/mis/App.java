@@ -19,15 +19,6 @@ public class App {
         UndirGraph g = importer.importGraph("Baum.txt");
 //        DirGraph g = importer.importDirectedGraph("graphs/Test.txt");
 
-//        System.out.println(g.hasEulerianCircuit());
-//        System.out.println(g.hasEulerianPath());
-//        System.out.println(g.hasCycle());
-//        g.breadthFirstSearch(g.vertexSet().stream().findFirst().get()).stream().forEach(System.out::println);
-//        g.depthFirstSearch(g.vertexSet().stream().findFirst().get()).stream().forEach(System.out::println);
-//        System.out.println(g.hasCycle());
-
-        GraphVisJSExporterImpl exp = new GraphVisJSExporterImpl(g);
-        System.out.println(exp.getNodeDataSet());
 
         GraphFileExporter exporter = new GraphDotExporterImpl();
         exporter.exportGraph(g, DOT_FILE_NAME);
