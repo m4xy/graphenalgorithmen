@@ -78,8 +78,6 @@ public class IndexBean {
         if(fileNameParam == null)
             fileNameParam = "Dijkstra";
         setGraphFileName(fileNameParam);
-
-        setStatusType("success");
     }
     @PostConstruct
     public void init() {
