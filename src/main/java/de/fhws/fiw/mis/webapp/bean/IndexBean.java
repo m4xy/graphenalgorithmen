@@ -21,9 +21,11 @@ import java.util.*;
 public class IndexBean {
     private ExternalContext externalContext;
     private String webAppRealPath;
-    private String graphFileName;
     private UndirGraph graph;
     private GraphVisJSExporterImpl visExporter;
+
+    private String graphFileName;
+    private String statusMessage;
 
     public String getGraphFileName() {
         return graphFileName;
@@ -31,6 +33,13 @@ public class IndexBean {
     public void setGraphFileName(String graphFileName) {
         this.graphFileName = graphFileName.endsWith(".txt") ? graphFileName : graphFileName + ".txt";
     }
+    public String getStatusMessage() {
+        return statusMessage;
+    }
+    public void setStatusMessage(String statusMessage) {
+        this.statusMessage = statusMessage;
+    }
+
 
     public IndexBean() {
         this.externalContext = FacesContext.getCurrentInstance().getExternalContext();
@@ -46,6 +55,7 @@ public class IndexBean {
         graph = importer.importGraph(getGraphFileName());
         visExporter = new GraphVisJSExporterImpl(graph);
     }
+
 
     public List<String> getFiles() {
         List<String> files = new LinkedList<>();
@@ -63,11 +73,14 @@ public class IndexBean {
 
         return files;
     }
-
     public String getVisNodeDataSet() {
         return visExporter.getNodeDataSet();
     }
     public String getVisEdgeDataSet() {
         return visExporter.getEdgeDataSet();
+    }
+
+    public void calculateEulerkreis() {
+        setStatusMessage("Eulerkreis ausgeführt.");
     }
 }
