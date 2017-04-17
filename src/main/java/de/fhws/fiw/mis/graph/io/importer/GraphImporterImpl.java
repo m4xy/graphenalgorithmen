@@ -46,7 +46,7 @@ public class GraphImporterImpl implements GraphImporter {
     private List<String> readFile(String fileName) {
         List<String> stringList = new LinkedList<>();
 
-        try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
+        try (Stream<String> stream = Files.lines(Paths.get("graphs/" + fileName))) {
             stream.forEach(l -> stringList.add(l));
         } catch (IOException e) {
             e.printStackTrace();
