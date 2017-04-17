@@ -7,6 +7,7 @@ import de.fhws.fiw.mis.graph.io.importer.GraphImporterImpl;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import java.io.IOException;
 import java.nio.file.*;
@@ -18,14 +19,31 @@ import java.util.*;
 @ManagedBean(name = "indexBean", eager = true)
 @RequestScoped
 public class IndexBean {
-    private String externalContext;
+    private ExternalContext externalContext;
+    private String webAppRealPath;
+    private String graphFileName;
     private UndirGraph graph;
     private GraphVisJSExporterImpl visExporter;
 
+    public String getGraphFileName() {
+        return graphFileName;
+    }
+    public void setGraphFileName(String graphFileName) {
+        this.graphFileName = graphFileName.endsWith(".txt") ? graphFileName : graphFileName + ".txt";
+    }
+
     public IndexBean() {
-        this.externalContext = FacesContext.getCurrentInstance().getExternalContext().getRealPath("/");
-        GraphImporter importer = new GraphImporterImpl(externalContext + "graphs");
-        graph = importer.importGraph("Baum.txt");
+        this.externalContext = FacesContext.getCurrentInstance().getExternalContext();
+        this.webAppRealPath = this.externalContext.getRealPath("/");
+        Map<String, String> parameterMap = (Map<String, String>) externalContext.getRequestParameterMap();
+        String fileNameParam = parameterMap.get("fileName");
+
+        if(fileNameParam == null)
+            fileNameParam = "Dijkstra";
+
+        setGraphFileName(fileNameParam);
+        GraphImporter importer = new GraphImporterImpl(webAppRealPath + "graphs");
+        graph = importer.importGraph(getGraphFileName());
         visExporter = new GraphVisJSExporterImpl(graph);
     }
 
@@ -33,7 +51,7 @@ public class IndexBean {
         List<String> files = new LinkedList<>();
 
         try {
-            Files.walk(Paths.get(externalContext + "graphs")).forEach(filePath -> {
+            Files.walk(Paths.get(webAppRealPath + "graphs")).forEach(filePath -> {
                 if (Files.isRegularFile(filePath)) {
                     files.add(filePath.getFileName().toString().substring(0, filePath.getFileName().toString().length() -4));
                 }

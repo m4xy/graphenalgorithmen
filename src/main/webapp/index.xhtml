@@ -33,15 +33,10 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse Files <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">Files</li>
                             <ui:repeat value="#{indexBean.files}" var="item">
-                                <li><a href="#">#{item}</a></li>
+                                <li><a href="?fileName=#{item}">#{item}</a></li>
                             </ui:repeat>
                         </ul>
                     </li>
@@ -53,7 +48,7 @@
     <div class="container">
         <div class="jumbotron-container">
             <div class="jumbotron">
-                <h1>Graph Example</h1>
+                <h1>#{indexBean.graphFileName}</h1>
                 <div id="graph"></div>
                 <div id="status"></div>
             </div>
