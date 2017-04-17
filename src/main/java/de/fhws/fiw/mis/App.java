@@ -15,7 +15,7 @@ public class App {
     public static void main(String[] args) {
         final String DOT_FILE_NAME = "graph.dot";
 
-        GraphImporter importer = new GraphImporterImpl();
+        GraphImporter importer = new GraphImporterImpl("graphs");
         UndirGraph g = importer.importGraph("Baum.txt");
 //        DirGraph g = importer.importDirectedGraph("graphs/Test.txt");
 

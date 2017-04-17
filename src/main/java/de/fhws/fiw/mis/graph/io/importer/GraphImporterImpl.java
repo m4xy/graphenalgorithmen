@@ -20,6 +20,12 @@ import java.util.stream.Stream;
  * Created by maxarndt on 22.03.17.
  */
 public class GraphImporterImpl implements GraphImporter {
+    private String searchBase;
+
+    public GraphImporterImpl(String searchbase) {
+        this.searchBase = searchbase.endsWith("/") ? searchbase : searchbase + "/";
+    }
+
     @Override
     public UndirGraph importGraph(String fileName) {
         UndirGraph graph = new UndirGraph();
@@ -46,7 +52,7 @@ public class GraphImporterImpl implements GraphImporter {
     private List<String> readFile(String fileName) {
         List<String> stringList = new LinkedList<>();
 
-        try (Stream<String> stream = Files.lines(Paths.get("graphs/" + fileName))) {
+        try (Stream<String> stream = Files.lines(Paths.get(searchBase + fileName))) {
             stream.forEach(l -> stringList.add(l));
         } catch (IOException e) {
             e.printStackTrace();
