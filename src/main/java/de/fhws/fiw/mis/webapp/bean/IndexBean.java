@@ -1,10 +1,11 @@
 package de.fhws.fiw.mis.webapp.bean;
 
 import de.fhws.fiw.mis.graph.AbstractGraph;
-import de.fhws.fiw.mis.graph.UndirGraph;
+import de.fhws.fiw.mis.graph.Vertex;
 import de.fhws.fiw.mis.graph.io.exporter.GraphVisJSExporterImpl;
 import de.fhws.fiw.mis.graph.io.importer.GraphImporter;
 import de.fhws.fiw.mis.graph.io.importer.GraphImporterImpl;
+import de.fhws.fiw.mis.webapp.ContextualStyle;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
@@ -15,6 +16,7 @@ import javax.faces.context.FacesContext;
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by maxarndt on 09.04.17.
@@ -32,6 +34,8 @@ public class IndexBean {
 
     private String graphFileName;
     private String statusMessage;
+    private String statusType;
+    private String startVertexName;
 
     public SessionBean getSessionBean() {
         return sessionBean;
@@ -52,17 +56,30 @@ public class IndexBean {
     public void setStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
     }
-
+    public String getStatusType() {
+        return statusType;
+    }
+    public void setStatusType(String statusType) {
+        this.statusType = statusType;
+    }
+    public String getStartVertexName() {
+        return startVertexName;
+    }
+    public void setStartVertexName(String startVertexName) {
+        this.startVertexName = startVertexName;
+    }
 
     public IndexBean() {
         this.externalContext = FacesContext.getCurrentInstance().getExternalContext();
         this.webAppRealPath = this.externalContext.getRealPath("/");
+
         Map<String, String> parameterMap = (Map<String, String>) externalContext.getRequestParameterMap();
         String fileNameParam = parameterMap.get("fileName");
-
         if(fileNameParam == null)
             fileNameParam = "Dijkstra";
         setGraphFileName(fileNameParam);
+
+        setStatusType("success");
     }
     @PostConstruct
     public void init() {
@@ -96,18 +113,44 @@ public class IndexBean {
     }
 
     public void calculateEulerianCircuit() {
-        setStatusMessage("Eulerkreis: " + graph.hasEulerianCircuit());
+        setStatus("Eulerkreis: " + graph.hasEulerianCircuit(), ContextualStyle.SUCCESS);
     }
     public void calculateEulerianPath() {
-        setStatusMessage("Eulerpfad: " + graph.hasEulerianPath());
+        setStatus("Eulerpfad: " + graph.hasEulerianPath(), ContextualStyle.SUCCESS);
     }
     public void calculateDepthSearch() {
-        setStatusMessage("Tiefensuche: ");
+        if(startVertexName.isEmpty() || startVertexName == "") {
+            setStatus("Wähle einen Knoten aus!", ContextualStyle.DANGER);
+        }
+        else {
+            setStatus("Tiefensuche: " +
+                    graph.depthFirstSearch(findVertex(startVertexName)).stream()
+                            .map(v -> v.getName())
+                            .collect(Collectors.joining(", "))
+            , ContextualStyle.SUCCESS);
+        }
     }
     public void calculateBreadthSearch() {
-        setStatusMessage("Breitensuche: ");
+        if(startVertexName.isEmpty() || startVertexName == "") {
+            setStatus("Wähle einen Knoten aus!", ContextualStyle.DANGER);
+        }
+        else {
+            setStatus("Breitensuche: " +
+                            graph.breadthFirstSearch(findVertex(startVertexName)).stream()
+                                    .map(v -> v.getName())
+                                    .collect(Collectors.joining(", "))
+                    , ContextualStyle.SUCCESS);
+        }
     }
     public void calculateCircuit() {
-        setStatusMessage("Kreis: " + graph.hasCycle());
+        setStatus("Kreis: " + graph.hasCycle(), ContextualStyle.SUCCESS);
+    }
+
+    private void setStatus(String message, ContextualStyle style) {
+        setStatusType(style.name().toLowerCase());
+        setStatusMessage(message);
+    }
+    private Vertex findVertex(String name) {
+        return graph.vertexSet().stream().filter(v -> v.getName().equals(name)).findFirst().get();
     }
 }

@@ -76,7 +76,7 @@
                 <h1>#{indexBean.graphFileName}</h1>
                 <div id="graph"></div>
                 <div id="panel" class="panel panel-default">
-                    <h:form>
+                    <h:form id="main-form">
                         <div class="panel-body">
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active"><a href="#blatt1" aria-controls="blatt1" role="tab" data-toggle="tab">Übungsblatt 1</a></li>
@@ -99,12 +99,12 @@
                                             </div>
                                             <div class="btn-group" role="group">
                                                 <h:commandButton id="btn-tiefensuche" value="Tiefensuche" action="#{indexBean.calculateDepthSearch}" type="button" class="btn btn-default">
-                                                    <f:ajax execute="btn-tiefensuche" render="statusMessage" />
+                                                    <f:ajax execute="btn-tiefensuche startVertexName" render="statusMessage" />
                                                 </h:commandButton>
                                             </div>
                                             <div class="btn-group" role="group">
                                                 <h:commandButton id="btn-breitensuche" value="Breitensuche" action="#{indexBean.calculateBreadthSearch}" type="button" class="btn btn-default">
-                                                    <f:ajax execute="btn-breitensuche" render="statusMessage" />
+                                                    <f:ajax execute="btn-breitensuche startVertexName" render="statusMessage" />
                                                 </h:commandButton>
                                             </div>
                                             <div class="btn-group" role="group">
@@ -119,13 +119,14 @@
                             </div>
                             <h:panelGroup id="statusMessage">
                                 <h:panelGroup rendered="#{indexBean.statusMessage != null}">
-                                    <div class="alert alert-success alert-dismissible" role="alert">
+                                    <div class="alert alert-#{indexBean.statusType} alert-dismissible" role="alert">
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                         <strong><h:outputText value="#{indexBean.statusMessage}"/></strong>
                                     </div>
                                 </h:panelGroup>
                             </h:panelGroup>
                         </div>
+                        <h:inputHidden id="startVertexName" value="#{indexBean.startVertexName}" />
                     </h:form>
                 </div>
             </div>
@@ -153,6 +154,10 @@
         };
         var options = {};
         var network = new vis.Network(container, data, options);
+
+        network.on('selectNode', function() {
+            document.getElementById("main-form:startVertexName").value = network.getSelectedNodes().toString();
+        });
     </script>
 </h:body>
 </html>
