@@ -1,17 +1,19 @@
 package de.fhws.fiw.mis.graph.io.exporter;
 
-import de.fhws.fiw.mis.graph.Vertex;
-import org.jgrapht.Graph;
-import org.jgrapht.graph.DefaultWeightedEdge;
+import de.fhws.fiw.mis.graph.AbstractGraph;
+
+import java.text.DecimalFormat;
 
 /**
  * Created by maxarndt on 11.04.17.
  */
 public class GraphVisJSExporterImpl implements GraphVisJSExporter {
-    private Graph<Vertex, DefaultWeightedEdge> graph;
+    private AbstractGraph graph;
+    private boolean hasWeightedEdges;
 
-    public GraphVisJSExporterImpl(Graph<Vertex, DefaultWeightedEdge> graph) {
+    public GraphVisJSExporterImpl(AbstractGraph graph) {
         this.graph = graph;
+        this.hasWeightedEdges = graph.hasWeightedEdges();
     }
 
     @Override
@@ -27,7 +29,12 @@ public class GraphVisJSExporterImpl implements GraphVisJSExporter {
     public String getEdgeDataSet(boolean arrows) {
         StringBuilder sb = new StringBuilder();
         graph.edgeSet().stream()
-                .forEach(e -> sb.append(getEdgeObj(graph.getEdgeSource(e).getName(), graph.getEdgeTarget(e).getName(), arrows)));
+                .forEach(e -> {
+                    if(hasWeightedEdges)
+                        sb.append(getEdgeObj(graph.getEdgeSource(e).getName(), graph.getEdgeTarget(e).getName(), graph.getEdgeWeight(e), arrows));
+                    else
+                        sb.append(getEdgeObj(graph.getEdgeSource(e).getName(), graph.getEdgeTarget(e).getName(), 0.0, arrows));
+                });
 
         return removeLastChar(sb.toString());
     }
@@ -36,8 +43,9 @@ public class GraphVisJSExporterImpl implements GraphVisJSExporter {
     private String getNodeObj(String id, String label) {
         return "{id: '" + id + "', label: '" + label + "'},";
     }
-    private String getEdgeObj(String from, String to, boolean arrows) {
+    private String getEdgeObj(String from, String to, double weight, boolean arrows) {
         String edgeObj = "{from: '" + from + "', to: '" + to + "'";
+        edgeObj += weight != 0.0 ? ", label: '" + new DecimalFormat("#.##").format(weight) + "', font: {align: 'horizontal'}" : "";
         edgeObj += arrows ? ", arrows: 'to'}," : "},";
         return edgeObj;
     }

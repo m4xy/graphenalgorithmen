@@ -24,6 +24,9 @@ public abstract class AbstractGraph extends AbstractBaseGraph<Vertex, DefaultWei
         Collection<Vertex> vertices = breadthFirstSearch(vertexSet().stream().findFirst().get());
         return !vertexSet().stream().anyMatch(x -> vertices.contains(x) == false);
     }
+    public boolean hasWeightedEdges() {
+        return edgeSet().stream().filter(e -> getEdgeWeight(e) != 1.0).count() > 0;
+    }
     public Collection<Vertex> breadthFirstSearch(Vertex startVertex) {
         Queue<Vertex> queue = new LinkedList<>(Arrays.asList(startVertex));
         List<Vertex> visited = new LinkedList<>(queue);
