@@ -20,6 +20,7 @@ public abstract class AbstractGraph extends AbstractBaseGraph<Vertex, DefaultWei
     public abstract boolean hasEulerianCircuit();
     public abstract boolean hasEulerianPath();
 
+
     public boolean isConnected() {
         Collection<Vertex> vertices = breadthFirstSearch(vertexSet().stream().findFirst().get());
         return !vertexSet().stream().anyMatch(x -> vertices.contains(x) == false);
