@@ -1,5 +1,6 @@
 package de.fhws.fiw.mis.graph.io.exporter;
 
+import de.fhws.fiw.mis.graph.Edge;
 import de.fhws.fiw.mis.graph.Vertex;
 import org.jgrapht.Graph;
 import org.jgrapht.ext.ComponentAttributeProvider;
@@ -19,9 +20,9 @@ import java.util.Map;
  */
 public class GraphDotExporterImpl implements GraphFileExporter {
     @Override
-    public void exportGraph(Graph<Vertex, DefaultWeightedEdge> graph, String filePath) {
-        ComponentAttributeProvider<DefaultWeightedEdge> componentAttributeProvider = new ComponentAttributeProvider<DefaultWeightedEdge>() {
-            public Map<String, String> getComponentAttributes(DefaultWeightedEdge e) {
+    public void exportGraph(Graph<Vertex, Edge> graph, String filePath) {
+        ComponentAttributeProvider<Edge> componentAttributeProvider = new ComponentAttributeProvider<Edge>() {
+            public Map<String, String> getComponentAttributes(Edge e) {
                 Map<String, String> map = new LinkedHashMap<>();
                 if(graph.getEdgeWeight(e) != 1)
                     map.put("label", new DecimalFormat("#.##").format(graph.getEdgeWeight(e)));

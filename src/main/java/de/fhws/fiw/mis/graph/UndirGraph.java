@@ -13,19 +13,19 @@ import java.util.Set;
  */
 public class UndirGraph extends AbstractGraph {
     public UndirGraph() {
-        super(new ClassBasedEdgeFactory<>(DefaultWeightedEdge.class), false, false);
+        super(new ClassBasedEdgeFactory<>(Edge.class), false, false);
     }
 
     @Override
-    protected Specifics<Vertex, DefaultWeightedEdge> createSpecifics() {
+    protected Specifics<Vertex, Edge> createSpecifics() {
         return super.createUndirectedSpecifics();
     }
 
     @Override
     public Collection<Vertex> getNeighbors(Vertex vertex) {
         Collection<Vertex> vertices = new ArrayList<>();
-        Set<DefaultWeightedEdge> edges = edgesOf(vertex);
-        for(DefaultWeightedEdge edge : edges) {
+        Set<Edge> edges = edgesOf(vertex);
+        for(Edge edge : edges) {
             Vertex neighbor = getEdgeSource(edge);
             if(neighbor.equals(vertex)) neighbor = getEdgeTarget(edge);
             if(!neighbor.equals(vertex)) vertices.add(neighbor);

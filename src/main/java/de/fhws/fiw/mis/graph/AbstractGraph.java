@@ -10,8 +10,8 @@ import java.util.stream.Collectors;
 /**
  * Created by maxarndt on 06.04.17.
  */
-public abstract class AbstractGraph extends AbstractBaseGraph<Vertex, DefaultWeightedEdge> {
-    public AbstractGraph(EdgeFactory<Vertex, DefaultWeightedEdge> ef, boolean allowMultipleEdges, boolean allowLoops) {
+public abstract class AbstractGraph extends AbstractBaseGraph<Vertex, Edge> {
+    public AbstractGraph(EdgeFactory<Vertex, Edge> ef, boolean allowMultipleEdges, boolean allowLoops) {
         super(ef, allowMultipleEdges, allowLoops);
     }
 
@@ -19,6 +19,7 @@ public abstract class AbstractGraph extends AbstractBaseGraph<Vertex, DefaultWei
     public abstract boolean hasCycle();
     public abstract boolean hasEulerianCircuit();
     public abstract boolean hasEulerianPath();
+
 
 
     public boolean isConnected() {

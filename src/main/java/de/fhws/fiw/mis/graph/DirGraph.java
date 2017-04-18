@@ -12,21 +12,21 @@ import java.util.stream.Collectors;
 /**
  * Created by maxarndt on 05.04.17.
  */
-public class DirGraph extends AbstractGraph implements DirectedGraph<Vertex, DefaultWeightedEdge> {
+public class DirGraph extends AbstractGraph implements DirectedGraph<Vertex, Edge> {
     public DirGraph() {
-        super(new ClassBasedEdgeFactory<>(DefaultWeightedEdge.class), false, false);
+        super(new ClassBasedEdgeFactory<>(Edge.class), false, false);
     }
 
     @Override
-    protected Specifics<Vertex, DefaultWeightedEdge> createSpecifics() {
+    protected Specifics<Vertex, Edge> createSpecifics() {
         return super.createDirectedSpecifics();
     }
 
     @Override
     public Collection<Vertex> getNeighbors(Vertex vertex) {
         Collection<Vertex> vertices = new ArrayList<>();
-        Set<DefaultWeightedEdge> edges = edgesOf(vertex);
-        for(DefaultWeightedEdge edge : edges) {
+        Set<Edge> edges = edgesOf(vertex);
+        for(Edge edge : edges) {
             Vertex neighbor = getEdgeTarget(edge);
             if(!neighbor.equals(vertex)) vertices.add(neighbor);
         }
@@ -58,6 +58,6 @@ public class DirGraph extends AbstractGraph implements DirectedGraph<Vertex, Def
             });
         }
 
-        return clone.edgeSet().size() > 0 ? true : false;
+        return clone.edgeSet().size() > 0;
     }
 }

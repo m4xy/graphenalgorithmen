@@ -1,6 +1,7 @@
 package de.fhws.fiw.mis.graph.io.importer;
 
 import de.fhws.fiw.mis.graph.DirGraph;
+import de.fhws.fiw.mis.graph.Edge;
 import de.fhws.fiw.mis.graph.UndirGraph;
 import de.fhws.fiw.mis.graph.Vertex;
 import org.jgrapht.graph.AbstractBaseGraph;
@@ -42,7 +43,7 @@ public class GraphImporterImpl implements GraphImporter {
         return graph;
     }
 
-    private void buildGraph(AbstractBaseGraph<Vertex, DefaultWeightedEdge> graph, String fileName) {
+    private void buildGraph(AbstractBaseGraph<Vertex, Edge> graph, String fileName) {
         List<String> inputFile = readFile(fileName);
 
         addVertexes(inputFile, graph);
@@ -60,7 +61,7 @@ public class GraphImporterImpl implements GraphImporter {
 
         return stringList;
     }
-    private void addVertexes(List<String> inputFile, AbstractBaseGraph<Vertex, DefaultWeightedEdge> graph) {
+    private void addVertexes(List<String> inputFile, AbstractBaseGraph<Vertex, Edge> graph) {
         for(String line : inputFile) {
             if(line.startsWith("knoten")) {
                 String vertexName = line.split(" ")[1];
@@ -69,7 +70,7 @@ public class GraphImporterImpl implements GraphImporter {
         }
     }
 
-    private void addEdges(List<String> inputFile, AbstractBaseGraph<Vertex, DefaultWeightedEdge> graph) {
+    private void addEdges(List<String> inputFile, AbstractBaseGraph<Vertex, Edge> graph) {
         try {
             for(String line : inputFile) {
                 if(line.startsWith("kante")) {
@@ -83,7 +84,7 @@ public class GraphImporterImpl implements GraphImporter {
                         weight = Double.parseDouble(lineArr[3]);
                     }
 
-                    DefaultWeightedEdge e = graph.addEdge(new Vertex(v1), new Vertex(v2));
+                    Edge e = graph.addEdge(new Vertex(v1), new Vertex(v2));
                     graph.setEdgeWeight(e, weight);
                 }
             }
