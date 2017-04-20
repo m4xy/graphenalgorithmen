@@ -1,13 +1,12 @@
 package de.fhws.fiw.mis.graph.io.exporter;
 
-import de.fhws.fiw.mis.graph.Edge;
-import de.fhws.fiw.mis.graph.Vertex;
+import de.fhws.fiw.mis.graph.EdgeBase;
+import de.fhws.fiw.mis.graph.VertexBase;
 import org.jgrapht.Graph;
-import org.jgrapht.graph.DefaultWeightedEdge;
 
 /**
  * Created by maxarndt on 23.03.17.
  */
 public interface GraphFileExporter {
-    void exportGraph(Graph<Vertex, Edge> graph, String filePath);
+    void exportGraph(Graph<VertexBase, EdgeBase> graph, String filePath);
 }

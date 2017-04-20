@@ -3,10 +3,10 @@ package de.fhws.fiw.mis.graph;
 /**
  * Created by maxarndt on 18.04.17.
  */
-public class FlowEdge extends Edge {
+public class FlowEdge extends EdgeBase {
     private int currentFlow;
 
-    public FlowEdge(Edge e) {
+    public FlowEdge(EdgeBase e) {
         super(e.getSource(), e.getTarget(), e.getWeight());
         this.currentFlow = 0;
     }

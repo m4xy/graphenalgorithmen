@@ -1,15 +1,8 @@
 package de.fhws.fiw.mis.graph.io.importer;
 
-import de.fhws.fiw.mis.graph.DirGraph;
-import de.fhws.fiw.mis.graph.Edge;
-import de.fhws.fiw.mis.graph.UndirGraph;
-import de.fhws.fiw.mis.graph.Vertex;
+import de.fhws.fiw.mis.graph.*;
 import org.jgrapht.graph.AbstractBaseGraph;
-import org.jgrapht.graph.DefaultWeightedEdge;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -28,22 +21,22 @@ public class GraphImporterImpl implements GraphImporter {
     }
 
     @Override
-    public UndirGraph importGraph(String fileName) {
-        UndirGraph graph = new UndirGraph();
+    public UndirectedBaseGraph importGraph(String fileName) {
+        UndirectedBaseGraph graph = new UndirectedBaseGraph();
         buildGraph(graph, fileName);
 
         return graph;
     }
 
     @Override
-    public DirGraph importDirectedGraph(String fileName) {
-        DirGraph graph = new DirGraph();
+    public DirectedBaseGraph importDirectedGraph(String fileName) {
+        DirectedBaseGraph graph = new DirectedBaseGraph();
         buildGraph(graph, fileName);
 
         return graph;
     }
 
-    private void buildGraph(AbstractBaseGraph<Vertex, Edge> graph, String fileName) {
+    private void buildGraph(AbstractGraph graph, String fileName) {
         List<String> inputFile = readFile(fileName);
 
         addVertexes(inputFile, graph);
@@ -61,30 +54,30 @@ public class GraphImporterImpl implements GraphImporter {
 
         return stringList;
     }
-    private void addVertexes(List<String> inputFile, AbstractBaseGraph<Vertex, Edge> graph) {
+    private void addVertexes(List<String> inputFile, AbstractGraph graph) {
         for(String line : inputFile) {
             if(line.startsWith("knoten")) {
                 String vertexName = line.split(" ")[1];
-                graph.addVertex(new Vertex(vertexName));
+                graph.addVertex(new VertexBase(vertexName));
             }
         }
     }
 
-    private void addEdges(List<String> inputFile, AbstractBaseGraph<Vertex, Edge> graph) {
+    private void addEdges(List<String> inputFile, AbstractGraph graph) {
         try {
             for(String line : inputFile) {
                 if(line.startsWith("kante")) {
                     String[] lineArr = line.split(" ");
-                    Double weight = 1.0;
+                    int weight = 1;
 
                     String v1 = lineArr[1];
                     String v2 = lineArr[2];
 
                     if(lineArr.length > 3) {
-                        weight = Double.parseDouble(lineArr[3]);
+                        weight = Integer.parseInt(lineArr[3]);
                     }
 
-                    Edge e = graph.addEdge(new Vertex(v1), new Vertex(v2));
+                    EdgeBase e = graph.addEdge(new VertexBase(v1), new VertexBase(v2));
                     graph.setEdgeWeight(e, weight);
                 }
             }

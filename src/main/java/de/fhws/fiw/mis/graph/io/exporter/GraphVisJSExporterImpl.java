@@ -19,7 +19,7 @@ public class GraphVisJSExporterImpl implements GraphVisJSExporter {
     @Override
     public String getNodeDataSet() {
         StringBuilder sb = new StringBuilder();
-        graph.vertexSet().stream()
+        graph.getVertexSet().stream()
                 .forEach(v -> sb.append(getNodeObj(v.getName(), v.toString())));
 
         return removeLastChar(sb.toString());
@@ -28,7 +28,7 @@ public class GraphVisJSExporterImpl implements GraphVisJSExporter {
     @Override
     public String getEdgeDataSet(boolean arrows) {
         StringBuilder sb = new StringBuilder();
-        graph.edgeSet().stream()
+        graph.getEdgeSet().stream()
                 .forEach(e -> {
                     if(hasWeightedEdges)
                         sb.append(getEdgeObj(graph.getEdgeSource(e).getName(), graph.getEdgeTarget(e).getName(), graph.getEdgeWeight(e), arrows));
