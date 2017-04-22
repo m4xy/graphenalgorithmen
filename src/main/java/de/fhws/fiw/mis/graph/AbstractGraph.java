@@ -1,5 +1,8 @@
 package de.fhws.fiw.mis.graph;
 
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Multimap;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -7,99 +10,115 @@ import java.util.stream.Collectors;
  * Created by maxarndt on 06.04.17.
  */
 public abstract class AbstractGraph implements Graph {
-    private boolean allowMultipleEdges;
-    private boolean allowLoops;
     private Map<String, Vertex> vertexMap;
-    private Map<Vertex, Edge> edgeMap; //warum multi value bei felix?
-    private List<Edge> edgeList; //für was?
+    private Multimap<Vertex, Edge> edgeMap;
+    private List<Edge> edgeList;
 
-    public AbstractGraph(boolean allowMultipleEdges, boolean allowLoops) {
-        this.allowMultipleEdges = allowMultipleEdges;
-        this.allowLoops = allowLoops;
+    public AbstractGraph() {
+        vertexMap = new HashMap<>();
+        edgeMap = ArrayListMultimap.create();
+        edgeList = new ArrayList<>();
     }
 
-    public abstract Collection<VertexBase> getNeighbors(VertexBase vertex);
+    public abstract Collection<Vertex> getNeighbors(Vertex vertex);
     public abstract boolean hasCycle();
     public abstract boolean hasEulerianCircuit();
     public abstract boolean hasEulerianPath();
+    public abstract Set<Edge> getAllEdges(Vertex sourceVertex, Vertex targetVertex);
+    public abstract Edge getEdge(Vertex sourceVertex, Vertex targetVertex);
 
     @Override
-    public Set<EdgeBase> getAllEdges(VertexBase sourceVertex, VertexBase targetVertex) {
+    public Edge addEdge(Vertex sourceVertex, Vertex targetVertex) {
+        Edge e = new EdgeBase(sourceVertex, targetVertex);
+        addEdge(e);
+        return e;
+    }
+
+    @Override
+    public Edge addEdge(Vertex sourceVertex, Vertex targetVertex, int weight) {
+        Edge e = new EdgeBase(sourceVertex, targetVertex, weight);
+        addEdge(e);
+        return e;
+    }
+
+    @Override
+    public void addEdge(Edge e) {
+        addVertex(e.getSource());
+        addVertex(e.getTarget());
+
+        edgeMap.put(e.getSource(), e);
+        if(e.getSource() != e.getTarget())
+            edgeMap.put(e.getTarget(), e);
+
+        edgeList.add(e);
+    }
+
+    @Override
+    public void addVertex(Vertex v) {
+        vertexMap.put(v.getName(), v);
+    }
+
+    @Override
+    public abstract boolean containsEdge(Vertex sourceVertex, Vertex targetVertex);
+
+    @Override
+    public boolean containsEdge(Edge e) {
+        return edgeList.contains(e);
+    }
+
+    @Override
+    public boolean containsVertex(Vertex v) {
+        return vertexMap.containsKey(v.getName());
+    }
+
+    @Override
+    public Set<Edge> getEdgeSet() {
         return null;
     }
 
     @Override
-    public EdgeBase getEdge(VertexBase sourceVertex, VertexBase targetVertex) {
+    public Set<Edge> getEdgesOf(Vertex v) {
         return null;
     }
 
     @Override
-    public EdgeBase addEdge(VertexBase sourceVertex, VertexBase targetVertex) {
+    public Edge removeEdge(Vertex sourceVertex, Vertex targetVertex) {
         return null;
     }
 
     @Override
-    public boolean addVertex(VertexBase v) {
-        return false;
+    public void removeEdge(Edge e) {
+
     }
 
     @Override
-    public boolean containsEdge(VertexBase sourceVertex, VertexBase targetVertex) {
-        return false;
+    public void removeVertex(Vertex v) {
+        edgeMap.get(v).stream().forEach(e -> {
+            edgeList.remove(e);
+            edgeMap.remove(e.getSource(), e);
+            edgeMap.remove(e.getTarget(), e);
+        });
+
+        vertexMap.remove(v.getName());
     }
 
     @Override
-    public boolean containsEdge(EdgeBase e) {
-        return false;
-    }
-
-    @Override
-    public boolean containsVertex(VertexBase v) {
-        return false;
-    }
-
-    @Override
-    public Set<EdgeBase> getEdgeSet() {
+    public Set<Vertex> getVertexSet() {
         return null;
     }
 
     @Override
-    public Set<EdgeBase> getEdgesOf(VertexBase v) {
+    public Vertex getEdgeSource(Edge e) {
         return null;
     }
 
     @Override
-    public EdgeBase removeEdge(VertexBase sourceVertex, VertexBase targetVertex) {
+    public Vertex getEdgeTarget(Edge e) {
         return null;
     }
 
     @Override
-    public boolean removeEdge(EdgeBase e) {
-        return false;
-    }
-
-    @Override
-    public boolean removeVertex(VertexBase v) {
-        return false;
-    }
-
-    @Override
-    public Set<VertexBase> getVertexSet() {
-        return null;
-    }
-
-    @Override
-    public VertexBase getEdgeSource(EdgeBase e) {
-        return null;
-    }
-
-    @Override
-    public VertexBase getEdgeTarget(EdgeBase e) {
-        return null;
-    }
-
-    @Override
-    public int getEdgeWeight(EdgeBase e) {
+    public int getEdgeWeight(Edge e) {
         return 0;
     }
 
@@ -109,20 +128,20 @@ public abstract class AbstractGraph implements Graph {
     }
 
     public boolean isConnected() {
-        Collection<VertexBase> vertices = breadthFirstSearch(getVertexSet().stream().findFirst().get());
+        Collection<Vertex> vertices = breadthFirstSearch(getVertexSet().stream().findFirst().get());
         return !getVertexSet().stream().anyMatch(x -> vertices.contains(x) == false);
     }
     public boolean hasWeightedEdges() {
         return getEdgeSet().stream().filter(e -> getEdgeWeight(e) != 1.0).count() > 0;
     }
 
-    public Collection<VertexBase> breadthFirstSearch(VertexBase startVertex) {
-        Queue<VertexBase> queue = new LinkedList<>(Arrays.asList(startVertex));
-        List<VertexBase> visited = new LinkedList<>(queue);
+    public Collection<Vertex> breadthFirstSearch(Vertex startVertex) {
+        Queue<Vertex> queue = new LinkedList<>(Arrays.asList(startVertex));
+        List<Vertex> visited = new LinkedList<>(queue);
 
         while (!queue.isEmpty()) {
-            VertexBase curVertex = queue.remove();
-            Collection<VertexBase> neighbors = getNeighbors(curVertex).stream()
+            Vertex curVertex = queue.remove();
+            Collection<Vertex> neighbors = getNeighbors(curVertex).stream()
                     .distinct()
                     .filter(v -> visited.contains(v) != true)
                     .collect(Collectors.toList());
@@ -132,12 +151,12 @@ public abstract class AbstractGraph implements Graph {
         return visited;
     }
 
-    public Collection<VertexBase> depthFirstSearch(VertexBase startVertex) {
-        Stack<VertexBase> stack = new Stack<>();
-        List<VertexBase> visited = new LinkedList<>();
+    public Collection<Vertex> depthFirstSearch(Vertex startVertex) {
+        Stack<Vertex> stack = new Stack<>();
+        List<Vertex> visited = new LinkedList<>();
         stack.add(startVertex);
         while(!stack.isEmpty()) {
-            VertexBase curVertex = stack.pop();
+            Vertex curVertex = stack.pop();
             if(!visited.contains(curVertex)) {
                 visited.add(curVertex);
                 stack.addAll(getNeighbors(curVertex).stream()

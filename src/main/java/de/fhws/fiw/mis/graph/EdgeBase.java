@@ -8,33 +8,33 @@ import java.io.Serializable;
  * Created by maxarndt on 18.04.17.
  */
 public class EdgeBase implements Edge, Cloneable, Serializable {
-    Object source;
-    Object target;
-    int weight = new Double(WeightedGraph.DEFAULT_EDGE_WEIGHT).intValue();
+    private Vertex source;
+    private Vertex target;
+    private int weight;
 
     public EdgeBase() {
 
     }
-    public EdgeBase(Object source, Object target) {
+    public EdgeBase(Vertex source, Vertex target) {
         this.source = source;
         this.target = target;
     }
-    public EdgeBase(Object source, Object target, int weight) {
+    public EdgeBase(Vertex source, Vertex target, int weight) {
         this.source = source;
         this.target = target;
         this.weight = weight;
     }
 
-    public Object getSource() {
+    public Vertex getSource() {
         return source;
     }
-    public void setSource(Object source) {
+    public void setSource(Vertex source) {
         this.source = source;
     }
-    public Object getTarget() {
+    public Vertex getTarget() {
         return target;
     }
-    public void setTarget(Object target) {
+    public void setTarget(Vertex target) {
         this.target = target;
     }
     public int getWeight() {

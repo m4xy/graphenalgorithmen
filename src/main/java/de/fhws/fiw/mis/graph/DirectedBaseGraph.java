@@ -10,7 +10,22 @@ import java.util.stream.Collectors;
 public class DirectedBaseGraph extends AbstractGraph implements DirectedGraph, Cloneable {
 
     public DirectedBaseGraph() {
-        super(false, false);
+
+    }
+
+    @Override
+    public Set<Edge> getAllEdges(Vertex sourceVertex, Vertex targetVertex) {
+        return null;
+    }
+
+    @Override
+    public Edge getEdge(Vertex sourceVertex, Vertex targetVertex) {
+        return null;
+    }
+
+    @Override
+    public boolean containsEdge(Vertex sourceVertex, Vertex targetVertex) {
+        return false;
     }
 
     @Override
@@ -34,11 +49,11 @@ public class DirectedBaseGraph extends AbstractGraph implements DirectedGraph, C
     }
 
     @Override
-    public Collection<VertexBase> getNeighbors(VertexBase vertex) {
-        Collection<VertexBase> vertices = new ArrayList<>();
-        Set<EdgeBase> edges = getEdgesOf(vertex);
-        for(EdgeBase edge : edges) {
-            VertexBase neighbor = getEdgeTarget(edge);
+    public Collection<Vertex> getNeighbors(Vertex vertex) {
+        Collection<Vertex> vertices = new ArrayList<>();
+        Set<Edge> edges = getEdgesOf(vertex);
+        for(Edge edge : edges) {
+            Vertex neighbor = getEdgeTarget(edge);
             if(!neighbor.equals(vertex)) vertices.add(neighbor);
         }
         return vertices;
@@ -54,15 +69,15 @@ public class DirectedBaseGraph extends AbstractGraph implements DirectedGraph, C
     }
     public boolean hasCycle() { //Kahn's Algorithm
         DirectedBaseGraph clone = (DirectedBaseGraph)clone();
-        List<VertexBase> sortedVertices = new LinkedList<>();
-        Queue<VertexBase> verticesWOIncEdge = new LinkedList<>(clone.getVertexSet().stream()
+        List<Vertex> sortedVertices = new LinkedList<>();
+        Queue<Vertex> verticesWOIncEdge = new LinkedList<>(clone.getVertexSet().stream()
                 .filter(v -> clone.getInDegreeOf(v) == 0)
                 .collect(Collectors.toList()));
         while(!verticesWOIncEdge.isEmpty()) {
-            VertexBase curVertex = verticesWOIncEdge.remove();
+            Vertex curVertex = verticesWOIncEdge.remove();
             sortedVertices.add(curVertex);
             clone.getEdgesOf(curVertex).stream().forEach(e -> {
-                VertexBase targetVertex = clone.getEdgeTarget(e);
+                Vertex targetVertex = clone.getEdgeTarget(e);
                 clone.removeEdge(e);
                 if(clone.getInDegreeOf(targetVertex) == 0)
                     verticesWOIncEdge.add(targetVertex);

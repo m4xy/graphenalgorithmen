@@ -12,15 +12,30 @@ import java.util.Set;
  */
 public class UndirectedBaseGraph extends AbstractGraph {
     public UndirectedBaseGraph() {
-        super(false, false);
+
     }
 
     @Override
-    public Collection<VertexBase> getNeighbors(VertexBase vertex) {
-        Collection<VertexBase> vertices = new ArrayList<>();
-        Set<EdgeBase> edges = getEdgesOf(vertex);
-        for(EdgeBase edge : edges) {
-            VertexBase neighbor = getEdgeSource(edge);
+    public Set<Edge> getAllEdges(Vertex sourceVertex, Vertex targetVertex) {
+        return null;
+    }
+
+    @Override
+    public Edge getEdge(Vertex sourceVertex, Vertex targetVertex) {
+        return null;
+    }
+
+    @Override
+    public boolean containsEdge(Vertex sourceVertex, Vertex targetVertex) {
+        return false;
+    }
+
+    @Override
+    public Collection<Vertex> getNeighbors(Vertex vertex) {
+        Collection<Vertex> vertices = new ArrayList<>();
+        Set<Edge> edges = getEdgesOf(vertex);
+        for(Edge edge : edges) {
+            Vertex neighbor = getEdgeSource(edge);
             if(neighbor.equals(vertex)) neighbor = getEdgeTarget(edge);
             if(!neighbor.equals(vertex)) vertices.add(neighbor);
         }

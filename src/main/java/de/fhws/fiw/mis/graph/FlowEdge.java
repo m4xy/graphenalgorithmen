@@ -13,7 +13,7 @@ public class FlowEdge extends EdgeBase {
 
     @Override
     public String toString() {
-        return "(" + source + " : " + target + "{" + currentFlow + "/" + weight + "})";
+        return "(" + super.getSource().getName() + " : " + super.getTarget().getName() + "{" + currentFlow + "/" + super.getWeight() + "})";
     }
 
     public int getCurrentFlow() {
