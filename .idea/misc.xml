@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectResources">
+    <resource url="http://xmlns.jcp.org/jsf/core" location="$PROJECT_DIR$/target/graphenalgorithmen/WEB-INF/lib/jsf-impl-2.2.2.jar!/com/sun/faces/metadata/taglib/facelets_jsf_core.taglib.xml" />
+    <resource url="http://xmlns.jcp.org/jsf/facelets" location="$PROJECT_DIR$/target/graphenalgorithmen/WEB-INF/lib/jsf-impl-2.2.2.jar!/com/sun/faces/metadata/taglib/ui.taglib.xml" />
+    <resource url="http://xmlns.jcp.org/jsf/html" location="$PROJECT_DIR$/target/graphenalgorithmen/WEB-INF/lib/jsf-impl-2.2.2.jar!/com/sun/faces/metadata/taglib/html_basic.taglib.xml" />
+    <resource url="http://xmlns.jcp.org/jsp/jstl/core" location="$PROJECT_DIR$/target/graphenalgorithmen/WEB-INF/lib/jsf-impl-2.2.2.jar!/com/sun/faces/metadata/taglib/jstl-core.taglib.xml" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
