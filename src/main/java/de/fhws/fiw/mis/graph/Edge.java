@@ -6,4 +6,6 @@ package de.fhws.fiw.mis.graph;
 public interface Edge {
     Vertex getSource();
     Vertex getTarget();
+    int getWeight();
+    void setWeight(int weight);
 }

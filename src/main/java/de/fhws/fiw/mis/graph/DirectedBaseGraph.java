@@ -14,12 +14,7 @@ public class DirectedBaseGraph extends AbstractGraph implements DirectedGraph, C
     }
 
     @Override
-    public Set<Edge> getAllEdges(Vertex sourceVertex, Vertex targetVertex) {
-        return null;
-    }
-
-    @Override
-    public Edge getEdge(Vertex sourceVertex, Vertex targetVertex) {
+    public Set<Edge> getEdges(Vertex sourceVertex, Vertex targetVertex) {
         return null;
     }
 
@@ -53,7 +48,7 @@ public class DirectedBaseGraph extends AbstractGraph implements DirectedGraph, C
         Collection<Vertex> vertices = new ArrayList<>();
         Set<Edge> edges = getEdgesOf(vertex);
         for(Edge edge : edges) {
-            Vertex neighbor = getEdgeTarget(edge);
+            Vertex neighbor = edge.getTarget();
             if(!neighbor.equals(vertex)) vertices.add(neighbor);
         }
         return vertices;
@@ -77,7 +72,7 @@ public class DirectedBaseGraph extends AbstractGraph implements DirectedGraph, C
             Vertex curVertex = verticesWOIncEdge.remove();
             sortedVertices.add(curVertex);
             clone.getEdgesOf(curVertex).stream().forEach(e -> {
-                Vertex targetVertex = clone.getEdgeTarget(e);
+                Vertex targetVertex = e.getTarget();
                 clone.removeEdge(e);
                 if(clone.getInDegreeOf(targetVertex) == 0)
                     verticesWOIncEdge.add(targetVertex);

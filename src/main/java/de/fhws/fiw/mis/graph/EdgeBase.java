@@ -45,6 +45,26 @@ public class EdgeBase implements Edge, Cloneable, Serializable {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        EdgeBase edgeBase = (EdgeBase) o;
+
+        if (weight != edgeBase.weight) return false;
+        if (!source.equals(edgeBase.source)) return false;
+        return target.equals(edgeBase.target);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = source.hashCode();
+        result = 31 * result + target.hashCode();
+        result = 31 * result + weight;
+        return result;
+    }
+
+    @Override
     public Object clone()
     {
         try {

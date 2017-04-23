@@ -45,14 +45,14 @@ public class GraphVisJSExprterTest {
 
     @Test
     public void testGetEdgeDataSetWithLabel() {
-        g.setEdgeWeight(g.getEdge(new VertexBase("A"), new VertexBase("C")), 7);
+        g.getEdges(new VertexBase("A"), new VertexBase("C")).stream().findFirst().get().setWeight(7);
         exporter = new GraphVisJSExporterImpl(g);
         assertEquals("{from: 'A', to: 'C', label: '7', font: {align: 'horizontal'}}", exporter.getEdgeDataSet(false));
     }
 
     @Test
     public void testGetEdgeDataSetWithArrowsAndLabel() {
-        g.setEdgeWeight(g.getEdge(new VertexBase("A"), new VertexBase("C")), 7);
+        g.getEdges(new VertexBase("A"), new VertexBase("C")).stream().findFirst().get().setWeight(7);
         exporter = new GraphVisJSExporterImpl(g);
         assertEquals("{from: 'A', to: 'C', label: '7', font: {align: 'horizontal'}, arrows: 'to'}", exporter.getEdgeDataSet(true));
     }

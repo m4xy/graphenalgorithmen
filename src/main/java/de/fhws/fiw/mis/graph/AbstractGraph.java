@@ -24,8 +24,8 @@ public abstract class AbstractGraph implements Graph {
     public abstract boolean hasCycle();
     public abstract boolean hasEulerianCircuit();
     public abstract boolean hasEulerianPath();
-    public abstract Set<Edge> getAllEdges(Vertex sourceVertex, Vertex targetVertex);
-    public abstract Edge getEdge(Vertex sourceVertex, Vertex targetVertex);
+    public abstract Set<Edge> getEdges(Vertex sourceVertex, Vertex targetVertex);
+    public abstract boolean containsEdge(Vertex sourceVertex, Vertex targetVertex);
 
     @Override
     public Edge addEdge(Vertex sourceVertex, Vertex targetVertex) {
@@ -59,9 +59,6 @@ public abstract class AbstractGraph implements Graph {
     }
 
     @Override
-    public abstract boolean containsEdge(Vertex sourceVertex, Vertex targetVertex);
-
-    @Override
     public boolean containsEdge(Edge e) {
         return edgeList.contains(e);
     }
@@ -73,22 +70,24 @@ public abstract class AbstractGraph implements Graph {
 
     @Override
     public Set<Edge> getEdgeSet() {
-        return null;
+        return new HashSet<>(edgeList);
     }
 
     @Override
     public Set<Edge> getEdgesOf(Vertex v) {
-        return null;
+        return new HashSet<>(edgeMap.get(v));
     }
 
     @Override
-    public Edge removeEdge(Vertex sourceVertex, Vertex targetVertex) {
-        return null;
+    public void removeEdges(Vertex sourceVertex, Vertex targetVertex) {
+        getEdges(sourceVertex, targetVertex).forEach(e -> removeEdge(e));
     }
 
     @Override
     public void removeEdge(Edge e) {
-
+        edgeMap.remove(e.getSource(), e);
+        edgeMap.remove(e.getTarget(), e);
+        edgeList.remove(e);
     }
 
     @Override
@@ -104,37 +103,21 @@ public abstract class AbstractGraph implements Graph {
 
     @Override
     public Set<Vertex> getVertexSet() {
-        return null;
+        return new HashSet<>(vertexMap.values());
     }
 
     @Override
-    public Vertex getEdgeSource(Edge e) {
-        return null;
-    }
-
-    @Override
-    public Vertex getEdgeTarget(Edge e) {
-        return null;
-    }
-
-    @Override
-    public int getEdgeWeight(Edge e) {
-        return 0;
-    }
-
-    @Override
-    public void setEdgeWeight(Edge e, int weight) {
-
-    }
-
     public boolean isConnected() {
         Collection<Vertex> vertices = breadthFirstSearch(getVertexSet().stream().findFirst().get());
         return !getVertexSet().stream().anyMatch(x -> vertices.contains(x) == false);
     }
+
+    @Override
     public boolean hasWeightedEdges() {
-        return getEdgeSet().stream().filter(e -> getEdgeWeight(e) != 1.0).count() > 0;
+        return getEdgeSet().stream().filter(e -> e.getWeight() != 1).count() > 0;
     }
 
+    @Override
     public Collection<Vertex> breadthFirstSearch(Vertex startVertex) {
         Queue<Vertex> queue = new LinkedList<>(Arrays.asList(startVertex));
         List<Vertex> visited = new LinkedList<>(queue);
@@ -151,6 +134,7 @@ public abstract class AbstractGraph implements Graph {
         return visited;
     }
 
+    @Override
     public Collection<Vertex> depthFirstSearch(Vertex startVertex) {
         Stack<Vertex> stack = new Stack<>();
         List<Vertex> visited = new LinkedList<>();

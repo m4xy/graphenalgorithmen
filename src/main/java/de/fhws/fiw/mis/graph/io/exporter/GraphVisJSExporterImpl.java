@@ -31,9 +31,9 @@ public class GraphVisJSExporterImpl implements GraphVisJSExporter {
         graph.getEdgeSet().stream()
                 .forEach(e -> {
                     if(hasWeightedEdges)
-                        sb.append(getEdgeObj(graph.getEdgeSource(e).getName(), graph.getEdgeTarget(e).getName(), graph.getEdgeWeight(e), arrows));
+                        sb.append(getEdgeObj(e.getSource().getName(), e.getTarget().getName(), e.getWeight(), arrows));
                     else
-                        sb.append(getEdgeObj(graph.getEdgeSource(e).getName(), graph.getEdgeTarget(e).getName(), 0.0, arrows));
+                        sb.append(getEdgeObj(e.getSource().getName(), e.getTarget().getName(), 0.0, arrows));
                 });
 
         return removeLastChar(sb.toString());
