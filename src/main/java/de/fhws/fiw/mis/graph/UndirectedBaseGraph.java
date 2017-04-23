@@ -1,8 +1,5 @@
 package de.fhws.fiw.mis.graph;
 
-import org.jgrapht.graph.ClassBasedEdgeFactory;
-import org.jgrapht.graph.specifics.Specifics;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Set;

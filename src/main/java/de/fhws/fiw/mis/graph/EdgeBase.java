@@ -1,7 +1,5 @@
 package de.fhws.fiw.mis.graph;
 
-import org.jgrapht.WeightedGraph;
-
 import java.io.Serializable;
 
 /**

@@ -1,7 +1,6 @@
 package de.fhws.fiw.mis.graph.io.importer;
 
 import de.fhws.fiw.mis.graph.*;
-import org.jgrapht.graph.AbstractBaseGraph;
 
 import java.io.IOException;
 import java.nio.file.Files;
