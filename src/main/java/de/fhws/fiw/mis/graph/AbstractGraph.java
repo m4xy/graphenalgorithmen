@@ -10,9 +10,9 @@ import java.util.stream.Collectors;
  * Created by maxarndt on 06.04.17.
  */
 public abstract class AbstractGraph implements Graph {
-    private Map<String, Vertex> vertexMap;
-    private Multimap<Vertex, Edge> edgeMap;
-    private List<Edge> edgeList;
+    Map<String, Vertex> vertexMap;
+    Multimap<Vertex, Edge> edgeMap;
+    List<Edge> edgeList;
 
     public AbstractGraph() {
         vertexMap = new HashMap<>();
@@ -92,12 +92,12 @@ public abstract class AbstractGraph implements Graph {
 
     @Override
     public void removeVertex(Vertex v) {
-        edgeMap.get(v).stream().forEach(e -> {
-            edgeList.remove(e);
+        for (Iterator<Edge> i = edgeMap.get(v).iterator(); i.hasNext();) {
+            Edge e = i.next();
             edgeMap.remove(e.getSource(), e);
             edgeMap.remove(e.getTarget(), e);
-        });
-
+            edgeList.remove(e);
+        }
         vertexMap.remove(v.getName());
     }
 

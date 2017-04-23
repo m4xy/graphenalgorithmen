@@ -2,7 +2,9 @@ package de.fhws.fiw.mis.graph;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * Created by maxarndt on 05.04.17.
@@ -14,12 +16,18 @@ public class UndirectedBaseGraph extends AbstractGraph {
 
     @Override
     public Set<Edge> getEdges(Vertex sourceVertex, Vertex targetVertex) {
-        return null;
+        return new HashSet<>(super.edgeMap.get(sourceVertex).stream()
+                .filter(e -> (e.getTarget().equals(targetVertex) && e.getSource().equals(sourceVertex) ||
+                             (e.getTarget().equals(sourceVertex) && e.getSource().equals(targetVertex))))
+                .collect(Collectors.toList()));
     }
 
     @Override
     public boolean containsEdge(Vertex sourceVertex, Vertex targetVertex) {
-        return false;
+        return super.edgeMap.get(sourceVertex).stream()
+                .filter(e -> (e.getTarget().equals(targetVertex) && e.getSource().equals(sourceVertex) ||
+                        (e.getTarget().equals(sourceVertex) && e.getSource().equals(targetVertex))))
+                .count() > 0;
     }
 
     @Override

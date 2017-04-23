@@ -15,12 +15,16 @@ public class DirectedBaseGraph extends AbstractGraph implements DirectedGraph, C
 
     @Override
     public Set<Edge> getEdges(Vertex sourceVertex, Vertex targetVertex) {
-        return null;
+        return new HashSet<>(super.edgeMap.get(sourceVertex).stream()
+                .filter(e -> e.getTarget().equals(targetVertex) && e.getSource().equals(sourceVertex))
+                .collect(Collectors.toList()));
     }
 
     @Override
     public boolean containsEdge(Vertex sourceVertex, Vertex targetVertex) {
-        return false;
+        return super.edgeMap.get(sourceVertex).stream()
+                .filter(e -> e.getTarget().equals(targetVertex) && e.getSource().equals(sourceVertex))
+                .count() > 0;
     }
 
     @Override
