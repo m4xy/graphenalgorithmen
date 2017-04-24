@@ -69,7 +69,7 @@ public abstract class AbstractGraph implements Graph {
     }
 
     @Override
-    public Set<Edge> getEdgeSet() {
+    public Set<Edge> getAllEdges() {
         return new HashSet<>(edgeList);
     }
 
@@ -102,19 +102,19 @@ public abstract class AbstractGraph implements Graph {
     }
 
     @Override
-    public Set<Vertex> getVertexSet() {
+    public Set<Vertex> getAllVertices() {
         return new HashSet<>(vertexMap.values());
     }
 
     @Override
     public boolean isConnected() {
-        Collection<Vertex> vertices = breadthFirstSearch(getVertexSet().stream().findFirst().get());
-        return !getVertexSet().stream().anyMatch(x -> vertices.contains(x) == false);
+        Collection<Vertex> vertices = breadthFirstSearch(getAllVertices().stream().findFirst().get());
+        return !getAllVertices().stream().anyMatch(x -> vertices.contains(x) == false);
     }
 
     @Override
     public boolean hasWeightedEdges() {
-        return getEdgeSet().stream().filter(e -> e.getWeight() != 1).count() > 0;
+        return getAllEdges().stream().filter(e -> e.getWeight() != 1).count() > 0;
     }
 
     @Override

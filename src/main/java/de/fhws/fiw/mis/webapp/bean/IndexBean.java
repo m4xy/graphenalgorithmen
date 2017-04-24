@@ -149,6 +149,6 @@ public class IndexBean {
         setStatusMessage(message);
     }
     private VertexBase findVertex(String name) {
-        return (VertexBase)graph.getVertexSet().stream().filter(v -> v.getName().equals(name)).findFirst().get();
+        return (VertexBase)graph.getAllVertices().stream().filter(v -> v.getName().equals(name)).findFirst().get();
     }
 }

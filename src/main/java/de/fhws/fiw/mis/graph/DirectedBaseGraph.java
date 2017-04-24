@@ -59,17 +59,17 @@ public class DirectedBaseGraph extends AbstractGraph implements DirectedGraph, C
     }
 
     public boolean hasEulerianCircuit() {
-        return isConnected() && getVertexSet().stream()
+        return isConnected() && getAllVertices().stream()
                 .allMatch(x -> getInDegreeOf(x) == getOutDegreeOf(x));
     }
     public boolean hasEulerianPath() {
-        return isConnected() && getVertexSet().stream().
+        return isConnected() && getAllVertices().stream().
                 allMatch(v -> Math.abs(getInDegreeOf(v) - getOutDegreeOf(v)) < 2);
     }
     public boolean hasCycle() { //Kahn's Algorithm
         DirectedBaseGraph clone = (DirectedBaseGraph)clone();
         List<Vertex> sortedVertices = new LinkedList<>();
-        Queue<Vertex> verticesWOIncEdge = new LinkedList<>(clone.getVertexSet().stream()
+        Queue<Vertex> verticesWOIncEdge = new LinkedList<>(clone.getAllVertices().stream()
                 .filter(v -> clone.getInDegreeOf(v) == 0)
                 .collect(Collectors.toList()));
         while(!verticesWOIncEdge.isEmpty()) {
@@ -83,7 +83,7 @@ public class DirectedBaseGraph extends AbstractGraph implements DirectedGraph, C
             });
         }
 
-        return clone.getEdgeSet().size() > 0;
+        return clone.getAllEdges().size() > 0;
     }
 
     @Override

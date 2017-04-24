@@ -15,12 +15,12 @@ public interface Graph {
     boolean containsEdge(Vertex sourceVertex, Vertex targetVertex);
     boolean containsEdge(Edge e);
     boolean containsVertex(Vertex v);
-    Set<Edge> getEdgeSet();
+    Set<Edge> getAllEdges();
     Set<Edge> getEdgesOf(Vertex v);
     void removeEdges(Vertex sourceVertex, Vertex targetVertex);
     void removeEdge(Edge e);
     void removeVertex(Vertex v);
-    Set<Vertex> getVertexSet();
+    Set<Vertex> getAllVertices();
     Collection<Vertex> getNeighbors(Vertex vertex);
     boolean hasCycle();
     boolean hasEulerianCircuit();
