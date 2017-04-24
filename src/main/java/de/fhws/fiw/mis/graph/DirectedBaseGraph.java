@@ -29,22 +29,22 @@ public class DirectedBaseGraph extends AbstractGraph implements DirectedGraph, C
 
     @Override
     public int getInDegreeOf(Vertex v) {
-        return 0;
+        return (int)super.edgeMap.get(v).stream().filter(e -> e.getTarget().equals(v)).count();
     }
 
     @Override
     public Set<Edge> getIncomingEdgesOf(Vertex v) {
-        return null;
+        return new HashSet<>(super.edgeMap.get(v).stream().filter(e -> e.getTarget().equals(v)).collect(Collectors.toList()));
     }
 
     @Override
     public int getOutDegreeOf(Vertex v) {
-        return 0;
+        return (int)super.edgeMap.get(v).stream().filter(e -> e.getSource().equals(v)).count();
     }
 
     @Override
     public Set<Edge> getOutgoingEdgesOf(Vertex v) {
-        return null;
+        return new HashSet<>(super.edgeMap.get(v).stream().filter(e -> e.getSource().equals(v)).collect(Collectors.toList()));
     }
 
     @Override

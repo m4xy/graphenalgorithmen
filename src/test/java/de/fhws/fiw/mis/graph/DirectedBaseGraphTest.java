@@ -28,6 +28,58 @@ public class DirectedBaseGraphTest {
     }
 
     @Test
+    public void testGetIncomingEdgesOf() {
+        assertEquals(new HashSet<Edge>(Arrays.asList(new EdgeBase(new VertexBase("A"), new VertexBase("C")))), g.getIncomingEdgesOf(new VertexBase("C")));
+    }
+    @Test
+    public void testGetIncomingEdgesOf2() {
+        g.addEdge(new VertexBase("C"), new VertexBase("B"));
+        g.addEdge(new VertexBase("B"), new VertexBase("C"), 9);
+        assertEquals(new HashSet<Edge>(Arrays.asList(new EdgeBase(new VertexBase("A"), new VertexBase("C")), new EdgeBase(new VertexBase("B"), new VertexBase("C"), 9))), g.getIncomingEdgesOf(new VertexBase("C")));
+    }
+
+    @Test
+    public void testGetOutgoingEdgesOf() {
+        assertEquals(new HashSet<Edge>(Arrays.asList(new EdgeBase(new VertexBase("A"), new VertexBase("C")), new EdgeBase(new VertexBase("A"), new VertexBase("B")))), g.getOutgoingEdgesOf(new VertexBase("A")));
+    }
+    @Test
+    public void testGetOutgoingEdgesOf2() {
+        g.addEdge(new VertexBase("C"), new VertexBase("B"));
+        g.addEdge(new VertexBase("B"), new VertexBase("A"));
+        g.addEdge(new VertexBase("B"), new VertexBase("C"), 9);
+        assertEquals(new HashSet<Edge>(Arrays.asList(new EdgeBase(new VertexBase("B"), new VertexBase("A")), new EdgeBase(new VertexBase("B"), new VertexBase("C"), 9))), g.getOutgoingEdgesOf(new VertexBase("B")));
+    }
+
+    @Test
+    public void testGetInDegreeOf() {
+        assertEquals(1, g.getInDegreeOf(new VertexBase("C")));
+    }
+    @Test
+    public void testGetInDegreeOf2() {
+        assertEquals(0, g.getInDegreeOf(new VertexBase("A")));
+    }
+    @Test
+    public void testGetInDegreeOf3() {
+        g.addEdge(new VertexBase("C"), new VertexBase("B"));
+        assertEquals(2, g.getInDegreeOf(new VertexBase("B")));
+    }
+
+    @Test
+    public void testGetOutDegreeOf() {
+        assertEquals(0, g.getOutDegreeOf(new VertexBase("C")));
+    }
+    @Test
+    public void testGetOutDegreeOf2() {
+        assertEquals(2, g.getOutDegreeOf(new VertexBase("A")));
+    }
+
+    @Test
+    public void testAddEdgeSelf() {
+        g.addEdge(new VertexBase("B"), new VertexBase("B"));
+        assertEquals(new HashSet<Edge>(Arrays.asList(new EdgeBase(new VertexBase("B"), new VertexBase("B")), new EdgeBase(new VertexBase("A"), new VertexBase("B")), new EdgeBase(new VertexBase("A"), new VertexBase("C")))), g.getAllEdges());
+    }
+
+    @Test
     public void testGetEdgesSingleEdge() {
         assertEquals(new HashSet<Edge>(Arrays.asList(new EdgeBase(new VertexBase("A"), new VertexBase("B")))), g.getEdges(new VertexBase("A"), new VertexBase("B")));
     }
