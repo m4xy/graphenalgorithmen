@@ -3,13 +3,17 @@ package de.fhws.fiw.mis.graph;
 /**
  * Created by maxarndt on 18.04.17.
  */
-public class FlowEdge {
-    private Edge edge;
+public class FlowEdge extends EdgeBase {
     private int currentFlow;
 
-    public FlowEdge(Edge e) {
-        this.edge = e;
+    public FlowEdge(EdgeBase e) {
+        super(e.getSource(), e.getTarget(), e.getWeight());
         this.currentFlow = 0;
+    }
+
+    @Override
+    public String toString() {
+        return "(" + super.getSource().getName() + " : " + super.getTarget().getName() + "{" + currentFlow + "/" + super.getWeight() + "})";
     }
 
     public int getCurrentFlow() {
@@ -19,8 +23,6 @@ public class FlowEdge {
         this.currentFlow = currentFlow;
     }
     public int getMaxFlow() {
-        return edge.getEdgeWeight();
+        return new Double(super.getWeight()).intValue();
     }
-
-
 }

@@ -1,7 +1,7 @@
 package de.fhws.fiw.mis.webapp.bean;
 
 import de.fhws.fiw.mis.graph.AbstractGraph;
-import de.fhws.fiw.mis.graph.Vertex;
+import de.fhws.fiw.mis.graph.VertexBase;
 import de.fhws.fiw.mis.graph.io.exporter.GraphVisJSExporterImpl;
 import de.fhws.fiw.mis.graph.io.importer.GraphImporter;
 import de.fhws.fiw.mis.graph.io.importer.GraphImporterImpl;
@@ -148,7 +148,7 @@ public class IndexBean {
         setStatusType(style.name().toLowerCase());
         setStatusMessage(message);
     }
-    private Vertex findVertex(String name) {
-        return graph.vertexSet().stream().filter(v -> v.getName().equals(name)).findFirst().get();
+    private VertexBase findVertex(String name) {
+        return (VertexBase)graph.getAllVertices().stream().filter(v -> v.getName().equals(name)).findFirst().get();
     }
 }

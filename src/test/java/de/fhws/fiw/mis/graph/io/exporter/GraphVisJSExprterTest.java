@@ -3,8 +3,8 @@ package de.fhws.fiw.mis.graph.io.exporter;
 
 import static org.junit.Assert.*;
 
-import de.fhws.fiw.mis.graph.UndirGraph;
-import de.fhws.fiw.mis.graph.Vertex;
+import de.fhws.fiw.mis.graph.UndirectedBaseGraph;
+import de.fhws.fiw.mis.graph.VertexBase;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,16 +13,16 @@ import org.junit.Test;
  */
 public class GraphVisJSExprterTest {
     GraphVisJSExporter exporter;
-    UndirGraph g;
+    UndirectedBaseGraph g;
 
     @Before
     public void setUp() {
-        g = new UndirGraph();
-        g.addVertex(new Vertex("A"));
-        g.addVertex(new Vertex("B"));
-        g.addVertex(new Vertex("C"));
+        g = new UndirectedBaseGraph();
+        g.addVertex(new VertexBase("A"));
+        g.addVertex(new VertexBase("B"));
+        g.addVertex(new VertexBase("C"));
 
-        g.addEdge(new Vertex("A"), new Vertex("C"));
+        g.addEdge(new VertexBase("A"), new VertexBase("C"));
     }
 
     @Test
@@ -45,14 +45,14 @@ public class GraphVisJSExprterTest {
 
     @Test
     public void testGetEdgeDataSetWithLabel() {
-        g.setEdgeWeight(g.getEdge(new Vertex("A"), new Vertex("C")), 7.0);
+        g.getEdges(new VertexBase("A"), new VertexBase("C")).stream().findFirst().get().setWeight(7);
         exporter = new GraphVisJSExporterImpl(g);
         assertEquals("{from: 'A', to: 'C', label: '7', font: {align: 'horizontal'}}", exporter.getEdgeDataSet(false));
     }
 
     @Test
     public void testGetEdgeDataSetWithArrowsAndLabel() {
-        g.setEdgeWeight(g.getEdge(new Vertex("A"), new Vertex("C")), 7.0);
+        g.getEdges(new VertexBase("A"), new VertexBase("C")).stream().findFirst().get().setWeight(7);
         exporter = new GraphVisJSExporterImpl(g);
         assertEquals("{from: 'A', to: 'C', label: '7', font: {align: 'horizontal'}, arrows: 'to'}", exporter.getEdgeDataSet(true));
     }

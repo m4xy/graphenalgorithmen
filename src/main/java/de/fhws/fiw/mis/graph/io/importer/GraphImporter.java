@@ -1,12 +1,12 @@
 package de.fhws.fiw.mis.graph.io.importer;
 
-import de.fhws.fiw.mis.graph.DirGraph;
-import de.fhws.fiw.mis.graph.UndirGraph;
+import de.fhws.fiw.mis.graph.DirectedBaseGraph;
+import de.fhws.fiw.mis.graph.UndirectedBaseGraph;
 
 /**
  * Created by maxarndt on 22.03.17.
  */
 public interface GraphImporter {
-    UndirGraph importGraph(String fileName);
-    DirGraph importDirectedGraph(String fileName);
+    UndirectedBaseGraph importGraph(String fileName);
+    DirectedBaseGraph importDirectedGraph(String fileName);
 }
