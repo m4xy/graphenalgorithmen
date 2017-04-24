@@ -28,6 +28,22 @@ public class DirectedBaseGraphTest {
     }
 
     @Test
+    public void testHasCycle() {
+        assertFalse(g.hasCycle());
+    }
+    @Test
+    public void testHasCycle2() {
+        g.addEdge(new VertexBase("B"), new VertexBase("C"));
+        assertFalse(g.hasCycle());
+    }
+    @Test
+    public void testHasCycle3() {
+        g.addEdge(new VertexBase("B"), new VertexBase("C"));
+        g.addEdge(new VertexBase("C"), new VertexBase("A"));
+        assertTrue(g.hasCycle());
+    }
+
+    @Test
     public void testGetIncomingEdgesOf() {
         assertEquals(new HashSet<Edge>(Arrays.asList(new EdgeBase(new VertexBase("A"), new VertexBase("C")))), g.getIncomingEdgesOf(new VertexBase("C")));
     }

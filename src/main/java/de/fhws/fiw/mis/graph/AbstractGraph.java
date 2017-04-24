@@ -3,13 +3,14 @@ package de.fhws.fiw.mis.graph;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 
+import java.io.Serializable;
 import java.util.*;
 import java.util.stream.Collectors;
 
 /**
  * Created by maxarndt on 06.04.17.
  */
-public abstract class AbstractGraph implements Graph {
+public abstract class AbstractGraph implements Graph, Serializable {
     Map<String, Vertex> vertexMap;
     Multimap<Vertex, Edge> edgeMap;
     List<Edge> edgeList;

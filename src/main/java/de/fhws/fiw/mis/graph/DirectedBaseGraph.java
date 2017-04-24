@@ -1,16 +1,23 @@
 package de.fhws.fiw.mis.graph;
 
 
+import com.google.common.collect.ArrayListMultimap;
+
+import java.io.Serializable;
 import java.util.*;
 import java.util.stream.Collectors;
 
 /**
  * Created by maxarndt on 05.04.17.
  */
-public class DirectedBaseGraph extends AbstractGraph implements DirectedGraph, Cloneable {
+public class DirectedBaseGraph extends AbstractGraph implements DirectedGraph, Serializable {
 
     public DirectedBaseGraph() {
-
+    }
+    public DirectedBaseGraph(DirectedBaseGraph clone) {
+        this.edgeList = new ArrayList<Edge>(clone.edgeList);
+        this.edgeMap = ArrayListMultimap.create(clone.edgeMap);
+        this.vertexMap = new HashMap<>(clone.vertexMap);
     }
 
     @Override
@@ -67,7 +74,7 @@ public class DirectedBaseGraph extends AbstractGraph implements DirectedGraph, C
                 allMatch(v -> Math.abs(getInDegreeOf(v) - getOutDegreeOf(v)) < 2);
     }
     public boolean hasCycle() { //Kahn's Algorithm
-        DirectedBaseGraph clone = (DirectedBaseGraph)clone();
+        DirectedBaseGraph clone = new DirectedBaseGraph(this);
         List<Vertex> sortedVertices = new LinkedList<>();
         Queue<Vertex> verticesWOIncEdge = new LinkedList<>(clone.getAllVertices().stream()
                 .filter(v -> clone.getInDegreeOf(v) == 0)
@@ -84,11 +91,5 @@ public class DirectedBaseGraph extends AbstractGraph implements DirectedGraph, C
         }
 
         return clone.getAllEdges().size() > 0;
-    }
-
-    @Override
-    protected Object clone() {
-        throw new RuntimeException();
-//        return super.clone();
     }
 }
