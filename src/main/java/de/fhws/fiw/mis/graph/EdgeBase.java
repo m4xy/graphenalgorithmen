@@ -14,8 +14,8 @@ public class EdgeBase implements Edge, Cloneable, Serializable {
 
     }
     public EdgeBase(Vertex source, Vertex target) {
-        this.source = source;
-        this.target = target;
+        this(source, target, 1);
+
     }
     public EdgeBase(Vertex source, Vertex target, int weight) {
         this.source = source;
