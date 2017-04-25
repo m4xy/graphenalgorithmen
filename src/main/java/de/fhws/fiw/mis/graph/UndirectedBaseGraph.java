@@ -42,14 +42,19 @@ public class UndirectedBaseGraph extends AbstractGraph {
         return vertices;
     }
 
+    @Override
     public boolean hasEulerianCircuit() {
         return isConnected() && getAllVertices().stream()
                 .allMatch(x -> getEdgesOf(x).size() % 2 == 0);
     }
+
+    @Override
     public boolean hasEulerianPath() {
         return isConnected() && getAllVertices().stream()
                 .filter(x -> getEdgesOf(x).size() % 2 == 1).count() == 2;
     }
+
+    @Override
     public boolean hasCycle() {
         return getAllEdges().size() >= getAllVertices().size();
     }

@@ -65,14 +65,19 @@ public class DirectedBaseGraph extends AbstractGraph implements DirectedGraph, S
         return vertices;
     }
 
+    @Override
     public boolean hasEulerianCircuit() {
         return isConnected() && getAllVertices().stream()
                 .allMatch(x -> getInDegreeOf(x) == getOutDegreeOf(x));
     }
+
+    @Override
     public boolean hasEulerianPath() {
         return isConnected() && getAllVertices().stream().
                 allMatch(v -> Math.abs(getInDegreeOf(v) - getOutDegreeOf(v)) < 2);
     }
+
+    @Override
     public boolean hasCycle() { //Kahn's Algorithm
         DirectedBaseGraph clone = new DirectedBaseGraph(this);
         List<Vertex> sortedVertices = new LinkedList<>();
