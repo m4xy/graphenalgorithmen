@@ -34,6 +34,16 @@ public class DirectedBaseGraphTest {
         g.addEdge(new VertexBase("A"), new VertexBase("B"), 8);
         assertEquals(9, g.getMaxFlow(new VertexBase("A"), new VertexBase("B")));
     }
+    @Test
+    public void testGetMaxFlow3() {
+        g.addVertex(new VertexBase("E"));
+        g.addEdge(new VertexBase("A"), new VertexBase("D"), 8);
+        g.addEdge(new VertexBase("B"), new VertexBase("E"));
+        g.addEdge(new VertexBase("B"), new VertexBase("C"));
+        g.addEdge(new VertexBase("B"), new VertexBase("D"));
+        assertEquals(9, g.getMaxFlow(new VertexBase("A"), new VertexBase("D")));
+
+    }
 
     @Test
     public void testGetPath() {
