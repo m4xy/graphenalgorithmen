@@ -22,7 +22,4 @@ public class FlowEdge extends EdgeBase {
     public void setCurrentFlow(int currentFlow) {
         this.currentFlow = currentFlow;
     }
-    public int getMaxFlow() {
-        return new Double(super.getWeight()).intValue();
-    }
 }

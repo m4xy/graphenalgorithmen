@@ -97,4 +97,92 @@ public class DirectedBaseGraph extends AbstractGraph implements DirectedGraph, S
 
         return clone.getAllEdges().size() > 0;
     }
+
+    @Override
+    public int getMaxFlow(Vertex source, Vertex sink) {
+        int maxFlow = 0;
+        List<Edge> path;
+
+        getAllEdges().stream().forEach(e -> {
+            addEdge(new FlowEdge(e));
+            removeEdge(e);
+        });
+
+        while(!(path = getPath(source, sink)).isEmpty()) {
+            int adjustment = path.stream().min(Comparator.comparingInt(Edge::getWeight)).get().getWeight();
+
+            maxFlow += adjustment;
+            path.stream().forEach(e -> {
+                e.setWeight(e.getWeight() - adjustment);
+                if(containsEdge(e.getTarget(), e.getSource())) {
+                    getEdges(e.getTarget(), e.getSource()).stream().findFirst().get().incrementWeight(adjustment);
+                } else {
+                    addEdge(e.getTarget(), e.getSource()).setWeight(adjustment);
+                }
+            });
+        }
+
+        return maxFlow;
+    }
+
+    public List<Edge> getPath(Vertex source, Vertex sink) {
+        List<Edge> path = new LinkedList<>();
+        Queue<Edge> queue = new LinkedList<>();
+        Set<Vertex> visited = new HashSet<>();
+
+        Edge initialEdge = getOutgoingEdgesOf(source).stream().filter(e -> e.getWeight() > 0).findFirst().orElse(null);
+        if(initialEdge != null) {
+            queue.add(initialEdge);
+        }
+
+        while(!queue.isEmpty()) {
+            Edge currentEdge = queue.poll();
+
+            if (currentEdge != null && currentEdge.getWeight() <= 0
+                    || visited.contains(currentEdge.getTarget())
+                    || (path.size() > 0 && !currentEdge.getSource().equals(path.get(path.size()-1).getTarget())))
+                continue;
+
+            visited.add(currentEdge.getSource());
+            path.add(currentEdge);
+
+            if (currentEdge.getTarget().equals(sink))
+                break;
+
+            queue.addAll(getOutgoingEdgesOf(currentEdge.getTarget()));
+        }
+
+        if(path.size() > 0 && !sink.equals(path.get(path.size()-1).getTarget())) {
+            path.get(path.size()-1).setWeight(0);
+            return getPath(source, sink);
+        }
+
+        return path;
+    }
+}
+
+class VertexEdgeTupel {
+    private Vertex vertex;
+    private Edge edge;
+
+    public VertexEdgeTupel(Vertex vertex, Edge edge) {
+        this.vertex = vertex;
+        this.edge = edge;
+    }
+
+    public Vertex getVertex() {
+        return vertex;
+    }
+
+    public void setVertex(Vertex vertex) {
+        this.vertex = vertex;
+    }
+
+    public Edge getEdge() {
+        return edge;
+    }
+
+    public void setEdge(Edge edge) {
+        this.edge = edge;
+    }
 }

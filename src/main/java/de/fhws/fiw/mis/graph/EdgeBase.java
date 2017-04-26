@@ -43,6 +43,11 @@ public class EdgeBase implements Edge, Cloneable, Serializable {
     }
 
     @Override
+    public void incrementWeight(int delta) {
+        this.weight += delta;
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

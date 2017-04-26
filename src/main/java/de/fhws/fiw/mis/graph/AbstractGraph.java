@@ -27,6 +27,7 @@ public abstract class AbstractGraph implements Graph, Serializable {
     public abstract boolean hasEulerianPath();
     public abstract Set<Edge> getEdges(Vertex sourceVertex, Vertex targetVertex);
     public abstract boolean containsEdge(Vertex sourceVertex, Vertex targetVertex);
+    public abstract int getMaxFlow(Vertex source, Vertex sink);
 
     @Override
     public Edge addEdge(Vertex sourceVertex, Vertex targetVertex) {

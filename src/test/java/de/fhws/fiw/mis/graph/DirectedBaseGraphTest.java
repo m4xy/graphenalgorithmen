@@ -6,9 +6,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by maxarndt on 23.04.17.
@@ -28,16 +26,36 @@ public class DirectedBaseGraphTest {
     }
 
     @Test
+    public void testGetMaxFlow() {
+        assertEquals(1, g.getMaxFlow(new VertexBase("A"), new VertexBase("B")));
+    }
+    @Test
+    public void testGetMaxFlow2() {
+        g.addEdge(new VertexBase("A"), new VertexBase("B"), 8);
+        assertEquals(9, g.getMaxFlow(new VertexBase("A"), new VertexBase("B")));
+    }
+
+    @Test
+    public void testGetPath() {
+        assertEquals(new LinkedList<>(Arrays.asList(new EdgeBase(new VertexBase("A"), new VertexBase("B")))), g.getPath(new VertexBase("A"), new VertexBase("B")));
+    }
+    @Test
+    public void testGetPath2() {
+        g.addVertex(new VertexBase("D"));
+        g.addEdge(new VertexBase("B"), new VertexBase("C"));
+        g.addEdge(new VertexBase("C"), new VertexBase("B"));
+        g.addEdge(new VertexBase("D"), new VertexBase("A"));
+        g.addEdge(new VertexBase("C"), new VertexBase("D"));
+        LinkedList<Edge> expected = new LinkedList<>(Arrays.asList(new EdgeBase(new VertexBase("A"), new VertexBase("B")), new EdgeBase(new VertexBase("B"), new VertexBase("C")), new EdgeBase(new VertexBase("C"), new VertexBase("D"))));
+        assertEquals(expected, g.getPath(new VertexBase("A"), new VertexBase("D")));
+    }
+
+    @Test
     public void testHasCycle() {
         assertFalse(g.hasCycle());
     }
     @Test
     public void testHasCycle2() {
-        g.addEdge(new VertexBase("B"), new VertexBase("C"));
-        assertFalse(g.hasCycle());
-    }
-    @Test
-    public void testHasCycle3() {
         g.addEdge(new VertexBase("B"), new VertexBase("C"));
         g.addEdge(new VertexBase("C"), new VertexBase("A"));
         assertTrue(g.hasCycle());

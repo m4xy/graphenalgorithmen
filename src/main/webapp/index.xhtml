@@ -80,7 +80,7 @@
                         <div class="panel-body">
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active"><a href="#blatt1" aria-controls="blatt1" role="tab" data-toggle="tab">Ü1, Aufgabe 2</a></li>
-                                <li role="presentation"><a href="#blatt2" aria-controls="blatt2" role="tab" data-toggle="tab">Ü1, Aufgabe 3</a></li>
+                                <li role="presentation"><a href="#blatt2" aria-controls="blatt2" role="tab" data-toggle="tab">Ü1, Aufgabe 4</a></li>
                             </ul>
 
                             <div class="tab-content">
@@ -115,7 +115,17 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div role="tabpanel" class="tab-pane" id="blatt2">...</div>
+                                <div role="tabpanel" class="tab-pane" id="blatt2">
+                                    <div class="buttongroup-row">
+                                        <div class="btn-group btn-group-justified" role="group" aria-label="functions blatt2">
+                                            <div class="btn-group" role="group">
+                                                <h:commandButton id="btn-maxflow" value="Max. Flow" action="#{indexBean.calculateMaxFlow}" type="button" class="btn btn-default">
+                                                    <f:ajax execute="btn-maxflow" render="statusMessage" />
+                                                </h:commandButton>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <h:panelGroup id="statusMessage">
                                 <h:panelGroup rendered="#{indexBean.statusMessage != null}">

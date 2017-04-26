@@ -144,6 +144,10 @@ public class IndexBean {
         setStatus("Kreis: " + graph.hasCycle(), ContextualStyle.SUCCESS);
     }
 
+    public void calculateMaxFlow() {
+        setStatus("Maximaler Fluss: " + graph.getMaxFlow(findVertex("S"), findVertex("T")), ContextualStyle.SUCCESS);
+    }
+
     private void setStatus(String message, ContextualStyle style) {
         setStatusType(style.name().toLowerCase());
         setStatusMessage(message);

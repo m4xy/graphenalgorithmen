@@ -1,5 +1,7 @@
 package de.fhws.fiw.mis.graph;
 
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -57,5 +59,10 @@ public class UndirectedBaseGraph extends AbstractGraph {
     @Override
     public boolean hasCycle() {
         return getAllEdges().size() >= getAllVertices().size();
+    }
+
+    @Override
+    public int getMaxFlow(Vertex source, Vertex sink) {
+        throw new NotImplementedException();
     }
 }

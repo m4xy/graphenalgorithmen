@@ -8,4 +8,5 @@ public interface Edge {
     Vertex getTarget();
     int getWeight();
     void setWeight(int weight);
+    void incrementWeight(int delta);
 }
