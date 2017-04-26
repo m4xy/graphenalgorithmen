@@ -143,7 +143,6 @@ public class IndexBean {
     public void calculateCircuit() {
         setStatus("Kreis: " + graph.hasCycle(), ContextualStyle.SUCCESS);
     }
-
     public void calculateMaxFlow() {
         setStatus("Maximaler Fluss: " + graph.getMaxFlow(findVertex("S"), findVertex("T")), ContextualStyle.SUCCESS);
     }

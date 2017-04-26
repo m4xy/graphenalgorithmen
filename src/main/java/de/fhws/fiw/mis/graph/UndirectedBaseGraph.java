@@ -63,6 +63,6 @@ public class UndirectedBaseGraph extends AbstractGraph {
 
     @Override
     public int getMaxFlow(Vertex source, Vertex sink) {
-        throw new NotImplementedException();
+        return 0;
     }
 }
