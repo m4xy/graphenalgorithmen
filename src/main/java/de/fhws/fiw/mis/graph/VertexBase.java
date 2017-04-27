@@ -1,6 +1,5 @@
 package de.fhws.fiw.mis.graph;
 
-import de.fhws.fiw.mis.graph.color.HtmlColors;
 import de.fhws.fiw.mis.graph.color.VertexColor;
 
 /**
@@ -15,12 +14,9 @@ public class VertexBase implements Vertex {
         this(name, 0);
     }
     public VertexBase(String name, int data) {
-        this(name, data, HtmlColors.WHITE);
-    }
-    public VertexBase(String name, int data, String color) {
         this.name = name;
         this.data = data;
-        this.color = new VertexColor(color);
+        this.color = new VertexColor();
     }
 
     public String getName() {

@@ -1,7 +1,6 @@
 package de.fhws.fiw.mis.graph;
 
 import de.fhws.fiw.mis.graph.color.EdgeColor;
-import de.fhws.fiw.mis.graph.color.HtmlColors;
 
 import java.io.Serializable;
 
