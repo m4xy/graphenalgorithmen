@@ -1,5 +1,6 @@
 package de.fhws.fiw.mis.graph;
 
+import de.fhws.fiw.mis.graph.color.HtmlColor;
 import de.fhws.fiw.mis.graph.color.VertexColor;
 
 /**
@@ -9,7 +10,8 @@ public interface Vertex {
     String getName();
     int getData();
     VertexColor getColor();
-    void setColor(VertexColor color);
+    HtmlColor getHtmlColor();
+    void setColor(HtmlColor color);
     boolean isInEdge(Edge e);
     boolean isOutEdge(Edge e);
 }

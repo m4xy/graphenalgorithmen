@@ -1,5 +1,6 @@
 package de.fhws.fiw.mis.graph;
 
+import de.fhws.fiw.mis.graph.color.HtmlColor;
 import de.fhws.fiw.mis.graph.color.VertexColor;
 
 /**
@@ -39,8 +40,12 @@ public class VertexBase implements Vertex {
         return color;
     }
 
-    public void setColor(VertexColor color) {
-        this.color = color;
+    public HtmlColor getHtmlColor() {
+        return color.getColor();
+    }
+
+    public void setColor(HtmlColor color) {
+        this.color.setColor(color);
     }
 
 
