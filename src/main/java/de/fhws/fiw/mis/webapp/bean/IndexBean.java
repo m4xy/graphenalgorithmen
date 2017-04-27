@@ -147,6 +147,10 @@ public class IndexBean {
         setStatus("Maximaler Fluss: " + graph.getMaxFlow(findVertex("S"), findVertex("T")), ContextualStyle.SUCCESS);
     }
 
+    public void greedyCol() {
+        setStatus("Greedy!", ContextualStyle.SUCCESS);
+    }
+
     private void setStatus(String message, ContextualStyle style) {
         setStatusType(style.name().toLowerCase());
         setStatusMessage(message);

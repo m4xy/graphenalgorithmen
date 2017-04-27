@@ -81,6 +81,7 @@
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active"><a href="#blatt1a2" aria-controls="blatt1a2" role="tab" data-toggle="tab">Ü1, Aufgabe 2</a></li>
                                 <li role="presentation"><a href="#blatt1a4" aria-controls="blatt1a4" role="tab" data-toggle="tab">Ü1, Aufgabe 4</a></li>
+                                <li role="presentation"><a href="#approx2" aria-controls="approx2" role="tab" data-toggle="tab">Approx. Chapter 2</a></li>
                             </ul>
 
                             <div class="tab-content">
@@ -121,6 +122,17 @@
                                             <div class="btn-group" role="group">
                                                 <h:commandButton id="btn-maxflow" value="Max. Flow" action="#{indexBean.calculateMaxFlow}" type="button" class="btn btn-default">
                                                     <f:ajax execute="btn-maxflow" render="statusMessage" />
+                                                </h:commandButton>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="approx2">
+                                    <div class="buttongroup-row">
+                                        <div class="btn-group btn-group-justified" role="group" aria-label="functions approx. algos chapter 2">
+                                            <div class="btn-group" role="group">
+                                                <h:commandButton id="btn-greedyCol" value="Greedy Color" action="#{indexBean.greedyCol}" type="button" class="btn btn-default">
+                                                    <f:ajax execute="btn-greedyCol" render="statusMessage" />
                                                 </h:commandButton>
                                             </div>
                                         </div>
