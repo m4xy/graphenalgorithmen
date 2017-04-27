@@ -2,6 +2,7 @@ package de.fhws.fiw.mis.webapp.bean;
 
 import de.fhws.fiw.mis.graph.AbstractGraph;
 import de.fhws.fiw.mis.graph.VertexBase;
+import de.fhws.fiw.mis.graph.color.ColorAlgorithm;
 import de.fhws.fiw.mis.graph.io.exporter.GraphVisJSExporterImpl;
 import de.fhws.fiw.mis.graph.io.importer.GraphImporter;
 import de.fhws.fiw.mis.graph.io.importer.GraphImporterImpl;
@@ -158,8 +159,8 @@ public class IndexBean {
     }
 
     public void greedyCol() {
-        setJavaScript("alert('JO');");
-//        setStatus("Greedy!", ContextualStyle.SUCCESS);
+        ColorAlgorithm.greedyCol(graph);
+        setJavaScript("network.setData({nodes: new vis.DataSet([" + visExporter.getNodeDataSet() + "]), edges: new vis.DataSet([" + visExporter.getEdgeDataSet(!sessionBean.getUndirectedGraph()) + "])});");
     }
 
     private void setStatus(String message, ContextualStyle style) {
