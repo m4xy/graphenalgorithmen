@@ -2,6 +2,7 @@ package de.fhws.fiw.mis.graph.io.exporter;
 
 import de.fhws.fiw.mis.graph.AbstractGraph;
 import de.fhws.fiw.mis.graph.Edge;
+import de.fhws.fiw.mis.graph.Vertex;
 
 import java.text.DecimalFormat;
 
@@ -21,7 +22,7 @@ public class GraphVisJSExporterImpl implements GraphVisJSExporter {
     public String getNodeDataSet() {
         StringBuilder sb = new StringBuilder();
         graph.getAllVertices().stream()
-                .forEach(v -> sb.append(getNodeObj(v.getName(), v.toString())));
+                .forEach(v -> sb.append(getNodeObj(v)));
 
         return removeLastChar(sb.toString());
     }
@@ -36,11 +37,11 @@ public class GraphVisJSExporterImpl implements GraphVisJSExporter {
     }
 
 
-    private String getNodeObj(String id, String label) {
-        return "{id: '" + id + "', label: '" + label + "'},";
+    private String getNodeObj(Vertex v) {
+        return "{id: '" + v.getName() + "', label: '" + v.toString() + "', "+ v.getColor() + "},";
     }
     private String getEdgeObj(Edge e, boolean weighted, boolean arrows) {
-        String edgeObj = "{from: '" + e.getSource().getName() + "', to: '" + e.getTarget().getName() + "', color: '" + e.getColor() + "'";
+        String edgeObj = "{from: '" + e.getSource().getName() + "', to: '" + e.getTarget().getName() + "', " + e.getColor();
         edgeObj += weighted ? ", label: '" + e.getWeight() + "', font: {align: 'horizontal'}" : "";
         edgeObj += arrows ? ", arrows: 'to'}," : "},";
         return edgeObj;

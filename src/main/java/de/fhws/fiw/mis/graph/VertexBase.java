@@ -1,24 +1,26 @@
 package de.fhws.fiw.mis.graph;
 
+import de.fhws.fiw.mis.graph.color.HtmlColors;
+import de.fhws.fiw.mis.graph.color.VertexColor;
+
 /**
  * Created by maxarndt on 07.04.17.
  */
 public class VertexBase implements Vertex {
     private String name;
     private int data;
-    private String color;
+    private VertexColor color;
 
     public VertexBase(String name) {
         this(name, 0);
     }
     public VertexBase(String name, int data) {
-        this.name = name;
-        this.data = data;
+        this(name, data, HtmlColors.WHITE);
     }
     public VertexBase(String name, int data, String color) {
         this.name = name;
         this.data = data;
-        this.color = color;
+        this.color = new VertexColor(color);
     }
 
     public String getName() {
@@ -37,11 +39,11 @@ public class VertexBase implements Vertex {
         this.data = data;
     }
 
-    public String getColor() {
+    public VertexColor getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(VertexColor color) {
         this.color = color;
     }
 

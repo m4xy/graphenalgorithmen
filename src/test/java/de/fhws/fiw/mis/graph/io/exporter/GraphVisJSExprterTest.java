@@ -28,7 +28,7 @@ public class GraphVisJSExprterTest {
     @Test
     public void testGetNodeDataSet() {
         exporter = new GraphVisJSExporterImpl(g);
-        assertEquals("{id: 'A', label: 'A'},{id: 'B', label: 'B'},{id: 'C', label: 'C'}", exporter.getNodeDataSet());
+        assertEquals("{id: 'A', label: 'A', color: {background: 'white', border: 'black'}},{id: 'B', label: 'B', color: {background: 'white', border: 'black'}},{id: 'C', label: 'C', color: {background: 'white', border: 'black'}}", exporter.getNodeDataSet());
     }
 
     @Test

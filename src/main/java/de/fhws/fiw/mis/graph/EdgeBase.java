@@ -1,5 +1,8 @@
 package de.fhws.fiw.mis.graph;
 
+import de.fhws.fiw.mis.graph.color.EdgeColor;
+import de.fhws.fiw.mis.graph.color.HtmlColors;
+
 import java.io.Serializable;
 
 /**
@@ -9,7 +12,7 @@ public class EdgeBase implements Edge, Cloneable, Serializable {
     private Vertex source;
     private Vertex target;
     private int weight;
-    private String color;
+    private EdgeColor color;
 
     public EdgeBase() {
 
@@ -22,7 +25,7 @@ public class EdgeBase implements Edge, Cloneable, Serializable {
         this.source = source;
         this.target = target;
         this.weight = weight;
-        this.color = HtmlColors.BLACK;
+        this.color = new EdgeColor();
     }
 
     public Vertex getSource() {
@@ -43,10 +46,10 @@ public class EdgeBase implements Edge, Cloneable, Serializable {
     public void setWeight(int weight) {
         this.weight = weight;
     }
-    public String getColor() {
+    public EdgeColor getColor() {
         return color;
     }
-    public void setColor(String color) {
+    public void setColor(EdgeColor color) {
         this.color = color;
     }
 
