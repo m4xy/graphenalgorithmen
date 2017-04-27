@@ -10,6 +10,10 @@ public class FlowEdge extends EdgeBase {
         super(e.getSource(), e.getTarget(), e.getWeight());
         this.currentFlow = 0;
     }
+    public FlowEdge(Vertex source, Vertex target, int weight, int currentFlow) {
+        super(source, target, weight);
+        this.currentFlow = currentFlow;
+    }
 
     @Override
     public String toString() {

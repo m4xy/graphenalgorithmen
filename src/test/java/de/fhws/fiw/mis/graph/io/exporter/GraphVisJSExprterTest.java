@@ -34,26 +34,26 @@ public class GraphVisJSExprterTest {
     @Test
     public void testGetEdgeDataSet() {
         exporter = new GraphVisJSExporterImpl(g);
-        assertEquals("{from: 'A', to: 'C'}", exporter.getEdgeDataSet(false));
+        assertEquals("{from: 'A', to: 'C', color: 'black'}", exporter.getEdgeDataSet(false));
     }
 
     @Test
     public void testGetEdgeDataSetWithArrows() {
         exporter = new GraphVisJSExporterImpl(g);
-        assertEquals("{from: 'A', to: 'C', arrows: 'to'}", exporter.getEdgeDataSet(true));
+        assertEquals("{from: 'A', to: 'C', color: 'black', arrows: 'to'}", exporter.getEdgeDataSet(true));
     }
 
     @Test
     public void testGetEdgeDataSetWithLabel() {
         g.getEdges(new VertexBase("A"), new VertexBase("C")).stream().findFirst().get().setWeight(7);
         exporter = new GraphVisJSExporterImpl(g);
-        assertEquals("{from: 'A', to: 'C', label: '7', font: {align: 'horizontal'}}", exporter.getEdgeDataSet(false));
+        assertEquals("{from: 'A', to: 'C', color: 'black', label: '7', font: {align: 'horizontal'}}", exporter.getEdgeDataSet(false));
     }
 
     @Test
     public void testGetEdgeDataSetWithArrowsAndLabel() {
         g.getEdges(new VertexBase("A"), new VertexBase("C")).stream().findFirst().get().setWeight(7);
         exporter = new GraphVisJSExporterImpl(g);
-        assertEquals("{from: 'A', to: 'C', label: '7', font: {align: 'horizontal'}, arrows: 'to'}", exporter.getEdgeDataSet(true));
+        assertEquals("{from: 'A', to: 'C', color: 'black', label: '7', font: {align: 'horizontal'}, arrows: 'to'}", exporter.getEdgeDataSet(true));
     }
 }

@@ -100,13 +100,9 @@ public class DirectedBaseGraph extends AbstractGraph implements DirectedGraph, S
 
     @Override
     public int getMaxFlow(Vertex source, Vertex sink) {
+        DirectedBaseGraph clone = new DirectedBaseGraph(this);
         int maxFlow = 0;
         List<Edge> path;
-
-        getAllEdges().stream().forEach(e -> {
-            addEdge(new FlowEdge(e));
-            removeEdge(e);
-        });
 
         while(!(path = getPath(source, sink)).isEmpty()) {
             int adjustment = path.stream().min(Comparator.comparingInt(Edge::getWeight)).get().getWeight();
@@ -121,6 +117,12 @@ public class DirectedBaseGraph extends AbstractGraph implements DirectedGraph, S
                 }
             });
         }
+
+        clone.getAllEdges().stream().forEach(e -> {
+            clone.addEdge(new FlowEdge(e.getSource(), e.getTarget(), e.getWeight(), getEdges(e.getSource(), e.getTarget()).stream().findFirst().get().getWeight()));
+            clone.removeEdge(e);
+            //funktioniet nicht, clone Constructor nutzt für die Edges in den Listen und Maps nur Referenzen.
+        });
 
         return maxFlow;
     }

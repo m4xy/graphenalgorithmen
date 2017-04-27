@@ -9,4 +9,6 @@ public interface Edge {
     int getWeight();
     void setWeight(int weight);
     void incrementWeight(int delta);
+    String getColor();
+    void setColor(String color);
 }
