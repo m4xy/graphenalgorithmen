@@ -36,6 +36,7 @@ public class IndexBean {
     private String statusMessage;
     private String statusType;
     private String startVertexName;
+    private String javaScript;
 
     public SessionBean getSessionBean() {
         return sessionBean;
@@ -67,6 +68,15 @@ public class IndexBean {
     }
     public void setStartVertexName(String startVertexName) {
         this.startVertexName = startVertexName;
+    }
+    public String getJavaScript() {
+        return this.javaScript;
+    }
+    public void setJavaScript(String javaScript) {
+        this.javaScript = javaScript;
+    }
+    public boolean hasJavaScript() {
+        return javaScript != null;
     }
 
     public IndexBean() {
@@ -148,7 +158,8 @@ public class IndexBean {
     }
 
     public void greedyCol() {
-        setStatus("Greedy!", ContextualStyle.SUCCESS);
+        setJavaScript("alert('JO');");
+//        setStatus("Greedy!", ContextualStyle.SUCCESS);
     }
 
     private void setStatus(String message, ContextualStyle style) {

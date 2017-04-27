@@ -132,7 +132,7 @@
                                         <div class="btn-group btn-group-justified" role="group" aria-label="functions approx. algos chapter 2">
                                             <div class="btn-group" role="group">
                                                 <h:commandButton id="btn-greedyCol" value="Greedy Color" action="#{indexBean.greedyCol}" type="button" class="btn btn-default">
-                                                    <f:ajax execute="btn-greedyCol" render="statusMessage" />
+                                                    <f:ajax execute="btn-greedyCol" render="beanJS" />
                                                 </h:commandButton>
                                             </div>
                                         </div>
@@ -149,6 +149,11 @@
                             </h:panelGroup>
                         </div>
                         <h:inputHidden id="startVertexName" value="#{indexBean.startVertexName}" />
+                        <h:panelGroup id="beanJS">
+                            <h:panelGroup rendered="#{indexBean.hasJavaScript()}">
+                                <h:outputScript>#{indexBean.javaScript}</h:outputScript>
+                            </h:panelGroup>
+                        </h:panelGroup>
                     </h:form>
                 </div>
             </div>
@@ -181,5 +186,6 @@
             document.getElementById("main-form:startVertexName").value = network.getSelectedNodes().toString();
         });
     </script>
+
 </h:body>
 </html>
