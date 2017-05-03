@@ -157,16 +157,15 @@ public class IndexBean {
     public void calculateMaxFlow() {
         setStatus("Maximaler Fluss: " + graph.getMaxFlow(findVertex("S"), findVertex("T")), ContextualStyle.SUCCESS);
     }
-
     public void greedyCol() {
         ColorAlgorithm.greedyCol(graph);
         updateGraph();
     }
 
+
     private void updateGraph() {
         setJavaScript("network.setData({nodes: new vis.DataSet([" + visExporter.getNodeDataSet() + "]), edges: new vis.DataSet([" + visExporter.getEdgeDataSet(!sessionBean.getUndirectedGraph()) + "])});");
     }
-
     private void setStatus(String message, ContextualStyle style) {
         setStatusType(style.name().toLowerCase());
         setStatusMessage(message);
