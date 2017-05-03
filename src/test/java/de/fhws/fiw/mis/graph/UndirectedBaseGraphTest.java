@@ -23,8 +23,8 @@ public class UndirectedBaseGraphTest {
         g.addVertex(new VertexBase("B"));
         g.addVertex(new VertexBase("C"));
 
-        g.addEdge(new VertexBase("A"), new VertexBase("B"));
-        g.addEdge(new VertexBase("A"), new VertexBase("C"));
+        g.addEdge("A", "B");
+        g.addEdge("A", "C");
     }
 
     @Test
@@ -40,14 +40,14 @@ public class UndirectedBaseGraphTest {
 
     @Test
     public void testGetEdgesMultipleEdges() {
-        g.addEdge(new VertexBase("A"), new VertexBase("B"), 3);
+        g.addEdge("A", "B", 3);
         Set<Edge> edges = g.getEdges(new VertexBase("A"), new VertexBase("B"));
         assertEquals(new HashSet<Edge>(Arrays.asList(new EdgeBase(new VertexBase("A"), new VertexBase("B")), new EdgeBase(new VertexBase("A"), new VertexBase("B"), 3))), edges);
     }
     @Test
     public void testGetEdgesMultipleEdges2() {
-        g.addEdge(new VertexBase("B"), new VertexBase("A"), 3);
-        g.addEdge(new VertexBase("B"), new VertexBase("A"), 7);
+        g.addEdge("B", "A", 3);
+        g.addEdge("B", "A", 7);
         Set<Edge> edges = g.getEdges(new VertexBase("B"), new VertexBase("A"));
         assertEquals(new HashSet<Edge>(Arrays.asList(new EdgeBase(new VertexBase("A"), new VertexBase("B")), new EdgeBase(new VertexBase("B"), new VertexBase("A"), 7), new EdgeBase(new VertexBase("B"), new VertexBase("A"), 3))), edges);
     }
@@ -80,7 +80,7 @@ public class UndirectedBaseGraphTest {
     }
     @Test
     public void testGetAllEdges2() {
-        g.addEdge(new VertexBase("A"), new VertexBase("B"), 3);
+        g.addEdge("A", "B", 3);
         assertEquals(new HashSet<Edge>(Arrays.asList(new EdgeBase(new VertexBase("A"), new VertexBase("B")), new EdgeBase(new VertexBase("A"), new VertexBase("B"), 3) , new EdgeBase(new VertexBase("A"), new VertexBase("C")))), g.getAllEdges());
     }
 
@@ -97,14 +97,14 @@ public class UndirectedBaseGraphTest {
 
     @Test
     public void testRemoveEdges() {
-        g.addEdge(new VertexBase("A"), new VertexBase("B"), 3);
+        g.addEdge("A", "B", 3);
         g.removeEdges(new VertexBase("A"), new VertexBase("B"));
         assertEquals(new HashSet<Edge>(Arrays.asList(new EdgeBase(new VertexBase("A"), new VertexBase("C")))), g.getAllEdges());
     }
     @Test
     public void testRemoveEdgesFalse() {
-        g.addEdge(new VertexBase("A"), new VertexBase("B"), 3);
-        g.addEdge(new VertexBase("B"), new VertexBase("A"), 5);
+        g.addEdge("A", "B", 3);
+        g.addEdge("B", "A", 5);
         g.removeEdges(new VertexBase("A"), new VertexBase("B"));
         assertEquals(new HashSet<Edge>(Arrays.asList(new EdgeBase(new VertexBase("A"), new VertexBase("C")))), g.getAllEdges());
     }

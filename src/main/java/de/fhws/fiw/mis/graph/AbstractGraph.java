@@ -30,15 +30,15 @@ public abstract class AbstractGraph implements Graph, Serializable {
     public abstract int getMaxFlow(Vertex source, Vertex sink);
 
     @Override
-    public Edge addEdge(Vertex sourceVertex, Vertex targetVertex) {
-        Edge e = new EdgeBase(sourceVertex, targetVertex);
+    public Edge addEdge(String sourceVertexName, String targetVertexName) {
+        Edge e = new EdgeBase(getVertex(sourceVertexName), getVertex(targetVertexName));
         addEdge(e);
         return e;
     }
 
     @Override
-    public Edge addEdge(Vertex sourceVertex, Vertex targetVertex, int weight) {
-        Edge e = new EdgeBase(sourceVertex, targetVertex, weight);
+    public Edge addEdge(String sourceVertexName, String targetVertexName, int weight) {
+        Edge e = new EdgeBase(getVertex(sourceVertexName), getVertex(targetVertexName), weight);
         addEdge(e);
         return e;
     }
@@ -68,6 +68,11 @@ public abstract class AbstractGraph implements Graph, Serializable {
     @Override
     public boolean containsVertex(Vertex v) {
         return vertexMap.containsKey(v.getName());
+    }
+
+    @Override
+    public boolean containsVertex(String name) {
+        return vertexMap.containsKey(name);
     }
 
     @Override
@@ -101,6 +106,15 @@ public abstract class AbstractGraph implements Graph, Serializable {
             edgeList.remove(e);
         }
         vertexMap.remove(v.getName());
+    }
+
+    @Override
+    public Vertex getVertex(String name) {
+        if(containsVertex(name))
+            return vertexMap.get(name);
+        else
+            throw new NoSuchElementException("Vertex '" + name + "' was not found!");
+
     }
 
     @Override

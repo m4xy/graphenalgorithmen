@@ -113,7 +113,7 @@ public class DirectedBaseGraph extends AbstractGraph implements DirectedGraph, S
                 if(containsEdge(e.getTarget(), e.getSource())) {
                     getEdges(e.getTarget(), e.getSource()).stream().findFirst().get().incrementWeight(adjustment);
                 } else {
-                    addEdge(e.getTarget(), e.getSource()).setWeight(adjustment);
+                    addEdge(e.getTarget().getName(), e.getSource().getName()).setWeight(adjustment);
                 }
             });
         }

@@ -76,7 +76,7 @@ public class GraphImporterImpl implements GraphImporter {
                         weight = Integer.parseInt(lineArr[3]);
                     }
 
-                    graph.addEdge(new VertexBase(v1), new VertexBase(v2), weight);
+                    graph.addEdge(v1, v2, weight);
                 }
             }
         }

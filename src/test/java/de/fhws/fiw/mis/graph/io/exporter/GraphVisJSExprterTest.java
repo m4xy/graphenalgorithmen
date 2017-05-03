@@ -22,7 +22,7 @@ public class GraphVisJSExprterTest {
         g.addVertex(new VertexBase("B"));
         g.addVertex(new VertexBase("C"));
 
-        g.addEdge(new VertexBase("A"), new VertexBase("C"));
+        g.addEdge("A", "C");
     }
 
     @Test
