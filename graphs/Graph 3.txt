@@ -1,0 +1,27 @@
+#  Knotendefinitionen, A bis K
+knoten A
+knoten B
+knoten C 
+knoten D
+knoten E
+knoten F
+knoten G
+knoten H
+knoten I
+knoten J
+knoten K
+
+# Kantendefinitionen 
+Kante A B
+kante A C
+kante A D
+kante A E
+kante A F
+kante A G
+kante A H
+kante A I
+kante A J
+kante A K
+
+
+
