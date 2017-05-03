@@ -160,6 +160,10 @@ public class IndexBean {
 
     public void greedyCol() {
         ColorAlgorithm.greedyCol(graph);
+        updateGraph();
+    }
+
+    private void updateGraph() {
         setJavaScript("network.setData({nodes: new vis.DataSet([" + visExporter.getNodeDataSet() + "]), edges: new vis.DataSet([" + visExporter.getEdgeDataSet(!sessionBean.getUndirectedGraph()) + "])});");
     }
 
