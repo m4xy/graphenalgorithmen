@@ -8,6 +8,7 @@ import java.util.Set;
  */
 public interface Graph {
     Set<Edge> getEdges(Vertex sourceVertex, Vertex targetVertex);
+    Set<Edge> getEdges(String sourceVertexName, String targetVertexName);
     Edge addEdge(String sourceVertexName, String targetVertexName);
     Edge addEdge(String sourceVertexName, String targetVertexName, int weight);
     void addEdge(Edge e);

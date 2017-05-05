@@ -76,6 +76,11 @@ public abstract class AbstractGraph implements Graph, Serializable {
     }
 
     @Override
+    public Set<Edge> getEdges(String sourceVertexName, String targetVertexName) {
+        return getEdges(getVertex(sourceVertexName), getVertex(targetVertexName));
+    }
+
+    @Override
     public Set<Edge> getAllEdges() {
         return new HashSet<>(edgeList);
     }
