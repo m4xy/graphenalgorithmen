@@ -22,4 +22,8 @@ public class ColorAlgorithm {
                             .findFirst().get())
                 );
     }
+
+    public static void colorEdges(AbstractGraph graph) {
+
+    }
 }
