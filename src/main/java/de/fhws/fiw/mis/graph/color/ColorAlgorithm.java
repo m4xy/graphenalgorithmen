@@ -3,8 +3,6 @@ package de.fhws.fiw.mis.graph.color;
 import de.fhws.fiw.mis.graph.AbstractGraph;
 
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Created by maxarndt on 27.04.17.
