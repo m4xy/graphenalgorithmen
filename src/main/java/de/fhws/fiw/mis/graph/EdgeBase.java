@@ -91,6 +91,6 @@ public class EdgeBase implements Edge, Cloneable, Serializable {
     @Override
     public String toString()
     {
-        return "(" + source + " : " + target + " {" + weight + "})";
+        return "(" + source + " : " + target + " {" + weight + "}, {" + color.getColorAsString() + "})";
     }
 }
