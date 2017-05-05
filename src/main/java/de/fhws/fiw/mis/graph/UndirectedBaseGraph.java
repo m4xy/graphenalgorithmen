@@ -1,11 +1,9 @@
 package de.fhws.fiw.mis.graph;
 
+import com.google.common.collect.ArrayListMultimap;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -14,6 +12,11 @@ import java.util.stream.Collectors;
 public class UndirectedBaseGraph extends AbstractGraph {
     public UndirectedBaseGraph() {
 
+    }
+    public UndirectedBaseGraph(UndirectedBaseGraph clone) {
+        this.edgeList = new ArrayList<Edge>(clone.edgeList);
+        this.edgeMap = ArrayListMultimap.create(clone.edgeMap);
+        this.vertexMap = new HashMap<>(clone.vertexMap);
     }
 
     @Override

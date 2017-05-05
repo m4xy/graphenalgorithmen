@@ -124,4 +124,9 @@ public class UndirectedBaseGraphTest {
         g.addVertex(new VertexBase("D", 4));
         assertEquals(new HashSet<Vertex>(Arrays.asList(new VertexBase("A"), new VertexBase("B"), new VertexBase("C"), new VertexBase("D", 4))), g.getAllVertices());
     }
+
+    @Test
+    public void testGetDegree() {
+        assertEquals(2, g.getDegree());
+    }
 }

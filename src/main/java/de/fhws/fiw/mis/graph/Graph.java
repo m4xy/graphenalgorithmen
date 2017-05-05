@@ -25,6 +25,7 @@ public interface Graph {
     Vertex getVertex(String name);
     Set<Vertex> getAllVertices();
     Collection<Vertex> getNeighbors(Vertex vertex);
+    int getDegree();
     boolean hasCycle();
     boolean hasEulerianCircuit();
     boolean hasEulerianPath();

@@ -128,6 +128,11 @@ public abstract class AbstractGraph implements Graph, Serializable {
     }
 
     @Override
+    public int getDegree() {
+        return getAllVertices().stream().map(v -> getEdgesOf(v).size()).max(Integer::compareTo).get();
+    }
+
+    @Override
     public boolean isConnected() {
         Collection<Vertex> vertices = breadthFirstSearch(getAllVertices().stream().findFirst().get());
         return !getAllVertices().stream().anyMatch(x -> vertices.contains(x) == false);
