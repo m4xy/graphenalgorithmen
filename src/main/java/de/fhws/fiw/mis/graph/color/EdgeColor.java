@@ -13,15 +13,19 @@ public class EdgeColor {
         this.color = color;
     }
 
-    public String getColor() {
-        return color.name().toLowerCase();
+    public HtmlColor getColor() {
+        return this.color;
     }
     public void setColor(HtmlColor color) {
         this.color = color;
     }
 
+    public String getColorAsString() {
+        return color.name().toLowerCase();
+    }
+
     @Override
     public String toString() {
-        return "color: '" + getColor() + "'";
+        return "color: '" + getColorAsString() + "'";
     }
 }
