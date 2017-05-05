@@ -1,6 +1,7 @@
 package de.fhws.fiw.mis.graph;
 
 import de.fhws.fiw.mis.graph.color.EdgeColor;
+import de.fhws.fiw.mis.graph.color.HtmlColor;
 
 import java.io.Serializable;
 
@@ -48,8 +49,8 @@ public class EdgeBase implements Edge, Cloneable, Serializable {
     public EdgeColor getColor() {
         return color;
     }
-    public void setColor(EdgeColor color) {
-        this.color = color;
+    public void setColor(HtmlColor color) {
+        this.color.setColor(color);
     }
 
     @Override

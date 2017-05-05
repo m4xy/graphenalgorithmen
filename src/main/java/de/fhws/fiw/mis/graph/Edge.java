@@ -1,6 +1,7 @@
 package de.fhws.fiw.mis.graph;
 
 import de.fhws.fiw.mis.graph.color.EdgeColor;
+import de.fhws.fiw.mis.graph.color.HtmlColor;
 
 /**
  * Created by maxarndt on 21.04.17.
@@ -12,5 +13,5 @@ public interface Edge {
     void setWeight(int weight);
     void incrementWeight(int delta);
     EdgeColor getColor();
-    void setColor(EdgeColor color);
+    void setColor(HtmlColor color);
 }
