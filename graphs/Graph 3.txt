@@ -12,7 +12,7 @@ knoten J
 knoten K
 
 # Kantendefinitionen 
-Kante A B
+kante A B
 kante A C
 kante A D
 kante A E
