@@ -161,6 +161,10 @@ public class IndexBean {
         ColorAlgorithm.greedyCol(graph);
         updateGraph();
     }
+    public void colorEdges() {
+        ColorAlgorithm.colorEdges(graph);
+        updateGraph();
+    }
 
 
     private void updateGraph() {
