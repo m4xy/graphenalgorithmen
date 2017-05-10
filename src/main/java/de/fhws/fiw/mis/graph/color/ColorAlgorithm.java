@@ -12,14 +12,14 @@ import java.util.stream.Collectors;
 public class ColorAlgorithm {
 
     public static void greedyCol(AbstractGraph graph) {
-        graph.getAllVertices().stream()
+        graph.getAllVertices()
                 .forEach(v -> v.setColor(HtmlColor.BLACK));
 
-        graph.getAllVertices().stream()
+        graph.getAllVertices()
                 .forEach(v ->
-                        v.setColor(Arrays.asList(HtmlColor.values()).stream()
+                        v.setColor(Arrays.stream(HtmlColor.values())
                             .filter(c -> graph.getNeighbors(v).stream()
-                                    .map(w -> w.getHtmlColor())
+                                    .map(Vertex::getHtmlColor)
                                     .noneMatch(x -> x.equals(c)))
                             .findFirst().get())
                 );
@@ -71,6 +71,15 @@ public class ColorAlgorithm {
         }
         return c0;
     }
+    public static boolean isAnyEdgeSpecificColored(List<Edge> edges, int htmlColorIndex) {
+        return edges.stream().anyMatch(c -> c.getColor().getColor().ordinal() == htmlColorIndex);
+    }
+    public static HtmlColor getFirstMissingColor(Set<Edge> edges) {
+        return Arrays.asList(HtmlColor.values()).stream()
+                .filter(c -> edges.stream()
+                        .noneMatch(x -> x.getColor().getColor().equals(c)))
+                .findFirst().get();
+    }
 
     public static HtmlColor lemma210(AbstractGraph graph, Vertex u, Vertex v) {
         int i = 0;
@@ -115,15 +124,5 @@ public class ColorAlgorithm {
         }
 
         return colorList.get(0);
-    }
-
-    public static boolean isAnyEdgeSpecificColored(List<Edge> edges, int htmlColorIndex) {
-        return edges.stream().anyMatch(c -> c.getColor().getColor().ordinal() == htmlColorIndex);
-    }
-    public static HtmlColor getFirstMissingColor(Set<Edge> edges) {
-        return Arrays.asList(HtmlColor.values()).stream()
-                .filter(c -> edges.stream()
-                        .noneMatch(x -> x.getColor().getColor().equals(c)))
-                .findFirst().get();
     }
 }
