@@ -24,6 +24,28 @@ public class ColorAlgorithm {
                             .findFirst().get())
                 );
     }
+    
+    public static void randomizedGreedyCol(AbstractGraph graph) {
+        List<Vertex> vertices = new ArrayList<>(graph.getAllVertices());
+        int numberOfVertices = vertices.size();
+
+        vertices.forEach(v -> v.setColor(HtmlColor.BLACK));
+
+        for(int i = 0;i < numberOfVertices;i++) {
+            Vertex v = removeRandomVertex(vertices);
+
+            v.setColor(Arrays.stream(HtmlColor.values())
+                    .filter(c -> graph.getNeighbors(v).stream()
+                            .map(Vertex::getHtmlColor)
+                            .noneMatch(x -> x.equals(c)))
+                    .findFirst().get());
+        }
+    }
+    public static Vertex removeRandomVertex(List<Vertex> vertices) {
+        Vertex v = vertices.get(new Double(Math.random() * vertices.size()).intValue());
+        vertices.remove(v);
+        return v;
+    }
 
     public static void colorEdges(AbstractGraph graph) {
         if(graph instanceof DirectedBaseGraph) throw new NotImplementedException();

@@ -20,9 +20,9 @@ public class App {
         UndirectedBaseGraph g = importer.importGraph("Dijkstra.txt");
 //        DirectedBaseGraph g = importer.importDirectedGraph("Dijkstra.txt");
 
-        ColorAlgorithm.greedyCol(g);
+        ColorAlgorithm.randomizedGreedyCol(g);
 
 
-        System.out.println(Arrays.asList(HtmlColor.values()).contains(HtmlColor.BLACK));
+        System.out.println();
     }
 }

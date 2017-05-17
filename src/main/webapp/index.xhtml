@@ -136,6 +136,11 @@
                                                 </h:commandButton>
                                             </div>
                                             <div class="btn-group" role="group">
+                                                <h:commandButton id="btn-randomizedGreedyCol" value="Random. Greedy Color" action="#{indexBean.randomizedGreedyCol}" type="button" class="btn btn-default">
+                                                    <f:ajax execute="btn-randomizedGreedyCol" render="beanJS" />
+                                                </h:commandButton>
+                                            </div>
+                                            <div class="btn-group" role="group">
                                                 <h:commandButton id="btn-colorEdges" value="Color Edges" action="#{indexBean.colorEdges}" type="button" class="btn btn-default">
                                                     <f:ajax execute="btn-colorEdges" render="beanJS" />
                                                 </h:commandButton>
