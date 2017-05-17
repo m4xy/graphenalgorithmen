@@ -27,6 +27,12 @@ public class EdgeBase implements Edge, Cloneable, Serializable {
         this.weight = weight;
         this.color = new EdgeColor();
     }
+    public EdgeBase(Edge copy) {
+        this.source = copy.getSource();
+        this.target = copy.getTarget();
+        this.weight = copy.getWeight();
+        this.color = copy.getColor();
+    }
 
     public Vertex getSource() {
         return source;

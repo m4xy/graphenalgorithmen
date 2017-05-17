@@ -12,6 +12,9 @@ public class VertexColor {
     public VertexColor(HtmlColor color) {
         this.color = color;
     }
+    public VertexColor(VertexColor clone) {
+        this.color = clone.getColor();
+    }
 
     public HtmlColor getColor() { return this.color; }
     public void setColor(HtmlColor color) {

@@ -25,6 +25,36 @@ public class ColorAlgorithm {
                 );
     }
 
+
+    public static void iteratedGreedyCol(AbstractGraph graph) {
+        if(graph instanceof UndirectedBaseGraph) {
+            AbstractGraph clone = new UndirectedBaseGraph((UndirectedBaseGraph)graph);
+            AbstractGraph bestColoredGraph = new UndirectedBaseGraph((UndirectedBaseGraph)graph);
+            long t= System.currentTimeMillis();
+            long end = t+5000;
+            long amountOfBestGraphColors = getAmountOfVertexColors(bestColoredGraph);
+
+            while(System.currentTimeMillis() < end) {
+                System.out.println(System.currentTimeMillis() + ": do");
+                randomizedGreedyCol(clone);
+                long cloneVertexColors = getAmountOfVertexColors(clone);
+
+                if(amountOfBestGraphColors == 0 || cloneVertexColors < amountOfBestGraphColors) {
+                    bestColoredGraph = clone;
+                    amountOfBestGraphColors = getAmountOfVertexColors(bestColoredGraph);
+                }
+                if(amountOfBestGraphColors < 3)
+                    break;
+
+                System.out.println(System.currentTimeMillis() + ": finished with " + cloneVertexColors + " colors. Best: " + amountOfBestGraphColors);
+            }
+
+            final AbstractGraph referenceGraph = new UndirectedBaseGraph((UndirectedBaseGraph)bestColoredGraph);
+            graph.getAllVertices().forEach(v -> v.setColor(referenceGraph.getVertex(v.getName()).getHtmlColor()));
+        } else {
+            throw new NotImplementedException();
+        }
+    }
     public static void randomizedGreedyCol(AbstractGraph graph) {
         List<Vertex> vertices = new ArrayList<>(graph.getAllVertices());
         int numberOfVertices = vertices.size();
@@ -45,6 +75,9 @@ public class ColorAlgorithm {
         Vertex v = vertices.get(new Double(Math.random() * vertices.size()).intValue());
         vertices.remove(v);
         return v;
+    }
+    public static long getAmountOfVertexColors(AbstractGraph graph) {
+        return graph.getAllVertices().stream().map(Vertex::getHtmlColor).filter(c -> !c.equals(HtmlColor.WHITE)).distinct().count();
     }
 
     public static void colorEdges(AbstractGraph graph) {

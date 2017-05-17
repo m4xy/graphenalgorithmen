@@ -19,6 +19,11 @@ public class VertexBase implements Vertex {
         this.data = data;
         this.color = new VertexColor();
     }
+    public VertexBase(Vertex copy) {
+        this.name = copy.getName();
+        this.data = copy.getData();
+        this.color = new VertexColor(copy.getColor());
+    }
 
     public String getName() {
         return name;
@@ -76,6 +81,6 @@ public class VertexBase implements Vertex {
 
     @Override
     public String toString() {
-        return data != 0 ? name + " (" + data + ")" : name;
+        return data != 0 ? name + " {" + getColor().getColorAsString() + "} {" + data + "{" : name + " {" + getColor().getColorAsString() + "}";
     }
 }

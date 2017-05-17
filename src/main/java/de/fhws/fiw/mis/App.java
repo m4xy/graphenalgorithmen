@@ -17,10 +17,10 @@ public class App {
         final String DOT_FILE_NAME = "graph.dot";
 
         GraphImporter importer = new GraphImporterImpl("graphs");
-        UndirectedBaseGraph g = importer.importGraph("Dijkstra.txt");
+        UndirectedBaseGraph g = importer.importGraph("Graph 2.1.txt");
 //        DirectedBaseGraph g = importer.importDirectedGraph("Dijkstra.txt");
 
-        ColorAlgorithm.randomizedGreedyCol(g);
+        ColorAlgorithm.iteratedGreedyCol(g);
 
 
         System.out.println();

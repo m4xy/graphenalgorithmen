@@ -12,6 +12,9 @@ public class EdgeColor {
     public EdgeColor(HtmlColor color) {
         this.color = color;
     }
+    public EdgeColor(EdgeColor clone) {
+        this.color = clone.getColor();
+    }
 
     public HtmlColor getColor() {
         return this.color;
