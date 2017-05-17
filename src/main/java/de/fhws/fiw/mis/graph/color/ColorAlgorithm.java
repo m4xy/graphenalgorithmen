@@ -24,7 +24,7 @@ public class ColorAlgorithm {
                             .findFirst().get())
                 );
     }
-    
+
     public static void randomizedGreedyCol(AbstractGraph graph) {
         List<Vertex> vertices = new ArrayList<>(graph.getAllVertices());
         int numberOfVertices = vertices.size();
