@@ -81,6 +81,6 @@ public class VertexBase implements Vertex {
 
     @Override
     public String toString() {
-        return data != 0 ? name + " {" + getColor().getColorAsString() + "} {" + data + "{" : name + " {" + getColor().getColorAsString() + "}";
+        return data != 0 ? name + " {" + data + "{" : name;
     }
 }
