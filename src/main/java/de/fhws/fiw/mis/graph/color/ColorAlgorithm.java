@@ -24,8 +24,6 @@ public class ColorAlgorithm {
                             .findFirst().get())
                 );
     }
-
-
     public static void iteratedGreedyCol(AbstractGraph graph) {
         if(graph instanceof UndirectedBaseGraph) {
             AbstractGraph clone = new UndirectedBaseGraph((UndirectedBaseGraph)graph);
@@ -33,6 +31,7 @@ public class ColorAlgorithm {
             long t= System.currentTimeMillis();
             long end = t+5000;
             long amountOfBestGraphColors = getAmountOfVertexColors(bestColoredGraph);
+            int i = 1;
 
             while(System.currentTimeMillis() < end) {
                 System.out.println(System.currentTimeMillis() + ": do");
@@ -43,12 +42,15 @@ public class ColorAlgorithm {
                     bestColoredGraph = clone;
                     amountOfBestGraphColors = getAmountOfVertexColors(bestColoredGraph);
                 }
-                if(amountOfBestGraphColors < 3)
-                    break;
+
+                i++;
 
                 System.out.println(System.currentTimeMillis() + ": finished with " + cloneVertexColors + " colors. Best: " + amountOfBestGraphColors);
+                if(amountOfBestGraphColors < 3)
+                    break;
             }
 
+            System.out.println("Anzahl Durchlaeufe: " + i);
             final AbstractGraph referenceGraph = new UndirectedBaseGraph((UndirectedBaseGraph)bestColoredGraph);
             graph.getAllVertices().forEach(v -> v.setColor(referenceGraph.getVertex(v.getName()).getHtmlColor()));
         } else {
@@ -134,50 +136,5 @@ public class ColorAlgorithm {
                 .filter(c -> edges.stream()
                         .noneMatch(x -> x.getColor().getColor().equals(c)))
                 .findFirst().get();
-    }
-
-    public static HtmlColor lemma210(AbstractGraph graph, Vertex u, Vertex v) {
-        int i = 0;
-        List<HtmlColor> colorList = Arrays.asList(Arrays.stream(HtmlColor.values()) //hält an den v_i fehlenden Farben. An unprocessedNeighbors[0] fehlt colorList[1]
-                .filter(c -> graph.getEdgesOf(v).stream()
-                        .noneMatch(x -> x.getColor().getColor().equals(c)))
-                .findFirst().get());
-
-        List<Edge> unprocessedNeighbors = graph.getEdgesOf(u).stream().filter(e -> e.getTarget().equals(v) || e.getSource().equals(v)).collect(Collectors.toList());
-        List<Edge> processedNeighbors = new ArrayList<>();
-
-
-
-        //a
-        //wenn an v_i eine Farbe fehlt, die an u fehlt, bis zu diesem Knoten alle Farben umfärben und die fehlende Farbe genau für diese Kante nutzen.
-
-
-        while(true) {
-            Optional<Edge> e = unprocessedNeighbors.stream().filter(x -> x.getColor().getColor().equals(colorList.get(i))).findFirst();
-            if(!e.isPresent()) {
-                //rollback algo
-                break;
-            }
-            else if(processedNeighbors.contains(e.get())) {
-                //prblemkante entfernen und dann rollback
-                //+ richtige Farbe finden für Problemkante
-                break;
-            }
-            else {
-
-
-                Vertex v_i = e.get().getSource().equals(u) ? e.get().getTarget() : e.get().getSource();
-                HtmlColor missingColor = Arrays.stream(HtmlColor.values())
-                        .filter(c -> graph.getEdgesOf(v_i).stream()
-                                .noneMatch(x -> x.getColor().getColor().equals(c)))
-                        .findFirst().get();
-                colorList.add(missingColor);
-                processedNeighbors.add(e.get());
-            }
-
-
-        }
-
-        return colorList.get(0);
     }
 }
